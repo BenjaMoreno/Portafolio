@@ -1,0 +1,68 @@
+.App {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #002029;
+}
+header {
+  height: 14vh;
+  min-height: 76.8px;
+  display: flex;
+  flex-direction: column;
+}
+header nav {
+  margin: 0 10%;
+  height: 96%;
+  box-sizing: border-box;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+}
+header nav ul li {
+  height: 100%;
+  flex: 1;
+}
+.navlink {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(214, 214, 214);
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+
+.container-hrs-header {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.hr-header {
+  width: 45%;
+  margin: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    red,
+    rgb(239, 239, 239),
+    rgba(77, 77, 77, 0.701),
+    rgba(48, 48, 70, 0.678)
+  );
+  border: none;
+  height: 2px;
+}
+#LOGO {
+  height: 16vh;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 14vh;
+  transform: translate(-50%, -50%);
+}
