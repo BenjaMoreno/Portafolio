@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import LOGO from "../src/IMAGES/logoben.png";
 import { QuienSoy } from "./PAGES/Quien Soy/QuienSoy";
-import { Codificando } from "./PAGES/Codificando/Codificando";
+import { FrontendPro } from "./PAGES/Frontend pro/FrontendPro";
 import { Proyectos } from "./PAGES/Proyectos/Proyectos";
 import { Contactame } from "./PAGES/Contactame/Contactame";
 
@@ -21,7 +21,7 @@ function App() {
               </li>
               <li>
                 <NavLink to="/codificando" className="navlink">
-                  Codificando
+                  Frontend Pro
                 </NavLink>
               </li>
               <li></li>
@@ -45,7 +45,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<QuienSoy />} />
-            <Route path="/codificando" element={<Codificando />} />
+            <Route path="/codificando" element={<FrontendPro />} />
             <Route path="/proyectos" element={<Proyectos />} />
             <Route path="/contactame" element={<Contactame />} />
           </Routes>

@@ -1,7 +1,7 @@
 import React from 'react';
-import './Codificando.css'
+import './FrontendPro.css'
 
-export const Codificando = () => {
+export const FrontendPro = () => {
   return (
     <div>Codificando</div>
   )
