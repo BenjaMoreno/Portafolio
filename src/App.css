@@ -39,7 +39,21 @@ header nav ul li {
   font-size: 1.6rem;
   text-align: center;
 }
-
+.navlink:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(128, 128, 128, 0.416) 0%,
+    rgba(8, 64, 83, 0.384) 60%
+  );
+}
+.navlink.active {
+  background: linear-gradient(
+    to bottom,
+    rgba(165, 165, 165, 0.336) 0%,
+    rgba(8, 64, 83, 0) 20%
+  );
+  box-sizing: border-box;
+}
 
 .container-hrs-header {
   height: 4%;
@@ -70,7 +84,7 @@ header nav ul li {
 }
 /* MAIN */
 /* FOOTER */
-footer{
+footer {
   height: 12vh;
   width: 100vw;
   box-sizing: border-box;
@@ -78,21 +92,22 @@ footer{
   bottom: 0;
   display: grid;
   grid-template-areas:
-  'hrs hrs'
-  'mensaje rrss';
+    "hrs hrs"
+    "mensaje rrss";
   grid-template-rows: 1% 99%;
   grid-template-columns: 1fr 1fr;
 }
-.container-hrs-footer{
+.container-hrs-footer {
   grid-area: hrs;
-  display:  flex;
+  display: flex;
   justify-content: space-around;
 }
-.container-frase-footer{
+.container-frase-footer {
   grid-area: mensaje;
   display: flex;
   justify-content: center;
-  align-items: center; font-family: "Raleway", sans-serif;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: italic;
@@ -100,7 +115,7 @@ footer{
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
-.container-rrss{
+.container-rrss {
   grid-area: rrss;
   display: flex;
   justify-content: center;
@@ -112,15 +127,15 @@ footer{
   height: 40px;
   width: 40px;
 }
-.logo-footer{
+.logo-footer {
   position: absolute;
   height: 80px;
   width: 80px;
   left: 50%;
   top: -40px;
-  transform: translateX(-50% );
+  transform: translateX(-50%);
 }
-.hr-footer{
+.hr-footer {
   margin: 0;
   height: 1px;
   width: 30%;
@@ -132,8 +147,4 @@ footer{
     rgba(77, 77, 77, 0.701),
     rgba(48, 48, 70, 0.678)
   );
-}
-
-/* borrar */
-footer div{
 }
