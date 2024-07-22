@@ -93,7 +93,7 @@
 
 .formulario-contacto textarea {
   margin: 20px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 15px;
   background-color: #042730;
   border: 1px solid #cdcdcd4a;
   min-height: 50px;
@@ -102,6 +102,17 @@
   color: rgba(239, 239, 239, 0.491);
   font-style: italic;
   padding: 10px;
+}
+.formulario-contacto textarea::-webkit-scrollbar{
+  width: 10px;
+  background-color: #002029;
+  border: solid 1px rgba(128, 128, 128, 0.454);
+  border-top-right-radius: 50px;
+}
+.formulario-contacto textarea::-webkit-scrollbar-thumb{
+  height: 10%;
+  width: 10%;
+  color: #25d366;
 }
 .formulario-contacto button {
   width: min-content;
@@ -131,4 +142,8 @@
   z-index: -10;
   height: 300%;
   width: 500%;
+}
+.error-formik-msg{
+  color: #859900a1;
+  text-align: right;
 }
