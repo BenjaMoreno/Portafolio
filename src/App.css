@@ -1,3 +1,4 @@
+/* HEADER */
 .App {
   box-sizing: border-box;
   height: 100vh;
@@ -66,4 +67,73 @@ header nav ul li {
   left: 50%;
   top: 14vh;
   transform: translate(-50%, -50%);
+}
+/* MAIN */
+/* FOOTER */
+footer{
+  height: 12vh;
+  width: 100vw;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-areas:
+  'hrs hrs'
+  'mensaje rrss';
+  grid-template-rows: 1% 99%;
+  grid-template-columns: 1fr 1fr;
+}
+.container-hrs-footer{
+  grid-area: hrs;
+  display:  flex;
+  justify-content: space-around;
+}
+.container-frase-footer{
+  grid-area: mensaje;
+  display: flex;
+  justify-content: center;
+  align-items: center; font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: italic;
+  color: rgb(216, 216, 216);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.container-rrss{
+  grid-area: rrss;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+.container-rrss a {
+  margin: 3.6% 4%;
+  height: 40px;
+  width: 40px;
+}
+.logo-footer{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50% );
+}
+.hr-footer{
+  margin: 0;
+  height: 1px;
+  width: 30%;
+  border: none;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    rgb(181, 177, 177),
+    rgb(239, 239, 239),
+    rgba(77, 77, 77, 0.701),
+    rgba(48, 48, 70, 0.678)
+  );
+}
+
+/* borrar */
+footer div{
 }
