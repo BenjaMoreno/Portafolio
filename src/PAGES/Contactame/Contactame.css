@@ -146,4 +146,5 @@
 .error-formik-msg{
   color: #859900a1;
   text-align: right;
+  text-decoration:overline solid rgba(255, 0, 0, 0.591);
 }
