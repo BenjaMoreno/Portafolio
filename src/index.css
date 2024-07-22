@@ -3,9 +3,10 @@
   text-decoration: none;
 }
 /* FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); */
 /* AGREGAR: (font-family: "Major Mono Display", monospace; font-weight: 400; font-style: normal;) */
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   margin: 0;
   height: 100vh;
