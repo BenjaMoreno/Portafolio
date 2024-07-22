@@ -2,7 +2,6 @@
 .App {
   box-sizing: border-box;
   height: 100vh;
-  background-color: #002029;
 }
 header {
   height: 14vh;
@@ -88,7 +87,7 @@ footer {
   height: 12vh;
   width: 100vw;
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: grid;
   grid-template-areas:
@@ -112,28 +111,29 @@ footer {
   font-weight: 200;
   font-style: italic;
   color: rgb(216, 216, 216);
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 1px;
-  cursor:vertical-text;
+  cursor: vertical-text;
 }
 .container-rrss {
   grid-area: rrss;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   box-sizing: border-box;
 }
 .container-rrss a {
-  margin: 3.6% 4%;
-  height: 40px;
-  width: 40px;
+  margin: 0 4%;
+  height: 40%;
+  width: 30px;
 }
 .logo-footer {
   position: absolute;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: auto;
   left: 50%;
-  top: -40px;
+  top: -30px;
   transform: translateX(-50%);
 }
 .hr-footer {
