@@ -1,0 +1,76 @@
+.grid-container-proyectos {
+  min-height: 90vh;
+  height: auto;
+  width: 90%;
+  max-width: 90%;
+  margin: 5vh auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.grid-container-proyectos figure {
+  height:min-content;
+  min-height: 192px;
+  min-width: 290px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border: solid #015a72 4px;
+
+}
+
+.grid-container-proyectos figure img {
+  width: 100%;
+  min-height: 192px;
+  min-width: 290px;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+.grid-container-proyectos figcaption{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #00141A;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.grid-container-proyectos figure:hover  img{
+  transform: scale(1.1);
+}
+.grid-container-proyectos figure:hover figcaption {
+  opacity: 1;
+}
+.grid-container-proyectos figcaption p{
+ height: 50%;
+ width: 100%;
+ box-sizing: border-box;
+ display: flex;
+ text-align: center;
+ padding: 10%;
+ align-items: center;
+ color: #ffffff;
+ font-family: 'Courier New', Courier, monospace;
+}
+.grid-container-proyectos figure figcaption a{
+  
+ margin: auto;
+  border: solid #015a72 4px;
+  border-radius: 50px;
+  padding: 20px 50px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.grid-container-proyectos figure figcaption a:hover{
+  background-color: #015a72;
+}
