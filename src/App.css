@@ -1,3 +1,31 @@
+/* GENERAL */
+#subir{
+  border: solid white 1px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+}
+#subir:hover{
+  border-color: rgb(99, 235, 231);
+
+}
+.flecha-svg{
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+#subir:hover .flecha-svg{
+  transform: rotate(-45deg);
+  color: rgb(99, 235, 231);
+}
+
+#subir:hover img {
+transform: rotate(-45deg);
+
+}
 /* HEADER */
 .App {
   box-sizing: border-box;

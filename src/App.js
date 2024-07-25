@@ -8,6 +8,7 @@ import { FrontendPro } from "./PAGES/Frontend pro/FrontendPro";
 import facebook from "../src/IMAGES/SVG/FACEBOOK.svg";
 import github from "../src/IMAGES/SVG/GITHUB.svg";
 import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
+import {ReactComponent as FLECHA} from '../src/IMAGES/SVG/FLECHA.svg'
 function App() {
   return (
     <BrowserRouter>
@@ -73,6 +74,9 @@ function App() {
           </div>
           <img className="logo-footer" src={LOGO} />
         </footer>
+        <a href="#" id="subir">
+          <FLECHA className="flecha-svg"/>
+        </a>
       </div>
     </BrowserRouter>
   );
