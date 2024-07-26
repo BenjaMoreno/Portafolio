@@ -7,6 +7,7 @@
   border-radius: 5px;
   height: 40px;
   width: 40px;
+  display: none;
 }
 #subir:hover{
   border-color: rgb(99, 235, 231);
@@ -36,6 +37,10 @@ header {
   min-height: 76.8px;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color:#002029 ;
+  z-index: 100;
 }
 header nav {
   margin: 0 10%;

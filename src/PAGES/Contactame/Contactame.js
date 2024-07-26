@@ -73,7 +73,7 @@ export const Contactame = () => {
           <img src={wsp_logo} />
           Whatsapp...
         </a>
-        <a href="mailto:webenja0@gmail.com" className="btn-gmail">
+        <a href="mailto:webenja0@gmail.com" target="blank" className="btn-gmail">
           <img src={gmail_logo} />
           Gmail
         </a>

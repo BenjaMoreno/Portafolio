@@ -1,0 +1,46 @@
+.container-pro {
+  min-height: 74vh;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+.titulo-pro {
+  height: 86vh;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(177, 177, 177);
+  font-size: 3.4rem;
+  font-family: "Zain", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  position: relative;
+}
+.titulo-pro span {
+  position: absolute;
+  top: 40%;
+}
+.flecha-animada {
+  position: absolute;
+  bottom: 0;
+  left: 33vh;
+  color: rgb(131, 131, 131);
+  width: 100px;
+  height: 100px;
+  animation: rebote 1s ease-in-out infinite; 
+}
+@keyframes rebote {
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 0;
+        color: white;
+    }
+    100%{
+        bottom: 50px;
+        color: rgb(131, 131, 131)    }
+}

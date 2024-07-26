@@ -10,6 +10,11 @@ import github from "../src/IMAGES/SVG/GITHUB.svg";
 import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
 import {ReactComponent as FLECHA} from '../src/IMAGES/SVG/FLECHA.svg'
 function App() {
+  //ACTIVAR BOTON DE SUBIDA HREF=#
+  window.addEventListener('scroll',function(){
+    var btn_flecha=document.getElementById('subir');
+    btn_flecha.style.display=window.scrollY > 0 ? 'block' : 'none'
+  })
   return (
     <BrowserRouter>
       <div className="App">
