@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./FrontendPro.css";
 import { ReactComponent as Flecha } from "../../IMAGES/SVG/FLECHA-ANIMADA.svg";
+import { Apis } from "../../COMPONENTES/frontend pro/Apis";
 export const FrontendPro = () => {
   // DESACTIVAR FLECHA ANIMADA
-  window.addEventListener('scroll',function(){
-    var flecha=document.querySelector('.flecha-animada');
-    flecha.style.display=window.scrollY > 500 ? 'none' : 'block'
-  })
+  useEffect(() => {
+    const detectarScroll = () => {
+      var flecha = document.querySelector(".flecha-animada");
+      if (flecha) {
+        flecha.style.display = window.scrollY > 200 ? "none" : "block";
+      }
+    };
+    window.addEventListener("scroll", detectarScroll);
+    // LIMPIAR FUNCION
+    return () => {
+      window.removeEventListener("scroll", detectarScroll);
+    };
+  }, []);
   return (
     <div className="container-pro">
       <h1 className="titulo-pro">
-        <span>Conoce mis habilidades y servicios como desarrollador de Frontend</span>
+        <span>
+          Conoce mis habilidades y servicios como desarrollador<br/> de Frontend
+        </span>
         <Flecha className="flecha-animada" />
       </h1>
+      <Apis/>
     </div>
   );
 };

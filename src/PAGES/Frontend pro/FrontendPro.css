@@ -12,10 +12,10 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  color: rgb(177, 177, 177);
-  font-size: 3.4rem;
-  font-family: "Zain", sans-serif;
-  font-weight: 200;
+  color: rgb(219, 219, 219);
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-style: normal;
   position: relative;
 }
@@ -30,17 +30,18 @@
   color: rgb(131, 131, 131);
   width: 100px;
   height: 100px;
-  animation: rebote 1s ease-in-out infinite; 
+  animation: rebote 1s ease-in-out infinite;
 }
 @keyframes rebote {
-    0%{
-        bottom: 50px;
-    }
-    50%{
-        bottom: 0;
-        color: white;
-    }
-    100%{
-        bottom: 50px;
-        color: rgb(131, 131, 131)    }
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 0;
+    color: white;
+  }
+  100% {
+    bottom: 50px;
+    color: rgb(131, 131, 131);
+  }
 }
