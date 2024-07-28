@@ -1,18 +1,69 @@
-.consulta-pokemon{
-    width: 70%;
-    height: 90%;
-    display: flex;
+.consulta-pokemon {
+  width: 90%;
+  height: 90%;
+  display: flex;
 }
-.separador-pokemon{
-    border: solid white 1px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.separador-pokemon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.pokemon{
-    border: solid white 1px;
-    height:90%;
-    width: 70%;
-    margin: auto;
-
+.separador-pokemon h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(176, 176, 176);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.separador-pokemon input {
+  width: 70%;
+  background-color: #011920;
+  border-radius: 50px;
+  height: 30px;
+  border: solid grey 1px;
+  margin: auto;
+  color: greenyellow;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.separador-pokemon button {
+  margin: auto;
+}
+.pokemon {
+  flex-direction: row;
+  height: 100%;
+}
+.pokemon img {
+  height: 100%;
+  width: auto;
+}
+.container-datos-pokemon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.dato-pokemon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.dato-pokemon span {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: italic;
+  color: rgb(216, 216, 216);
+  font-size: 1rem;
+  text-align: left;
+}
+.dato-pokemon strong {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: orange;
+  font-size: 1.6rem;
+  margin: auto;
 }
