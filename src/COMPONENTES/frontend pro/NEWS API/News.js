@@ -29,7 +29,7 @@ export const News = () => {
         <div className="new-item" key={index}>
           <h1>{noticia.autor || "Autor desconocido"}</h1>
           <img src={noticia.img === null  ? news_icon : noticia.img} alt={noticia.titulo} />
-          <h5>fecha de publicación:{new Date(noticia.fecha).toLocaleDateString()}</h5>
+          <h5><span>fecha de publicación:&nbsp;&nbsp;</span>{new Date(noticia.fecha).toLocaleDateString()}</h5>
           <p>{noticia.p}</p>
         </div>
       ))}

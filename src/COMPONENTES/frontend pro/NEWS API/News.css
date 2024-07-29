@@ -39,6 +39,11 @@
   padding-left: 5%;
 font-size: 0.8rem;
 }
+.new-item h5 span{
+  color: grey;
+  font-style: italic;
+
+}
 .new-item p {
   background-color: rgb(255, 255, 255);
   height: 30%;
