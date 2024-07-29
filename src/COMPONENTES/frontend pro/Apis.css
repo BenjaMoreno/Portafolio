@@ -10,6 +10,7 @@
   width: 90%;
   border-radius: 20px;
   box-shadow: 0 0 5px 1px grey;
+  background-color: #043f52;
 }
 .titulo-habilidad {
   font-size: 2.6rem;
@@ -30,8 +31,13 @@
   background-color: #011920;
 }
 .api-elemento{
-    height:50vh;
+    height:70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.api-elemento-titulo span{
+  color: lime;
+  font-size: 1.2rem;
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./PokeApi.css";
-
+import pokeball from '../../../IMAGES/SVG/POKEBALL.svg'
 export const PokeApi = () => {
   //ESTADOS
   const [pokemon, setPokemon] = useState("");
   const [pokeDatos, setPokeDatos] = useState({
-    img: "",
+    img: pokeball,
     nombre: "",
     tamaño: "",
     habilidad: "",
