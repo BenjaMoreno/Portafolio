@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./News.css";
-import news_icon from '../../../IMAGES/SVG/NEWS.svg'
+import news_icon from '../../../../IMAGES/SVG/NEWS.svg'
 export const News = () => {
   const [noticias, setNoticias] = useState([]);
 

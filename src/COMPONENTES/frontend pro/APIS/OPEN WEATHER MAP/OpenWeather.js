@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./OpenWeather.css";
-import weather_paper from '../../../IMAGES/SVG/WEATHER.svg'
+import weather_paper from '../../../../IMAGES/SVG/WEATHER.svg'
 
 export const OpenWeather = () => {
   //ESTADOS

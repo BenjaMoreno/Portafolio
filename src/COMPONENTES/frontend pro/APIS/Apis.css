@@ -5,23 +5,26 @@
   align-items: center;
   justify-content: center;
   padding: 10% 0 10% 0;
+  display: none;
 }
 .info-api {
   width: 90%;
   border-radius: 20px;
-  box-shadow: 0 0 5px 1px grey;
-  background-color: #ffffff;
+  background-color: #002029;
+  overflow: hidden;
 }
 .titulo-habilidad {
-  font-size:3rem;
-  text-align: center;
-  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  text-align: left;
+  color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
+  background-color: #002029;
+  padding-left: 1%;
 }
-.api-elemento-titulo{
-  margin: 4%;
+.api-elemento-titulo {
+  margin: 0;
   color: rgb(0, 0, 0);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -29,21 +32,21 @@
   padding-left: 1%;
   font-size: 1.4rem;
   text-align: center;
+  background-color: rgb(192, 192, 192);
 }
-.api-elemento{
-    height:70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #002029
+.api-elemento {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002029;
 }
 
-.api-elemento-titulo span{
+.api-elemento-titulo span {
   color: rgb(255, 0, 0);
   font-size: 1.2rem;
   font-style: italic;
-
 }
-.fondo-noticias{
+.fondo-noticias {
   padding: 5% 0;
 }

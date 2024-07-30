@@ -8,13 +8,13 @@ import { FrontendPro } from "./PAGES/Frontend pro/FrontendPro";
 import facebook from "../src/IMAGES/SVG/FACEBOOK.svg";
 import github from "../src/IMAGES/SVG/GITHUB.svg";
 import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
-import {ReactComponent as FLECHA} from '../src/IMAGES/SVG/FLECHA.svg'
+import { ReactComponent as FLECHA } from "../src/IMAGES/SVG/FLECHA.svg";
 function App() {
   //ACTIVAR BOTON DE SUBIDA HREF=#
-  window.addEventListener('scroll',function(){
-    var btn_flecha=document.getElementById('subir');
-    btn_flecha.style.display=window.scrollY > 0 ? 'block' : 'none'
-  })
+  window.addEventListener("scroll", function () {
+    var btn_flecha = document.getElementById("subir");
+    btn_flecha.style.display = window.scrollY > 0 ? "block" : "none";
+  });
   return (
     <BrowserRouter>
       <div className="App">
@@ -67,20 +67,28 @@ function App() {
             Viviendo, aprendiendo y subiendo de nivel un día a la vez.
           </div>
           <div className="container-rrss">
-            <a href="https://web.facebook.com/benjamin.morenosaez.3" target="blank">
+            <a
+              href="https://web.facebook.com/benjamin.morenosaez.3"
+              target="blank"
+            >
               <img src={facebook} alt="logo face" />
             </a>
-            <a href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/" target="blank">
+            <a
+              href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/"
+              target="blank"
+            >
               <img src={linkedin} alt="logo linkedin" />
             </a>
-            <a href="https://github.com/BenjaMoreno" target="blank"> 
+            <a href="https://github.com/BenjaMoreno" target="blank">
               <img src={github} alt="logo github" />
             </a>
           </div>
-          <img className="logo-footer" src={LOGO} />
+          <a href="#">
+            <img className="logo-footer" src={LOGO} />
+          </a>
         </footer>
         <a href="#" id="subir">
-          <FLECHA className="flecha-svg"/>
+          <FLECHA className="flecha-svg" />
         </a>
       </div>
     </BrowserRouter>
