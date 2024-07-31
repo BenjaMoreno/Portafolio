@@ -29,7 +29,6 @@
   align-items: center;
   background-color: #002029;
   border-top: solid rgba(220, 220, 220, 0.368) 1px;
-
   box-sizing: border-box;
 }
 
@@ -39,5 +38,6 @@
   font-style: italic;
 }
 .fondo-noticias {
-  padding: 5% 0;
+  padding: 0 0 40px 0;
+  height: 100vh;
 }

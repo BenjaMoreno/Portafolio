@@ -4,6 +4,10 @@
   margin-top: 2%;
   display: flex;
 }
+.compo:hover{
+  scale: 1.1;
+  transition: 0.5s;
+}
 .nombre-compo {
   border: solid white 1px;
   flex: 2;

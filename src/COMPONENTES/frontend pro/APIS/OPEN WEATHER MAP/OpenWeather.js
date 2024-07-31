@@ -42,7 +42,7 @@ export const OpenWeather = () => {
     <div className="consulta-weather">
       <form className="separador-weather" onSubmit={consultarClima}>
         <h1>Consulta el clima actual</h1>
-        <input placeholder="Nombre de la ciudad..." name="nombre_ciudad" />
+        <input placeholder="Escribe una ciudad..." name="nombre_ciudad" />
         <button type="submit"> Consultar</button>
       </form>
       <div className="separador-weather weather">
