@@ -89,6 +89,8 @@
     height: 30%;
     width: 100%;
     justify-content: space-around;
+    position: relative;
+
 }
 .container-input-btn input {
   background-color: #011920;
@@ -137,4 +139,11 @@
 }
 .container-avatars img:hover{
   scale: 1.2;
+}
+.form-estado span{
+  color: rgb(179, 255, 0);
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  text-decoration: overline red;
 }
