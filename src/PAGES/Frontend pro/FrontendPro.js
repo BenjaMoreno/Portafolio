@@ -27,9 +27,10 @@ export const FrontendPro = () => {
         </span>
         <Flecha className="flecha-animada" />
       </h1>
+      <Gestion/>
       <ComposR/>
-      {/* <Gestion/> */}
       <Apis/>
+      
     </div>
   );
 };

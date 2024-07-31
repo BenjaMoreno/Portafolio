@@ -4,35 +4,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10% 0 10% 0;
-  display: none;
 }
 .info-api {
   width: 90%;
-  border-radius: 20px;
   background-color: #002029;
   overflow: hidden;
 }
 .titulo-habilidad {
+  border: solid 2px rgb(192, 192, 192);
+  width: max-content;
+  margin: 25vh auto 10vh auto;
   font-size: 3rem;
-  text-align: left;
   color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  background-color: #002029;
-  padding-left: 1%;
-}
-.api-elemento-titulo {
-  margin: 0;
-  color: rgb(0, 0, 0);
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-left: 1%;
-  font-size: 1.4rem;
-  text-align: center;
-  background-color: rgb(192, 192, 192);
+  border-radius: 100px;
+  padding: 2% 3%;
 }
 .api-elemento {
   height: 70vh;
@@ -40,6 +28,9 @@
   justify-content: center;
   align-items: center;
   background-color: #002029;
+  border-top: solid rgba(220, 220, 220, 0.368) 1px;
+
+  box-sizing: border-box;
 }
 
 .api-elemento-titulo span {

@@ -8,10 +8,10 @@ import monkey from '../../../IMAGES/SVG/MONKEY.svg';
 
 export const ComposR = () => {
     const estilosCompos={
-        compo1:{fondo:'#FF5733',emoji:cowboy},
-        compo2:{fondo:'#33FF57',emoji:monkey},
-        compo3:{fondo:'#33C3FF',emoji:cold},
-        compo4:{fondo:'#FFFF33',emoji:happy},
+        compo1:{fondo:'#FF5733',numero:'1',emoji:cowboy},
+        compo2:{fondo:'#33FF57',numero:'2',emoji:monkey},
+        compo3:{fondo:'#33C3FF',numero:'3',emoji:cold},
+        compo4:{fondo:'#FFFF33',numero:'4',emoji:happy},
     }
   return (
     <section className="container-compos-reutilizables">
