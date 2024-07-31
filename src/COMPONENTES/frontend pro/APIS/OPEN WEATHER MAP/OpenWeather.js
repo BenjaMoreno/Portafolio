@@ -31,7 +31,6 @@ export const OpenWeather = () => {
             humedad: data.main.humidity,
             temperatura:data.main.temp
           };
-          console.log(data)
           setCityData(datosCiudad);
         })
         .catch((error) => console.error("ERROR EN LA CAPTURA DE DATOS", error));

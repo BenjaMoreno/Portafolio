@@ -10,7 +10,6 @@ export const News = () => {
         "https://newsapi.org/v2/top-headlines?country=us&apiKey=1b50ac1a21a7493aa81e780d7f9ea2ee";
       const respuesta = await fetch(url);
       const data = await respuesta.json();
-      console.log(data);
 
       const arrayNoticias = data.articles.slice(0, 4).map((article) => ({
         autor: article.author,

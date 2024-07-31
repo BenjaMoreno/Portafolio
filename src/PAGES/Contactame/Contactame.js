@@ -25,7 +25,6 @@ export const Contactame = () => {
         comentario:Yup.string().max(156,'MUCHO TEXTO BRO 🥴 klañsjfas')
     }),
     onSubmit: (values) => {
-      console.log(values);
     },
   });
 

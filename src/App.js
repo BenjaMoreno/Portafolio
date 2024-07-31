@@ -9,8 +9,15 @@ import facebook from "../src/IMAGES/SVG/FACEBOOK.svg";
 import github from "../src/IMAGES/SVG/GITHUB.svg";
 import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
 import { ReactComponent as FLECHA } from "../src/IMAGES/SVG/FLECHA.svg";
-import { ContextUser } from "./CONTEXT/ContextUser";
+import { useState } from "react";
+import {ContextUser} from './CONTEXT/ContextUser'
 function App() {
+  // ESTADO CONTEXT USUARIO
+  const [usuario,setUsuario]=useState({
+    usuario:'',
+    avatar:''
+  });
+  console.log(usuario)
   //ACTIVAR BOTON DE SUBIDA HREF=#
   window.addEventListener("scroll", function () {
     var btn_flecha = document.getElementById("subir");
@@ -19,7 +26,7 @@ function App() {
 
 
   return (
-    <ContextUser.Provider usuario={''}>
+    <ContextUser.Provider value={{usuario,setUsuario}}>
       <BrowserRouter>
         <div className="App">
           <header>
