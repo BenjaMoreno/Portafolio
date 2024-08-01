@@ -9,24 +9,35 @@ import facebook from "../src/IMAGES/SVG/FACEBOOK.svg";
 import github from "../src/IMAGES/SVG/GITHUB.svg";
 import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
 import { ReactComponent as FLECHA } from "../src/IMAGES/SVG/FLECHA.svg";
-import { useState } from "react";
-import {ContextUser} from './CONTEXT/ContextUser'
+import { useEffect, useState } from "react";
+import { ContextUser } from "./CONTEXT/ContextUser";
 function App() {
   // ESTADO CONTEXT USUARIO
-  const [usuario,setUsuario]=useState({
-    usuario:'',
-    avatar:''
+  const [usuario, setUsuario] = useState(null);
+  const [estadoAnimacion, setEstadoAnimacion] = useState({
+    usuario: "",
+    avatar: "",
   });
-  console.log(usuario)
+  useEffect(() => {
+    if (usuario) {
+      setEstadoAnimacion(usuario);
+      document.querySelector(".animacion-bienvenida-usuario").style.display =
+        "flex";
+      setTimeout(function(){
+        document.querySelector(".animacion-bienvenida-usuario").style.display =
+        "none";
+      },5000)
+    }
+  }, [usuario]);
+
   //ACTIVAR BOTON DE SUBIDA HREF=#
   window.addEventListener("scroll", function () {
     var btn_flecha = document.getElementById("subir");
     btn_flecha.style.display = window.scrollY > 0 ? "block" : "none";
   });
 
-
   return (
-    <ContextUser.Provider value={{usuario,setUsuario}}>
+    <ContextUser.Provider value={{ usuario, setUsuario }}>
       <BrowserRouter>
         <div className="App">
           <header>
@@ -101,6 +112,11 @@ function App() {
           <a href="#" id="subir">
             <FLECHA className="flecha-svg" />
           </a>
+          <div className="animacion-bienvenida-usuario">
+            <h5>¡BIENVENIDO!</h5>
+            <span>{estadoAnimacion.usuario}</span>
+            <div></div>
+          </div>
         </div>
       </BrowserRouter>
     </ContextUser.Provider>

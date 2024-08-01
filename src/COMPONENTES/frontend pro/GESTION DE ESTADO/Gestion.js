@@ -21,7 +21,7 @@ export const Gestion = () => {
       usuario: "",
     },
     validationSchema: Yup.object().shape({
-      usuario: Yup.string()
+      usuario: Yup.string('Porfavor ,ingresa texto')
         .max(10, "Demasiado largo")
         .required("Crea cualquier palabra"),
     }),
@@ -32,8 +32,8 @@ export const Gestion = () => {
 
   // Función manejadora personalizada que llama a dos funciones
   const handleChange = (event) => {
-    formik.handleChange(event); // Llama a la función de Formik
-    modUsuario(event); // Llama a la segunda función personalizada
+    formik.handleChange(event); // Llamar a la función de Formik
+    modUsuario(event); // Llamar a la segunda función personalizada
   };
 
   // Ejemplo de una función personalizada (puedes ajustarla según sea necesario)
@@ -46,10 +46,11 @@ export const Gestion = () => {
       alert("Porfavor intenta ingresar un nombre de Usuario");
     } else {
       let objetoUsuario = {
-        usuario: { usuarioState },
-        avatar: { avatarState },
+        usuario: usuarioState,
+        avatar: avatarState,
       };
       setUsuario(objetoUsuario);
+      
     }
   };
   return (
@@ -63,7 +64,7 @@ export const Gestion = () => {
             placeholder="estado..."
             name="usuario"
             value={formik.values.usuario}
-            onChange={handleChange} // Usa la función personalizada aquí
+            onChange={handleChange} 
             onBlur={formik.handleBlur}
             maxLength={23}
           />

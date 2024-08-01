@@ -1,5 +1,5 @@
 /* GENERAL */
-#subir{
+#subir {
   border: solid white 1px;
   position: fixed;
   right: 10px;
@@ -9,23 +9,88 @@
   width: 50px;
   display: none;
 }
-#subir:hover{
+#subir:hover {
   border-color: rgb(99, 235, 231);
-
 }
-.flecha-svg{
+.flecha-svg {
   height: 100%;
   width: 100%;
   color: white;
 }
-#subir:hover .flecha-svg{
+#subir:hover .flecha-svg {
   transform: rotate(-45deg);
   color: rgb(99, 235, 231);
 }
 
 #subir:hover img {
-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.animacion-bienvenida-usuario {
+  position: fixed;
+  top: 10vh;
+  right: -40vw;
+  border: solid rgba(151, 151, 151, 0.352) 1px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  width: 30vw;
+  z-index: 200;
+  background-color: #002029;
+  overflow: hidden;
+  height: 10vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: toggle-usuario 6s ease-out 1 none ;
+ 
+}
+@keyframes toggle-usuario {
+  0%{
+    right: -40vw;
+  }
+  20%{
+    right: 0;
+  }
+  80%{
+    right: 0;
+  }
+  100%{
+    right: -40vw;
+  }
 
+}
+.animacion-bienvenida-usuario h5{
+  color: grey;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+}
+.animacion-bienvenida-usuario span{
+  flex: 1;
+  width: max-content;
+  max-width: 100%;
+  color: lime;
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+.animacion-bienvenida-usuario div{
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  background-color: lime;
+  left:5%;
+  top: 70%;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  animation: titilar linear 1s infinite;
+}
+@keyframes titilar {
+  0%{
+    background-color: white;
+  }
+  40%{background-color: lime;}
+  100%{background-color: rgba(0, 255, 0, 0.105);}
+  
 }
 /* HEADER */
 .App {
@@ -39,7 +104,7 @@ header {
   flex-direction: column;
   position: sticky;
   top: 0;
-  background-color:#002029 ;
+  background-color: #002029;
   z-index: 100;
 }
 header nav {
