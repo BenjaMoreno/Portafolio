@@ -10,8 +10,17 @@ import standart from "../../../IMAGES/SVG/PELADO.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
 
 export const Gestion = () => {
+const avatares=[astronaut,cientifica,barwoman,detective]
+
+
+
   const [usuarioState, setUsuarioState] = useState(null);
-  const [avatarState, setAvatarState] = useState(standart);
+  const [avatarState, setAvatarState] = useState(astronaut);
+  const [indiceAvatar,setIndiceAvatar]=useState(0);
+
+  //colores para avatar activo
+  const avatarActive='radial-gradient(rgba(255, 255, 255, 0.781),rgba(106, 106, 106, 0.339))'
+
   //Envío de datos al contexto
   var { setUsuario } = useContext(ContextUser);
 
@@ -53,6 +62,11 @@ export const Gestion = () => {
       
     }
   };
+  const clickAvatar=(img,index)=>{
+    setAvatarState(img);
+    setIndiceAvatar(index)
+  }
+  
   return (
     <section className="container-gestion">
       <h1 className="titulo-gestion">Gestión de Estado</h1>
@@ -77,26 +91,15 @@ export const Gestion = () => {
         </div>
         <h2>Elige tu avatar</h2>
         <div className="container-avatars">
-          <img
-            src={astronaut}
-            alt="Astronauta"
-            onClick={() => setAvatarState(astronaut)}
-          />
-          <img
-            src={detective}
-            alt="Detective"
-            onClick={() => setAvatarState(detective)}
-          />
-          <img
-            src={barwoman}
-            alt="Barwoman"
-            onClick={() => setAvatarState(barwoman)}
-          />
-          <img
-            src={cientifica}
-            alt="Científica"
-            onClick={() => setAvatarState(cientifica)}
-          />
+          {avatares.map((avatarImg,index)=>(
+            <img
+            src={avatarImg}
+            key={index}
+            onClick={() => clickAvatar(avatarImg,index)}
+            style={{background:indiceAvatar === index ? avatarActive : 'transparent',
+            }}
+            />
+          ))}
         </div>
       </form>
       <hr className="hr-estado" />

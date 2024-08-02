@@ -139,6 +139,7 @@
   width: 10%;
   height: auto;
   margin: auto;
+  border-radius: 50%;
 }
 .container-avatars img:hover{
   scale: 1.2;
