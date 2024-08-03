@@ -33,23 +33,56 @@ export const Formulario = () => {
         <div className="grid-container-form-verde">
           <div className="grid-item-form-verde compañia">
             <label className="label-titulo">COMPAÑÍA</label>
-            <input placeholder="nombre de la compañia" className="input-verde"/>
+            <input
+              placeholder="nombre de la compañia"
+              className="input-verde"
+            />
           </div>
           <div className="grid-item-form-verde pais">
             <label className="label-titulo">PAIS</label>
-            <input placeholder="pais de residencia" className="input-verde" />
+            <select>
+              <option>sfa</option>
+            </select>
           </div>
           <div className="grid-item-form-verde numero">
             <label className="label-titulo">CELULAR</label>
-            <input placeholder="numero movil"  className="input-verde"/>
+            <input placeholder="numero movil" className="input-verde"  type="tel"/>
           </div>
           <div className="grid-item-form-verde correo">
             <label className="label-titulo">CORREO</label>
-            <input placeholder="tu correo" className="input-verde"/>
+            <input placeholder="tu correo" className="input-verde" />
           </div>
-          <div className="grid-item-form-verde atencion"></div>
-          <div className="grid-item-form-verde reglamento1"></div>
-          <div className="grid-item-form-verde reglamento2"></div>
+          <div className="grid-item-form-verde atencion">
+            <label className="titulo-atencion">Calidad de atención:</label>
+            <label for="opcion1">
+              <input type="radio" id="opcion1" name="opciones" />
+              muy mala
+            </label>
+            <label for="opcion2">
+              <input type="radio" id="opcion2" name="opciones" />
+              mala
+            </label>
+            <label for="opcion3">
+              <input type="radio" id="opcion2" name="opciones" />
+              buena
+            </label>
+            <label for="opcion4">
+              <input type="radio" id="opcion2" name="opciones" />
+              muy buena
+            </label>
+          </div>
+          <div className="grid-item-form-verde reglamento1">
+            <label className="reglamentos">
+              <input type="checkbox" />
+              <span>Aceptar Reglamentos y condiciones uno</span>
+            </label>
+          </div>
+          <div className="grid-item-form-verde reglamento2">
+            <label className="reglamentos">
+              <input type="checkbox" />
+              <span>Aceptar Reglamentos y condiciones dos</span>
+            </label>
+          </div>
           <button>Enviar</button>
         </div>
       </form>

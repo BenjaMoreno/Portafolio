@@ -36,121 +36,172 @@
   padding: 2%;
   box-sizing: border-box;
 }
-.formulario h1{
-    text-align: center;
-    margin: 2%;
+.formulario h1 {
+  text-align: center;
+  margin: 2%;
 }
-.container-formularios input,.container-formularios textarea,.container-formularios select{
-    width: 90%;
-    max-width: 90%;
-    max-height: 15%;
-    margin: auto auto;
-    border-radius: 5px;
-    border: none;
-    font-size: 1.2rem;
+.container-formularios input:not(.grid-item-form-verde input),
+.container-formularios textarea,
+.container-formularios select {
+  width: 90%;
+  max-width: 90%;
+  max-height: 15%;
+  margin: auto auto;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
 }
-.container-formularios label{
-    font-size: 1.2rem;
-    padding-left: 3%;
+.container-formularios label {
+  font-size: 1.2rem;
+  padding-left: 3%;
 }
-.rosa{
-    background-color: palevioletred;
+.rosa {
+  background-color: palevioletred;
+}
+.verde {
+  background-color: rgb(1, 211, 145);
+  width: 90%;
+}
+.grid-container-form-verde {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-areas:
+    "compañia pais atencion"
+    "numero correo atencion"
+    "r1 r1 r1"
+    "r2 r2 btn";
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: repeat(2, 30%) repeat(2, 1fr);
+  grid-gap: 2%;
+}
+.grid-item-form-verde select {
+  margin: 5% auto;
+  border: solid green 2px;
+  border-radius: 50px;
+  width: 70%;
+  font-size: small;
+  background-color: rgb(189, 255, 219);
+}
+.grid-item-form-verde {
+  border: solid green 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  box-sizing: border-box;
+  color: #013612;
+}
+.grid-item-form-verde:hover{
+  background-color: #027e29;
+  scale: 1.009;
+  color: white;
+}
+.grid-item-form-verde .label-titulo {
+  margin: 5% auto;
+}
+.grid-item-form-verde .input-verde {
+  margin: 5% auto auto auto;
+  padding-left: 4%;
+  font-size: 1rem;
+  border: solid green 2px;
+  border-radius: 50px;
+  width: 70%;
+  background-color: rgb(189, 255, 219);
+}
 
+.grid-container-form-verde button {
+  grid-area: btn;
+  height: max-content;
+  width: max-content;
+  padding: 2% 3%;
+  margin: auto;
+  border: solid green 4px;
+  border-radius: 5px;
+  color: rgb(2, 96, 2);
+  font-size: medium;
+  font-family: inherit;
+  background-color: rgb(207, 240, 205);
+  cursor: pointer;
 }
-.verde{
-    background-color: rgb(1, 211, 145);
-    width: 90%;
+.grid-container-form-verde button:hover {
+  background-color: green;
+  color: white;
 }
-.grid-container-form-verde{
-    width: 100%;
-    flex: 1;
-    display: grid;
-    grid-template-areas:
-    'compañia pais atencion'
-    'numero correo atencion'
-    'r1 r1 r1'
-    'r2 r2 btn';
-    grid-template-columns:repeat(3,32%);
-    grid-template-rows: repeat(2,30%) repeat(2,1fr);
-    grid-gap: 2%;
+.compañia {
+  grid-area: compañia;
 }
-
-.grid-item-form-verde{
-    border: solid green 2px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    box-sizing: border-box;
+.pais {
+  grid-area: pais;
 }
-.grid-item-form-verde .label-titulo{
-    margin: 5% auto;
+.numero {
+  grid-area: numero;
 }
-.grid-item-form-verde .input-verde{
-    margin: 0 auto auto auto;
-    padding-left: 4%;
-    font-size: 1rem;
+.correo {
+  grid-area: correo;
 }
-
-.grid-container-form-verde button{
-    grid-area: btn;
-    height: max-content;
-    width: max-content;
-    padding: 2% 3%;
-    margin: auto;
-    border: solid green 4px;
-    border-radius: 5px;
-    color: rgb(2, 96, 2);
-    font-size:medium;
-    font-family: inherit;
-    background-color: rgb(207, 240, 205);
+.atencion {
+  grid-area: atencion;
+  display: grid;
+  grid-template-areas:
+    "titulo titulo"
+    "o1 o2"
+    "o3 o4";
+  grid-template-columns: 1fr 1fr;
+}
+.atencion label:not(.titulo-atencion) {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  font-size: 1rem;
+  
+}
+.atencion label input,.atencion label {
     cursor: pointer;
+
 }
-.grid-container-form-verde button:hover{
-    background-color: green;
-    color: white;
+.titulo-atencion {
+  grid-area: titulo;
 }
-.compañia{
-    grid-area: compañia;
+.reglamento1 {
+  grid-area: r1;
 }
-.pais{
-    grid-area: pais;
-}
-.numero{
-    grid-area: numero;
-}
-.correo{
-    grid-area: correo;
-}
-.atencion{
-    grid-area: atencion;
-}
-.reglamento1{
-    grid-area: r1;
-}
-.reglamento2{
-    grid-area: r2;
+.reglamento2 {
+  grid-area: r2;
 }
 
-.rosa select{
-    width: 90%;
-    margin:  auto;
+.rosa select {
+  width: 90%;
+  margin: auto;
 }
-.rosa button{
-    width: max-content;
-    height: max-content;
-    margin: auto;
-    border: solid rgb(151, 0, 0) 4px;
-    border-radius: 5px;
-    color: rgb(151, 0, 0);
-    background-color: rgb(255, 235, 235);
-    font-size:medium;
-    font-family: inherit;
-    cursor:pointer
+.rosa button {
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  border: solid rgb(151, 0, 0) 4px;
+  border-radius: 5px;
+  color: rgb(151, 0, 0);
+  background-color: rgb(255, 235, 235);
+  font-size: medium;
+  font-family: inherit;
+  cursor: pointer;
 }
-.rosa button:hover{
-    color: white;
-    background-color:rgb(151, 0, 0) ;
-    
+.rosa button:hover {
+  color: white;
+  background-color: rgb(151, 0, 0);
+}
+.reglamento1,
+.reglamento2 {
+  position: relative;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+.reglamentos {
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem !important;
+  color: rgb(65, 65, 65);
+  padding-left: 10px !important;
 }
