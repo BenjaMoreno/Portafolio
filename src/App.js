@@ -15,7 +15,7 @@ function App() {
   // ESTADO CONTEXT USUARIO
   const [usuario, setUsuario] = useState(null);
   const [estadoAnimacion, setEstadoAnimacion] = useState({
-    usuario: "",
+    usuario: "inicia sesíon",
     avatar: "",
   });
   useEffect(() => {
@@ -70,6 +70,10 @@ function App() {
             <div className="container-hrs-header">
               <hr className="hr-header"></hr>
               <hr className="hr-header"></hr>
+            </div>
+            <div className="usuario-activo">
+              <span>{estadoAnimacion.usuario}</span>
+              <img src={estadoAnimacion.avatar}/>
             </div>
           </header>
           <main>

@@ -40,32 +40,30 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  animation: toggle-usuario 6s ease-out 1 none ;
- 
+  animation: toggle-usuario 6s ease-out 1 none;
 }
 @keyframes toggle-usuario {
-  0%{
+  0% {
     right: -40vw;
   }
-  20%{
+  20% {
     right: 0;
   }
-  80%{
+  80% {
     right: 0;
   }
-  100%{
+  100% {
     right: -40vw;
   }
-
 }
-.animacion-bienvenida-usuario h5{
+.animacion-bienvenida-usuario h5 {
   color: grey;
   display: flex;
   align-items: center;
   flex: 1;
   margin: 0;
 }
-.animacion-bienvenida-usuario span{
+.animacion-bienvenida-usuario span {
   flex: 1;
   width: max-content;
   max-width: 100%;
@@ -73,24 +71,27 @@
   font-size: 1.5rem;
   font-family: monospace;
 }
-.animacion-bienvenida-usuario div{
+.animacion-bienvenida-usuario div {
   height: 10px;
   width: 10px;
   position: absolute;
   background-color: lime;
-  left:5%;
+  left: 5%;
   top: 70%;
   border-radius: 10px;
   transform: translateY(-50%);
   animation: titilar linear 1s infinite;
 }
 @keyframes titilar {
-  0%{
+  0% {
     background-color: white;
   }
-  40%{background-color: lime;}
-  100%{background-color: rgba(0, 255, 0, 0.105);}
-  
+  40% {
+    background-color: lime;
+  }
+  100% {
+    background-color: rgba(0, 255, 0, 0.105);
+  }
 }
 /* HEADER */
 .App {
@@ -178,6 +179,30 @@ header nav ul li {
   left: 50%;
   top: 14vh;
   transform: translate(-50%, -50%);
+}
+.usuario-activo {
+  width: max-content;
+  padding: 0 20px;
+  height: 40px;
+  position: absolute;
+  right: 20%;
+  bottom: -40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: lime;
+  font-family: monospace;
+  font-size: 1.4rem;
+  border: solid lime 2px;
+  border-radius: 50px;
+  border-top:none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #002029;
+}
+.usuario-activo img {
+  height: 100%;
+  width: auto;
 }
 /* MAIN */
 /* FOOTER */

@@ -13,7 +13,7 @@
 .titulo-habilidad {
   border: solid 2px rgb(192, 192, 192);
   width: max-content;
-  margin: 25vh auto 10vh auto;
+  margin: 0 auto 10vh auto;
   font-size: 3rem;
   color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;

@@ -4,6 +4,7 @@ import { ReactComponent as Flecha } from "../../IMAGES/SVG/FLECHA-ANIMADA.svg";
 import { Apis } from "../../COMPONENTES/frontend pro/APIS/Apis";
 import { Gestion } from "../../COMPONENTES/frontend pro/GESTION DE ESTADO/Gestion";
 import { ComposR } from "../../COMPONENTES/frontend pro/COMPOS REUTILIZABLES/ComposR";
+import { Formulario } from "../../COMPONENTES/frontend pro/FORMULARIOS/Formulario";
 export const FrontendPro = () => {
   // DESACTIVAR FLECHA ANIMADA
   useEffect(() => {
@@ -30,7 +31,7 @@ export const FrontendPro = () => {
       <Gestion/>
       <ComposR/>
       <Apis/>
-      
+      <Formulario/>
     </div>
   );
 };

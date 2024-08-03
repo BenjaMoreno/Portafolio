@@ -1,17 +1,19 @@
 .container-compos-reutilizables{
     width: 100%;
     min-width: 100%;
-    height: auto;
+    height: 140vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+
 }
 .container-compos{
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: auto;
+    width: 70%;
+    height: 100vh;  
+
 }
 .container-compos-reutilizables h1{
     font-size: 3rem;
@@ -22,4 +24,5 @@
     border:solid 2px rgb(192, 192, 192);
     border-radius: 100px;
     padding: 2% 3%;
+    margin: 0;
 }

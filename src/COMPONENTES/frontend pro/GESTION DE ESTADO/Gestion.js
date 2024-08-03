@@ -2,24 +2,23 @@ import React, { useContext, useState } from "react";
 import "./Gestion.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import astronaut from "../../../IMAGES/SVG/ASTRONAUT.svg";
-import detective from "../../../IMAGES/SVG/DETECTIVE.svg";
-import barwoman from "../../../IMAGES/SVG/BARWOMAN.svg";
-import cientifica from "../../../IMAGES/SVG/CIENTIFICA.svg";
-import standart from "../../../IMAGES/SVG/PELADO.svg";
+import calculador from "../../../IMAGES/SVG/ABACO.svg";
+import social from "../../../IMAGES/SVG/SELFIE.svg";
+import creativo from "../../../IMAGES/SVG/BRUSH.svg";
+import practico from "../../../IMAGES/SVG/LLAVE.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
 
 export const Gestion = () => {
-const avatares=[astronaut,cientifica,barwoman,detective]
+const avatares=[practico,creativo,social,calculador]
 
 
 
   const [usuarioState, setUsuarioState] = useState(null);
-  const [avatarState, setAvatarState] = useState(astronaut);
+  const [avatarState, setAvatarState] = useState(practico);
   const [indiceAvatar,setIndiceAvatar]=useState(0);
 
   //colores para avatar activo
-  const avatarActive='radial-gradient(rgba(255, 255, 255, 0.781),rgba(106, 106, 106, 0.339))'
+  const avatarActive='radial-gradient(lime,rgba(0, 255, 0, 0.455))'
 
   //Envío de datos al contexto
   var { setUsuario } = useContext(ContextUser);
@@ -80,7 +79,7 @@ const avatares=[astronaut,cientifica,barwoman,detective]
             value={formik.values.usuario}
             onChange={handleChange} 
             onBlur={formik.handleBlur}
-            maxLength={23}
+            maxLength={20}
           />
           {formik.errors.usuario && formik.touched.usuario && (
             <span>{formik.errors.usuario}</span>
