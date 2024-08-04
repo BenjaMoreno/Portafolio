@@ -79,7 +79,7 @@ const avatares=[practico,creativo,social,calculador]
             value={formik.values.usuario}
             onChange={handleChange} 
             onBlur={formik.handleBlur}
-            maxLength={20}
+            maxLength={13}
           />
           {formik.errors.usuario && formik.touched.usuario && (
             <span>{formik.errors.usuario}</span>
@@ -106,6 +106,7 @@ const avatares=[practico,creativo,social,calculador]
         <div className="caja-flex-estado">
           Usuario:&nbsp;&nbsp;<span>{usuarioState}</span>
         </div>
+        <div className="divisor-flex"></div>
         <div className="caja-flex-estado">
           Avatar:&nbsp;&nbsp;&nbsp;&nbsp;
           <img src={avatarState} alt="Astronauta" />
