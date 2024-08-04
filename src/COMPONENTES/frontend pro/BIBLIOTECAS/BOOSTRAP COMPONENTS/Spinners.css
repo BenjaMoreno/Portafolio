@@ -1,0 +1,13 @@
+.container-spinners{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.separador-spinners{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+}

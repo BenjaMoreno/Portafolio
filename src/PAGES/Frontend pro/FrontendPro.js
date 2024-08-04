@@ -5,6 +5,7 @@ import { Apis } from "../../COMPONENTES/frontend pro/APIS/Apis";
 import { Gestion } from "../../COMPONENTES/frontend pro/GESTION DE ESTADO/Gestion";
 import { ComposR } from "../../COMPONENTES/frontend pro/COMPOS REUTILIZABLES/ComposR";
 import { Formulario } from "../../COMPONENTES/frontend pro/FORMULARIOS/Formulario";
+import { Bibliotecas } from "../../COMPONENTES/frontend pro/BIBLIOTECAS/Bibliotecas";
 export const FrontendPro = () => {
   // DESACTIVAR FLECHA ANIMADA
   useEffect(() => {
@@ -32,6 +33,7 @@ export const FrontendPro = () => {
       <ComposR/>
       <Apis/>
       <Formulario/>
+      <Bibliotecas/>
     </div>
   );
 };
