@@ -11,9 +11,10 @@
 .container-compos{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 70%;
     height: 100vh;  
-
+    padding: 5vh 0;
 }
 .container-compos-reutilizables h1{
     font-size: 4rem;
@@ -24,5 +25,5 @@
     border:solid 2px rgb(192, 192, 192);
     border-radius: 100px;
     padding: 2% 3%;
-    margin: 0;
+    margin: 0 0 10vh 0;
 }

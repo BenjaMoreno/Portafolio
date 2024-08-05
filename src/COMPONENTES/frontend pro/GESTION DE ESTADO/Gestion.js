@@ -68,7 +68,9 @@ const avatares=[practico,creativo,social,calculador]
   
   return (
     <section className="container-gestion">
-      <h1 className="titulo-gestion">Gestión de Estado</h1>
+      <h1 className="titulo-gestion">Gestión de Estado
+      </h1>
+      
       <form className="form-estado" onSubmit={formik.handleSubmit}>
         <h1>Crea un usuario</h1>
         <div className="container-input-btn">

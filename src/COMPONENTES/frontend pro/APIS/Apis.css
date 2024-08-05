@@ -13,8 +13,8 @@
 .titulo-habilidad {
   border: solid 2px rgb(192, 192, 192);
   width: max-content;
-  margin: 0 auto 10vh auto;
-  font-size: 3rem;
+  margin: 10vh auto 10vh auto;
+  font-size: 4rem;
   color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -28,7 +28,6 @@
   justify-content: center;
   align-items: center;
   background-color: #002029;
-  border-top: solid rgba(220, 220, 220, 0.368) 1px;
   box-sizing: border-box;
 }
 

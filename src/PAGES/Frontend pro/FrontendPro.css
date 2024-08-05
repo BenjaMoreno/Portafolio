@@ -32,6 +32,11 @@
   height: 100px;
   animation: rebote 1s ease-in-out infinite;
 }
+.separador-secciones{
+  color: aliceblue;
+  width: 80%;
+  margin: auto;
+}
 @keyframes rebote {
   0% {
     bottom: 50px;

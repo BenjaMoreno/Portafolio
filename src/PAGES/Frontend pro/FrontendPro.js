@@ -30,9 +30,16 @@ export const FrontendPro = () => {
         <Flecha className="flecha-animada" />
       </h1>
       <Gestion/>
+      <hr className="separador-secciones"></hr>
       <ComposR/>
+      <hr className="separador-secciones"></hr>
+
       <Apis/>
+      <hr className="separador-secciones"></hr>
+
       <Formulario/>
+      <hr className="separador-secciones"></hr>
+
       <Bibliotecas/>
     </div>
   );

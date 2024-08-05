@@ -1,6 +1,6 @@
 .compo {
   width: 100%;
-  margin-top: auto;
+  /* margin-top: auto; */
   height: 20%;
   display: flex;
   transition: transform 0.3s ease-out;
@@ -8,6 +8,7 @@
 .compo:hover{
   scale: 1.04;
   transform: scale(1.1);
+  cursor: pointer;
 }
 .nombre-compo {
   flex: 2;

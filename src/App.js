@@ -15,7 +15,7 @@ function App() {
   // ESTADO CONTEXT USUARIO
   const [usuario, setUsuario] = useState(null);
   const [estadoAnimacion, setEstadoAnimacion] = useState({
-    usuario: "inicia sesíon",
+    usuario: "estado",
     avatar: "",
   });
   useEffect(() => {

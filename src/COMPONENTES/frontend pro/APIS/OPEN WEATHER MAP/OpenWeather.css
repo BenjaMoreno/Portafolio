@@ -14,7 +14,7 @@
 }
 .separador-weather h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -24,12 +24,13 @@
   width: 70%;
   background-color: #002029;
   border-radius: 50px;
-  height: 30px;
+  height: 50px;
   margin: auto;
   color: #FFA500;
   text-align: center;
   font-size: 1.6rem;
-  border: solid grey 3px;
+  border: solid rgb(0, 251, 255) 3px;
+  box-shadow: 0 0 6px 1px rgb(0, 251, 255);
 }
 .separador-weather button {
   margin: auto;
@@ -41,6 +42,12 @@
   position: relative;
   font-size: 1rem;
   color: black;
+  border: 2px solid black;
+}
+.separador-weather button:hover{
+  background-color: #002029;
+  border-color: #FFA500;
+  color: #FFA500;
 }
 .weather img {
   flex: 1;

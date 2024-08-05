@@ -11,7 +11,7 @@
 }
 .separador-pokemon h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: rgb(192, 192, 192);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -21,8 +21,9 @@
   width: 70%;
   background-color: #011920;
   border-radius: 50px;
-  height: 30px;
-  border: solid grey 3px;
+  height: 50px;
+  border: solid yellow 3px;
+  box-shadow: 0 0 6px 1px yellow;
   margin: auto;
   color: greenyellow;
   text-align: center;
@@ -38,6 +39,11 @@
   position: relative;
   font-size: 1rem;
   color: black;
+}
+.separador-pokemon button:hover{
+  background-color: rgba(0, 0, 0, 0.086);
+  border-color: yellow;
+  color: yellow;
 }
 .pokemon {
   flex-direction: row;
