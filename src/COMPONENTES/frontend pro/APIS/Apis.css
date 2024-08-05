@@ -37,6 +37,6 @@
   font-style: italic;
 }
 .fondo-noticias {
-  padding: 0 0 40px 0;
-  height: 100vh;
+  height: 80vh;
+  width: 100%;
 }

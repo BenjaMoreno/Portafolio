@@ -150,6 +150,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
 .container-avatars img:hover {
   scale: 1.2;
 }

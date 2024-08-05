@@ -1,5 +1,6 @@
 .container-formularios {
   box-sizing: border-box;
+  margin-top: 50vh;
   height: 100vh;
   width: 100%;
   display: grid;
@@ -84,7 +85,7 @@
   background-color: rgb(189, 255, 219);
 }
 .grid-item-form-verde {
-  border: solid green 2px;
+  border: solid rgba(0, 128, 0, 0.488) 2px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;

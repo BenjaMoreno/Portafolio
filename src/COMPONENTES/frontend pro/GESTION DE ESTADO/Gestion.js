@@ -9,16 +9,19 @@ import practico from "../../../IMAGES/SVG/LLAVE.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
 
 export const Gestion = () => {
-const avatares=[practico,creativo,social,calculador]
-
-
+  const avatares = [practico, creativo, social, calculador];
 
   const [usuarioState, setUsuarioState] = useState(null);
   const [avatarState, setAvatarState] = useState(practico);
-  const [indiceAvatar,setIndiceAvatar]=useState(0);
+  const [indiceAvatar, setIndiceAvatar] = useState(0);
 
-  //colores para avatar activo
-  const avatarActive='radial-gradient(lime,rgba(0, 255, 0, 0.455))'
+  const clickAvatar = (img, index) => {
+    setAvatarState(img);
+    setIndiceAvatar(index);
+  };
+
+  //color para avatar activo
+  const avatarActive = "inset 0 0 20px 1px lime";
 
   //Envío de datos al contexto
   var { setUsuario } = useContext(ContextUser);
@@ -29,7 +32,7 @@ const avatares=[practico,creativo,social,calculador]
       usuario: "",
     },
     validationSchema: Yup.object().shape({
-      usuario: Yup.string('Porfavor ,ingresa texto')
+      usuario: Yup.string("Porfavor ,ingresa texto")
         .max(10, "Demasiado largo")
         .required("Crea cualquier palabra"),
     }),
@@ -58,19 +61,13 @@ const avatares=[practico,creativo,social,calculador]
         avatar: avatarState,
       };
       setUsuario(objetoUsuario);
-      
     }
   };
-  const clickAvatar=(img,index)=>{
-    setAvatarState(img);
-    setIndiceAvatar(index)
-  }
-  
+
   return (
     <section className="container-gestion">
-      <h1 className="titulo-gestion">Gestión de Estado
-      </h1>
-      
+      <h1 className="titulo-gestion">Gestión de Estado</h1>
+
       <form className="form-estado" onSubmit={formik.handleSubmit}>
         <h1>Crea un usuario</h1>
         <div className="container-input-btn">
@@ -79,7 +76,7 @@ const avatares=[practico,creativo,social,calculador]
             placeholder="estado..."
             name="usuario"
             value={formik.values.usuario}
-            onChange={handleChange} 
+            onChange={handleChange}
             onBlur={formik.handleBlur}
             maxLength={13}
           />
@@ -92,13 +89,14 @@ const avatares=[practico,creativo,social,calculador]
         </div>
         <h2>Elige tu avatar</h2>
         <div className="container-avatars">
-          {avatares.map((avatarImg,index)=>(
+          {avatares.map((avatarImg, index) => (
             <img
-            src={avatarImg}
-            key={index}
-            onClick={() => clickAvatar(avatarImg,index)}
-            style={{background:indiceAvatar === index ? avatarActive : 'transparent',
-            }}
+              src={avatarImg}
+              key={index}
+              onClick={() => clickAvatar(avatarImg, index)}
+              style={{
+                boxShadow: indiceAvatar === index ? avatarActive : "none",
+              }}
             />
           ))}
         </div>
