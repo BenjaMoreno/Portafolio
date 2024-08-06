@@ -34,9 +34,17 @@
   animation: rebote 1s ease-in-out infinite;
 }
 .separador-secciones{
-  color: aliceblue;
-  width: 80%;
   margin: auto;
+  height: 1px;
+  width: 80%;
+  border: none;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    rgb(181, 177, 177),
+    rgb(239, 239, 239),
+    rgba(77, 77, 77, 0.701),
+    rgba(48, 48, 70, 0.678)
+  );
 }
 @keyframes rebote {
   0% {
