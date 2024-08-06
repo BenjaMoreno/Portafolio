@@ -18,6 +18,10 @@
   height: 80%;
   border: lightskyblue 3px solid;
   overflow: hidden;
+  transition: transform 0.2s ;
+}
+.new-item:hover{
+  transform: scale(1.1);
 }
 .new-item h1 {
   height: 10%;

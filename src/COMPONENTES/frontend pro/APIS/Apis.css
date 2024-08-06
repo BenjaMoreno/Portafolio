@@ -23,11 +23,9 @@
   padding: 2% 3%;
 }
 .api-elemento {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #002029;
+  height: 90vh;
+  width: 100%;
+  
   box-sizing: border-box;
 }
 

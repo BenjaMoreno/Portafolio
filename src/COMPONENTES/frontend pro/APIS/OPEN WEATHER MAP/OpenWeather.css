@@ -1,12 +1,13 @@
 .consulta-weather {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
 }
 .separador-weather {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .weather {
@@ -22,18 +23,17 @@
 }
 .separador-weather input {
   width: 70%;
+  margin: 5% 0;
   background-color: #002029;
   border-radius: 50px;
   height: 50px;
-  margin: auto;
-  color: #FFA500;
+  color: #ffa500;
   text-align: center;
   font-size: 1.6rem;
   border: solid rgb(0, 251, 255) 3px;
   box-shadow: 0 0 6px 1px rgb(0, 251, 255);
 }
 .separador-weather button {
-  margin: auto;
   border-radius: 50px;
   padding: 10px 30px;
   font-family: "Poppins", sans-serif;
@@ -44,27 +44,36 @@
   color: black;
   border: 2px solid black;
 }
-.separador-weather button:hover{
+.separador-weather button:hover {
   background-color: #002029;
-  border-color: #FFA500;
-  color: #FFA500;
+  border-color: #ffa500;
+  color: #ffa500;
 }
 .weather img {
-  flex: 1;
-  margin: auto;
-  width: 40%;
+  width: auto;
+  margin: auto 0 auto 0;
+  height: 80%;
 }
 .container-datos-weather {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   height: 100%;
+  display: grid;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 20% 10%;
+  box-shadow: 0 0 100px rgba(128, 128, 128, 0.217);
 }
 .dato-weather {
   flex: 1;
   display: flex;
   align-items: center;
 }
+.dato-weather:nth-child(1) {
+  grid-column: 1/4;
+}
+
 .dato-weather span {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -73,6 +82,7 @@
   color: rgb(205, 205, 205);
   font-size: 1rem;
   text-align: left;
+  margin: auto;
 }
 .dato-weather strong {
   font-family: "Lilita One", sans-serif;
