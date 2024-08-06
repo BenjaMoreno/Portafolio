@@ -4,7 +4,7 @@ import "./Formulario.css";
 export const Formulario = () => {
   return (
     <section className="container-formularios">
-      <h1 className="titulo-formularios">Validacion de Formularios</h1>
+      <h1 className="titulo-formularios">Validación de Formularios</h1>
       <form action="" className="formulario rosa">
         <h1>Formulario 1</h1>
         <label>Nombre:</label>

@@ -12,7 +12,8 @@
   align-items: center;
 }
 .weather {
-  flex-direction: row;
+  flex-direction: row; 
+  height: 90%;
 }
 .separador-weather h1 {
   text-align: center;
@@ -57,7 +58,7 @@
 }
 .container-datos-weather {
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: grid;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;

@@ -37,7 +37,6 @@ export const FrontendPro = () => {
       <Apis/>
 
       <Formulario/>
-      <hr className="separador-secciones"></hr>
 
       <Bibliotecas/>
     </div>
