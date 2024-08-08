@@ -7,14 +7,14 @@ export const Formulario = () => {
       <h1 className="titulo-formularios">Validación de Formularios</h1>
       <form action="" className="formulario rosa">
         <h1>Formulario 1</h1>
-        <label>Nombre:</label>
-        <input placeholder="nombre" type="text" />
-        <label>Tu correo:</label>
-        <input placeholder="correo" type="email" />
-        <label>Tu celular:</label>
-        <input placeholder="numero celular" type="tel" />
-        <label>Comentarios:</label>
-        <textarea></textarea>
+        <label htmlFor="nombre">Nombre:</label>
+        <input placeholder="nombre" type="text" id="nombre" name="nombre" />
+        <label htmlFor="email">Tu correo:</label>
+        <input placeholder="correo" type="email" id="" name="email" />
+        <label htmlFor="celular">Tu celular:</label>
+        <input placeholder="numero celular" type="tel" id="" htmlFor='celular' />
+        <label htmlFor="comentarios">Comentarios:</label>
+        <textarea name="comentarios"></textarea>
         <label>Tu genero:</label>
         <select>
           <option>Hombre</option>
@@ -36,6 +36,7 @@ export const Formulario = () => {
             <input
               placeholder="nombre de la compañia"
               className="input-verde"
+              id=""
             />
           </div>
           <div className="grid-item-form-verde pais">
@@ -46,41 +47,46 @@ export const Formulario = () => {
           </div>
           <div className="grid-item-form-verde numero">
             <label className="label-titulo">CELULAR</label>
-            <input placeholder="numero movil" className="input-verde"  type="tel"/>
+            <input
+              placeholder="numero movil"
+              className="input-verde"
+              type="tel"
+              id=""
+            />
           </div>
           <div className="grid-item-form-verde correo">
             <label className="label-titulo">CORREO</label>
-            <input placeholder="tu correo" className="input-verde" />
+            <input placeholder="tu correo" className="input-verde" id="" />
           </div>
           <div className="grid-item-form-verde atencion">
-            <label className="titulo-atencion">Calidad de atención:</label>
-            <label for="opcion1">
+            <h5 className="titulo-atencion">Calidad de atención:</h5>
+            <label htmlFor="opcion1">
               <input type="radio" id="opcion1" name="opciones" />
               muy mala
             </label>
-            <label for="opcion2">
+            <label htmlFor="opcion3">
               <input type="radio" id="opcion2" name="opciones" />
               mala
             </label>
-            <label for="opcion3">
-              <input type="radio" id="opcion2" name="opciones" />
+            <label htmlFor="opcion3">
+              <input type="radio" id="opcion3" name="opciones" />
               buena
             </label>
-            <label for="opcion4">
-              <input type="radio" id="opcion2" name="opciones" />
+            <label htmlFor="opcion4">
+              <input type="radio" id="opcion4" name="opciones" />
               muy buena
             </label>
           </div>
           <div className="grid-item-form-verde reglamento1">
-            <label className="reglamentos">
-              <input type="checkbox" />
-              <span>Aceptar Reglamentos y condiciones uno</span>
+            <input type="checkbox" name="reglamento1" id="" />
+            <label className="reglamentos" htmlFor="reglamento1">
+              Aceptar Reglamentos y condiciones uno
             </label>
           </div>
           <div className="grid-item-form-verde reglamento2">
-            <label className="reglamentos">
-              <input type="checkbox" />
-              <span>Aceptar Reglamentos y condiciones dos</span>
+            <input type="checkbox" name="reglamento2" id="" />
+            <label className="reglamentos" htmlFor="reglamento2">
+              Aceptar Reglamentos y condiciones dos
             </label>
           </div>
           <button>Enviar</button>

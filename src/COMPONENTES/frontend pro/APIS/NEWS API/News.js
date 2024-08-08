@@ -5,19 +5,31 @@ export const News = () => {
   const [noticias, setNoticias] = useState([]);
 
   useEffect(() => {
-    const consultarNews = async () => {
+    const consultarNews = () => {
       const url =
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=1b50ac1a21a7493aa81e780d7f9ea2ee";
-      const respuesta = await fetch(url);
-      const data = await respuesta.json();
+        "https://api.worldnewsapi.com/top-news?source-country=us&language=en&date=2024-05-29";
+      const apiKey = "0d9c07c2f4f34493a417f083b652d606";
 
-      const arrayNoticias = data.articles.slice(0, 4).map((article) => ({
-        autor: article.author,
-        img: article.urlToImage,
-        fecha: article.publishedAt,
-        p: article.title,
-      }));
-      setNoticias(arrayNoticias);
+      fetch(url, {
+        method: "GET",
+        headers: {
+          "x-api-key": apiKey,
+        },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const newsArray = data.top_news[0].news;
+          console.log(newsArray);
+          setNoticias(newsArray);
+        })
+        .catch((error) =>
+          console.error("There was a problem with the fetch operation:", error)
+        );
     };
     consultarNews();
   }, []);
@@ -28,18 +40,18 @@ export const News = () => {
         Noticias principales y actuales en Estados Unidos
       </h1>
       <div className="news-container">
-        {noticias.map((noticia, index) => (
+        {noticias.slice(0, 4).map((noticia, index) => (
           <div className="new-item" key={index}>
-            <h1>{noticia.autor || "Autor desconocido"}</h1>
+            <h1>{noticia.author || "Autor desconocido"}</h1>
             <img
-              src={noticia.img === null ? news_icon : noticia.img}
-              alt={noticia.titulo}
+              src={noticia.image === null ? news_icon : noticia.image}
+              alt={""}
             />
             <h5>
               <span>fecha de publicación:&nbsp;&nbsp;</span>
-              {new Date(noticia.fecha).toLocaleDateString()}
+              {new Date(noticia.publish_date).toLocaleDateString()}
             </h5>
-            <p>{noticia.p}</p>
+            <p>{noticia.title}</p>
           </div>
         ))}
       </div>
