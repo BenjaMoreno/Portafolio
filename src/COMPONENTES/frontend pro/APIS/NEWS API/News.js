@@ -33,7 +33,14 @@ export const News = () => {
     };
     consultarNews();
   }, []);
-
+  const mostrarNoticia = (indice) => {
+    var nodeListTextNews = document.querySelectorAll(".texto-noticia");
+    nodeListTextNews.forEach((cajaTexto,index)=>{
+      if(index === indice){
+        cajaTexto.style.display='block'
+      }
+    })
+  };
   return (
     <article className="container-news-main">
       <h1 className="titulo-news">
@@ -41,7 +48,7 @@ export const News = () => {
       </h1>
       <div className="news-container">
         {noticias.slice(0, 4).map((noticia, index) => (
-          <div className="new-item" key={index}>
+          <div className="new-item" key={index} onClick={()=>mostrarNoticia(index)}>
             <h1>{noticia.author || "Autor desconocido"}</h1>
             <img
               src={noticia.image === null ? news_icon : noticia.image}
@@ -52,6 +59,7 @@ export const News = () => {
               {new Date(noticia.publish_date).toLocaleDateString()}
             </h5>
             <p>{noticia.title}</p>
+            <div className="texto-noticia">alskf</div>
           </div>
         ))}
       </div>

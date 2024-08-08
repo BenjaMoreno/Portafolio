@@ -12,7 +12,12 @@ export const Formulario = () => {
         <label htmlFor="email">Tu correo:</label>
         <input placeholder="correo" type="email" id="" name="email" />
         <label htmlFor="celular">Tu celular:</label>
-        <input placeholder="numero celular" type="tel" id="" htmlFor='celular' />
+        <input
+          placeholder="numero celular"
+          type="tel"
+          id=""
+          htmlFor="celular"
+        />
         <label htmlFor="comentarios">Comentarios:</label>
         <textarea name="comentarios"></textarea>
         <label>Tu genero:</label>
@@ -25,11 +30,6 @@ export const Formulario = () => {
       </form>
       <form action="" className="formulario verde">
         <h1>Formulario 2</h1>
-        {/* calidad de atencion
-        compañia
-        numero telefono
-        pais
-        reglamentos x2 */}
         <div className="grid-container-form-verde">
           <div className="grid-item-form-verde compañia">
             <label className="label-titulo">COMPAÑÍA</label>

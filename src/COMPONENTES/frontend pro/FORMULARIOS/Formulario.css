@@ -28,7 +28,7 @@
   margin: auto;
   height: 80%;
   width: 70%;
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -45,23 +45,23 @@
 .container-formularios input:not(.grid-item-form-verde input),
 .container-formularios textarea,
 .container-formularios select {
-  width: 95%;
-  max-width: 95%;
-  max-height: 15%;
-  margin: auto auto;
+  width: 80%;
   border-radius: 5px;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.2rem; 
+  margin: auto;
+
 }
 .container-formularios label {
-  font-size: 1.2rem;
-  padding-left: 3%;
+  font-size: 1rem;
+  margin:1% 0;
+  text-align: center;
 }
 .rosa {
   background-color: palevioletred;
 }
 .verde {
-  background-color: rgb(1, 211, 145);
+  background-color: rgb(1, 211, 134);
   width: 90%;
 }
 .grid-container-form-verde {
@@ -78,10 +78,10 @@
   grid-gap: 2%;
 }
 .grid-item-form-verde select {
-  margin: 5% auto;
+  margin:auto;
   border: solid green 2px;
-  border-radius: 50px;
-  width: 70%;
+  border-radius: 5px;
+  width: 85%;
   font-size: small;
   background-color: rgb(189, 255, 219);
 }
@@ -90,27 +90,28 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2%;
-  box-sizing: border-box;
   color: #013612;
 }
 .grid-item-form-verde:hover {
-  background-color: #027e29;
+  background-color:  rgba(51, 154, 35, 0.792);
   scale: 1.009;
   color: white;
 }
 .grid-item-form-verde .label-titulo {
-  margin: 5% auto;
+  margin: 5% auto; 
+  width: 100%;
+  padding-left: 4%;
 }
 .grid-item-form-verde .input-verde {
-  margin: 5% auto auto auto;
+  margin: 0 auto;
   padding-left: 4%;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: solid green 2px;
-  border-radius: 50px;
-  width: 70%;
-  background-color: rgb(189, 255, 219);
+  border-radius: 5px;
+  height: 30%;
+  width: 85%;
+  background-color: rgb(189, 255, 219); 
+  cursor: pointer;
 }
 
 .grid-container-form-verde button {
@@ -151,19 +152,29 @@
     "o1 o2"
     "o3 o4";
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30% 1fr 1fr ;
 }
-.atencion label:not(.titulo-atencion) {
+.atencion label{
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  font-size: 1rem;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+
 }
 .atencion label input,
 .atencion label {
   cursor: pointer;
+
 }
 .titulo-atencion {
   grid-area: titulo;
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .reglamento1 {
@@ -175,12 +186,16 @@
 
 .rosa select {
   width: 90%;
+}
+
+.rosa input{
+  height: 8%;
   margin: auto;
 }
 .rosa button {
   width: max-content;
   height: max-content;
-  margin: auto;
+  margin: 2% auto 0 auto;
   border: solid rgb(151, 0, 0) 4px;
   border-radius: 5px;
   color: rgb(151, 0, 0);
@@ -195,15 +210,16 @@
 }
 .reglamento1,
 .reglamento2 {
-  position: relative;
-  display: flex;
-  padding: 0;
-  justify-content: center;
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ padding: 0 0 0 10px;
 }
 .reglamentos {
-  position: absolute;
-  left: 0;
   font-size: 0.8rem !important;
   color: rgb(65, 65, 65);
-  padding-left: 10px !important;
+  margin: 0 10px !important;
+}
+.pais select{
+  height: 30%;
 }

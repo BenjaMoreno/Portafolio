@@ -50,7 +50,7 @@
 .pokemon {
   flex-direction: row;
   height: 90%;
-  box-shadow: 0 0 50px rgba(169, 218, 7, 0.788);
+  box-shadow: 0 0 50px rgba(169, 218, 7, 0.283);
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%; 
 
