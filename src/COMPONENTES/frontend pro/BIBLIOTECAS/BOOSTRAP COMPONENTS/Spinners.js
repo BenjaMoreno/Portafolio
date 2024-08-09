@@ -1,10 +1,9 @@
 import Spinner from "react-bootstrap/Spinner";
 import "./Spinners.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { Button } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 
 function Spinners() {
-  
   return (
     <div className="container-spinners">
       <div className="separador-spinners">
@@ -37,7 +36,10 @@ function Spinners() {
           <ProgressBar striped variant="warning" now={60} className="barra" />
           <ProgressBar striped variant="danger" now={80} className="barra" />
         </div>
-        <Button variant="success" size="sm" >Probar Barras de progreso</Button>
+        <div className="rango-barra">
+          <Form.Label>Rangos</Form.Label>
+          <Form.Range />
+        </div>
         {/* <Spinner animation="grow" variant="light" />
         <Spinner animation="grow" variant="dark" /> */}
       </div>

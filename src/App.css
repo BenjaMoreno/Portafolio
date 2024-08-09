@@ -179,6 +179,10 @@ header nav ul li {
   left: 50%;
   top: 14vh;
   transform: translate(-50%, -50%);
+  transition: 0.15s;
+}
+#LOGO:hover{
+  filter: drop-shadow(0 0 9px rgb(153, 199, 246));
 }
 .usuario-activo {
   width: max-content;
