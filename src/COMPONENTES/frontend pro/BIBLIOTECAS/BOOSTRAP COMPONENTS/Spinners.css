@@ -11,3 +11,14 @@
     justify-content: space-around;
     padding: 0 5%;
 }
+.loafin{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.barra{
+    background-color: transparent;
+    border: solid 1px rgba(180, 180, 180, 0.342);
+}

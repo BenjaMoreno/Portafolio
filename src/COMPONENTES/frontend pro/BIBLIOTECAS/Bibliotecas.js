@@ -8,6 +8,7 @@ import Spinners from "./BOOSTRAP COMPONENTS/Spinners";
 import Botones from "./BOOSTRAP COMPONENTS/Botones";
 
 export const Bibliotecas = () => {
+ 
   return (
     <section className="container-bibliotecas">
       <h1 className="titulo-bibliotecas">Uso de Bibliotecas</h1>

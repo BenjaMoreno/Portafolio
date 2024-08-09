@@ -5,14 +5,14 @@ import yo from '../../../../IMAGES/generales/yoTarjeta.jpg'
 
 function Tarjeta() {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} className='ola'>
       <Card.Img variant="top" src={yo} />
       <Card.Body>
         <Card.Title>Tarjeta de Presentación</Card.Title>
         <Card.Text>
           Interactua con los elementos que hay en pantalla.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Trabajemos</Button>
       </Card.Body>
     </Card>
   );
