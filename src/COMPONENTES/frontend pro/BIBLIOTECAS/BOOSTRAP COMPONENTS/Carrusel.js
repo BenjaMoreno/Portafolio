@@ -1,32 +1,54 @@
 import Carousel from "react-bootstrap/Carousel";
-import foto from "../../../../IMAGES/proyectos/sonicpulse.webp";
+
 import "./Carrusel.css";
 
 function Carrusel() {
-  var imagenesCarrrusel = [
+  const imagenesCarrusel = [
     {
-      foto: foto,
-      titulo: "Implementación",
+      fondo: "red",
+      titulo: "1",
       parrafo: "Lee las diapositivas",
     },
     {
-      foto: foto,
-      titulo: "De",
+      fondo: "green",
+      titulo: "2",
       parrafo: "continua",
     },
-    { foto: foto, titulo: "Carruseles", parrafo: ";)" },
+
     {
-      foto: foto,
-      titulo: "Uso moderado",
+      fondo: "orange",
+      titulo: "3",
+      parrafo:
+        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+    },
+    {
+      fondo: "purple",
+      titulo: "4",
+      parrafo:
+        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+    },
+    {
+      fondo: "blue",
+      titulo: "5",
+      parrafo:
+        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+    },
+    {
+      fondo: "brown",
+      titulo: "6",
       parrafo:
         "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
     },
   ];
+
   return (
-    <Carousel fade interval={2000}>
-      {imagenesCarrrusel.map((objeto,index) => (
-        <Carousel.Item key={index}>
-          <img src={objeto.foto} className="img-carrusel" />
+    <Carousel fade interval={2000} className="carousel-bs">
+      {imagenesCarrusel.map((objeto, index) => (
+        <Carousel.Item
+          key={index}
+          style={{ backgroundColor: objeto.fondo }}
+          className="item-carrusel-bs"
+        >
           <Carousel.Caption>
             <h3>{objeto.titulo}</h3>
             <p>{objeto.parrafo}</p>

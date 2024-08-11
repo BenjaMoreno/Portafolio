@@ -56,7 +56,19 @@
   font-size: 1rem;
   margin:1% 0;
   text-align: center;
+  display: flex;
+  min-width: 100%;
+  width: max-content;
+  align-items: center;
 }
+.error-yup{
+  flex: 1;
+  text-align: center;
+  color: rgb(117, 10, 10);
+  text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;}
 .rosa {
   background-color: palevioletred;
 }
@@ -222,4 +234,16 @@
 }
 .pais select{
   height: 30%;
+}
+.input-numero{
+  overflow-y: hidden;
+}
+
+.datos-form-rosa-listo{
+  color: lime;
+  width: 100%;
+  text-align: right;
+  padding-right: 20%;
+  font-style: normal;
+  display: none;
 }

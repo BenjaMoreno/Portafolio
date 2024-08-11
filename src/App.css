@@ -182,7 +182,7 @@ header nav ul li {
   transition: 0.15s;
 }
 #LOGO:hover{
-  filter: drop-shadow(0 0 4px rgb(153, 199, 246));
+  filter: drop-shadow(0 0 1px rgb(153, 199, 246));
 }
 .usuario-activo {
   width: max-content;

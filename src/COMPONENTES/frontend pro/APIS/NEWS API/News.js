@@ -24,7 +24,6 @@ export const News = () => {
         })
         .then((data) => {
           const newsArray = data.top_news[0].news;
-          console.log(newsArray);
           setNoticias(newsArray);
         })
         .catch((error) =>

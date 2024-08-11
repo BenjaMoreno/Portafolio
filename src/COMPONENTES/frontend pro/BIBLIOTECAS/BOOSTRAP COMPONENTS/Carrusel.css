@@ -1,8 +1,22 @@
-.carousel{
+.carousel-bs{
     border: gray solid 1px;
     height: 70%;
+    max-height: 320px;
     width: 80%;
     overflow: hidden;
+    position: relative;
+}
+.item-carrusel-bs{
+    height: 320px;
+}
+.item-carrusel-bs h3{
+    font-size: 6rem;
+}
+.item-carrusel-bs p{
+    font-family: "Edu AU VIC WA NT Hand", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 .img-carrusel{
    width: 100%;
