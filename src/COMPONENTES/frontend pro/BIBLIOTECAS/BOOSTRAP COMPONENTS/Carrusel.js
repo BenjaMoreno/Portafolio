@@ -5,48 +5,48 @@ import "./Carrusel.css";
 function Carrusel() {
   const imagenesCarrusel = [
     {
-      fondo: "red",
-      titulo: "1",
+      fondo: "linear-gradient(to right, transparent,red ,transparent)",
+      titulo: "Carruseles",
       parrafo: "Lee las diapositivas",
     },
     {
-      fondo: "green",
-      titulo: "2",
+      fondo: "linear-gradient(to right, transparent,blue ,transparent)",
+      titulo: "Carruseles",
       parrafo: "continua",
     },
 
     {
-      fondo: "orange",
-      titulo: "3",
+      fondo: "linear-gradient(to right, transparent,brown ,transparent)",
+      titulo: "Carruseles",
       parrafo:
         "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
     },
     {
-      fondo: "purple",
-      titulo: "4",
+      fondo: "linear-gradient(to right, transparent,purple ,transparent)",
+      titulo: "Personalizables",
       parrafo:
         "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
     },
     {
-      fondo: "blue",
-      titulo: "5",
+      fondo: "linear-gradient(to right, transparent,red ,transparent)",
+      titulo: "1",
       parrafo:
         "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
     },
     {
-      fondo: "brown",
-      titulo: "6",
+      fondo: "linear-gradient(to right, transparent,lime ,transparent)",
+      titulo: "2",
       parrafo:
         "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
     },
   ];
 
   return (
-    <Carousel fade interval={2000} className="carousel-bs">
+    <Carousel fade interval={1500} className="carousel-bs">
       {imagenesCarrusel.map((objeto, index) => (
         <Carousel.Item
           key={index}
-          style={{ backgroundColor: objeto.fondo }}
+          style={{ background: objeto.fondo }}
           className="item-carrusel-bs"
         >
           <Carousel.Caption>

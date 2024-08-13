@@ -4,11 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  
 }
 .info-api {
   width: 90%;
-  background-color: #002029;
   overflow: hidden;
+  
 }
 .titulo-habilidad {
   border: solid 2px rgb(192, 192, 192);
@@ -26,7 +28,8 @@
   height: 90vh;
   width: 100%;
   margin: 10vh 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+
 }
 
 .api-elemento-titulo span {

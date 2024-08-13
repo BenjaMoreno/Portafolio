@@ -48,27 +48,27 @@
   width: 80%;
   border-radius: 5px;
   border: none;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   margin: auto;
-
 }
 .container-formularios label {
   font-size: 1rem;
-  margin:1% 0;
+  margin: 1% 0;
   text-align: center;
   display: flex;
   min-width: 100%;
   width: max-content;
   align-items: center;
 }
-.error-yup{
+.error-yup {
   flex: 1;
   text-align: center;
   color: rgb(117, 10, 10);
   text-decoration: underline;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: normal;}
+  font-style: normal;
+}
 .rosa {
   background-color: palevioletred;
 }
@@ -90,7 +90,7 @@
   grid-gap: 2%;
 }
 .grid-item-form-verde select {
-  margin:auto;
+  margin: auto;
   border: solid green 2px;
   border-radius: 5px;
   width: 85%;
@@ -105,14 +105,15 @@
   color: #013612;
 }
 .grid-item-form-verde:hover {
-  background-color:  rgba(51, 154, 35, 0.792);
+  background-color: rgba(51, 154, 35, 0.792);
   scale: 1.009;
   color: white;
 }
 .grid-item-form-verde .label-titulo {
-  margin: 5% auto; 
+  margin: 5% auto;
   width: 100%;
   padding-left: 4%;
+  display: flex;
 }
 .grid-item-form-verde .input-verde {
   margin: 0 auto;
@@ -122,7 +123,7 @@
   border-radius: 5px;
   height: 30%;
   width: 85%;
-  background-color: rgb(189, 255, 219); 
+  background-color: rgb(189, 255, 219);
   cursor: pointer;
 }
 
@@ -164,20 +165,18 @@
     "o1 o2"
     "o3 o4";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30% 1fr 1fr ;
+  grid-template-rows: 30% 1fr 1fr;
 }
-.atencion label{
+.atencion label {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: space-evenly;
   font-size: 0.8rem;
-
 }
 .atencion label input,
 .atencion label {
   cursor: pointer;
-
 }
 .titulo-atencion {
   grid-area: titulo;
@@ -200,7 +199,7 @@
   width: 90%;
 }
 
-.rosa input{
+.rosa input {
   height: 8%;
   margin: auto;
 }
@@ -222,28 +221,78 @@
 }
 .reglamento1,
 .reglamento2 {
- display: flex;
- align-items: center;
- flex-direction: row;
- padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 0 0 10px;
 }
 .reglamentos {
   font-size: 0.8rem !important;
   color: rgb(65, 65, 65);
   margin: 0 10px !important;
 }
-.pais select{
+.pais select {
   height: 30%;
 }
-.input-numero{
+.input-numero {
   overflow-y: hidden;
 }
 
-.datos-form-rosa-listo{
+.datos-form-rosa-listo {
   color: lime;
   width: 100%;
   text-align: right;
   padding-right: 20%;
   font-style: normal;
   display: none;
+}
+.container-exitoso-verde {
+  width: 100%;
+  display: none;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50% 1fr 1fr;
+}
+.item-exitoso-verde {
+  border: solid rgba(0, 255, 0, 0.18) 1px;
+  font-family: initial;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: grey;
+  font-style: italic;
+}
+.item-exitoso-verde span {
+  color: lime;
+  font-style: normal;
+}
+.item-exitoso-verde:nth-child(4),
+.item-exitoso-verde:nth-child(5) {
+  grid-column: 1/3;
+}
+.item-exitoso-verde:nth-child(6) {
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+.label-titulo span {
+  flex: 1;
+  height: 100%;
+  font-size: 0.6rem;
+  color: rgb(154, 6, 6);
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-reglas-aceptadas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: lime;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  font-style: normal;
 }

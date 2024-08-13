@@ -5,7 +5,7 @@ function DropdownB() {
   return (
     <>
     <Dropdown className='dropdown-container'>
-      <Dropdown.Toggle variant="warning" id="dropdown-basic">
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
         Boton de Despliegue
       </Dropdown.Toggle>
 
@@ -16,7 +16,7 @@ function DropdownB() {
       </Dropdown.Menu>
     </Dropdown>
      <Dropdown className='dropdown-container'>
-     <Dropdown.Toggle variant="success" id="dropdown-basic">
+     <Dropdown.Toggle variant="primary" id="dropdown-basic">
        Boton de Despliegue
      </Dropdown.Toggle>
 

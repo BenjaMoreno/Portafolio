@@ -5,3 +5,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.dropdown-container:nth-child(1) button{
+    background-color: purple;
+    border: none;
+    color: white;
+}

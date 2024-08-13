@@ -90,8 +90,7 @@
   background-color: gray;
   top: 100%;
   left: 0;
-  animation: subir 0.5s linear forwards;
-  display: none
+  
 }
 @keyframes subir {
   from{
@@ -99,5 +98,13 @@
   }
   to{
     top: 0;
+  }
+}
+@keyframes bajar {
+  from{
+    top: 0;
+  }
+  to{
+    top: 100%;
   }
 }

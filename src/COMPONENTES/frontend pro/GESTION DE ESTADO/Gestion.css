@@ -17,10 +17,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
+  border-radius: 500px;
   border: solid gray 2px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom: none;
   padding: 2% 5%;
   grid-area: h1;
 }

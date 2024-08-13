@@ -32,13 +32,20 @@ export const News = () => {
     };
     consultarNews();
   }, []);
+  const nodeListTextNews = document.querySelectorAll(".texto-noticia");
   const mostrarNoticia = (indice) => {
-    var nodeListTextNews = document.querySelectorAll(".texto-noticia");
-    nodeListTextNews.forEach((cajaTexto,index)=>{
-      if(index === indice){
-        cajaTexto.style.display='block'
+    nodeListTextNews.forEach((cajaTexto, index) => {
+      if (index === indice) {
+        cajaTexto.style.animation= "subir 0.5s linear forwards";
       }
-    })
+    });
+  };
+  const cerrarNoticia = (indice) => {
+    nodeListTextNews.forEach((cajaTexto, index) => {
+      if (index === indice) {
+        cajaTexto.style.animation= "bajar 0.5s linear forwards";
+      }
+    });
   };
   return (
     <article className="container-news-main">
@@ -47,7 +54,11 @@ export const News = () => {
       </h1>
       <div className="news-container">
         {noticias.slice(0, 4).map((noticia, index) => (
-          <div className="new-item" key={index} onClick={()=>mostrarNoticia(index)}>
+          <div
+            className="new-item"
+            key={index}
+            onClick={() => mostrarNoticia(index)}
+          >
             <h1>{noticia.author || "Autor desconocido"}</h1>
             <img
               src={noticia.image === null ? news_icon : noticia.image}
@@ -58,7 +69,9 @@ export const News = () => {
               {new Date(noticia.publish_date).toLocaleDateString()}
             </h5>
             <p>{noticia.title}</p>
-            <div className="texto-noticia">alskf</div>
+            <div className="texto-noticia" onClick={() => cerrarNoticia(index)}>
+              alskf
+            </div>
           </div>
         ))}
       </div>
