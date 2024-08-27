@@ -2,7 +2,7 @@ import React from "react";
 import "./Apis.css";
 import { PokeApi } from "./POKEAPI/PokeApi";
 import { OpenWeather } from "./OPEN WEATHER MAP/OpenWeather";
-import { News } from "./NEWS API/News";
+// import { News } from "./NEWS API/News";
 
 export const Apis = () => {
   return (
@@ -18,9 +18,9 @@ export const Apis = () => {
           <PokeApi />
         </div>
 
-        <div className="api-elemento fondo-noticias">
+        {/* <div className="api-elemento fondo-noticias">
           <News />
-        </div>
+        </div> */}
       </article>
     </section>
   );
