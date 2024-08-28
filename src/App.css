@@ -234,7 +234,7 @@ footer {
     "mensaje rrss";
   grid-template-rows: 1% 99%;
   grid-template-columns: 1fr 1fr;
-  margin-top: 4vh;
+  
 }
 .container-hrs-footer {
   grid-area: hrs;
