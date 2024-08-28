@@ -153,3 +153,15 @@
   text-align: right;
   text-decoration:overline solid rgba(255, 0, 0, 0.591);
 }
+@media (max-height:560px) {
+  .formulario-contacto input{
+    margin: 2%;
+  }
+  .formulario-contacto textarea {
+    min-height: initial;
+    flex: 1;
+  }
+  .formulario-contacto button {
+    margin: 0 auto;
+  }
+}
