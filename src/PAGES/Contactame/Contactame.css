@@ -165,3 +165,19 @@
     margin: 0 auto;
   }
 }
+@media (max-width:767px) {
+  .container-contactame{
+    flex-direction: column;
+    height: 140vh;
+  }
+ 
+}
+@media (max-width:400px) {
+  .container-btnes-contacto a{
+    min-width: 158.400px;
+  }
+  .formulario-contacto{
+    height: 90vh;
+    width: 90%;
+  }
+}
