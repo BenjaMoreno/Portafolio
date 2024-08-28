@@ -1,6 +1,5 @@
 /* GENERAL */
 #subir {
-  border: solid white 1px;
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -108,22 +107,40 @@ header {
   background-color: #002029;
   z-index: 100;
 }
-header nav {
-  margin: 0 10%;
+.bg-body-tertiary {
   height: 96%;
-  box-sizing: border-box;
-}
-header nav ul {
-  margin: 0;
+  background-color: transparent !important;
+  margin: 0 !important;
+  width: 100vw;
   padding: 0;
-  display: flex;
-  list-style-type: none;
+}
+
+.justify-content-end {
+  height: 100%;
+  padding: 0 !important;
+}
+.canvas-container {
+  margin: 0 10%;
+  padding: 0;
+  box-sizing: border-box;
   height: 100%;
 }
-header nav ul li {
-  height: 100%;
-  flex: 1;
+#offcanvasNavbar {
+  height: 100% !important;
 }
+.canvas-body{
+  height: 100%;
+}
+.brand-logo {
+  height: 16vh;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 14vh;
+  transform: translate(-50%, -50%);
+  transition: 0.15s;
+}
+
 .navlink {
   height: 100%;
   width: 100%;
@@ -173,15 +190,10 @@ header nav ul li {
   height: 2px;
 }
 #LOGO {
-  height: 16vh;
+  height: 100%;
   width: auto;
-  position: absolute;
-  left: 50%;
-  top: 14vh;
-  transform: translate(-50%, -50%);
-  transition: 0.15s;
 }
-#LOGO:hover{
+#LOGO:hover {
   filter: drop-shadow(0 0 1px rgb(153, 199, 246));
 }
 .usuario-activo {
@@ -199,7 +211,7 @@ header nav ul li {
   font-size: 1.4rem;
   border: solid lime 2px;
   border-radius: 50px;
-  border-top:none;
+  border-top: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #002029;

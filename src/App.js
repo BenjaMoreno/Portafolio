@@ -11,6 +11,11 @@ import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
 import { ReactComponent as FLECHA } from "../src/IMAGES/SVG/FLECHA.svg";
 import { useEffect, useState } from "react";
 import { ContextUser } from "./CONTEXT/ContextUser";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Nav from "react-bootstrap/Nav";
+
 function App() {
   // ESTADO CONTEXT USUARIO
   const [usuario, setUsuario] = useState(null);
@@ -18,15 +23,16 @@ function App() {
     usuario: "estado",
     avatar: "",
   });
+
   useEffect(() => {
     if (usuario) {
       setEstadoAnimacion(usuario);
       document.querySelector(".animacion-bienvenida-usuario").style.display =
         "flex";
-      setTimeout(function(){
+      setTimeout(function () {
         document.querySelector(".animacion-bienvenida-usuario").style.display =
-        "none";
-      },5000)
+          "none";
+      }, 5000);
     }
   }, [usuario]);
 
@@ -41,39 +47,49 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <header>
-            <nav>
-              <img src={LOGO} id="LOGO" />
-              <ul>
-                <li>
-                  <NavLink to="/" className="navlink">
-                    ¿Quién soy?
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/codificando" className="navlink">
-                    Frontend Pro
-                  </NavLink>
-                </li>
-                <li></li>
-                <li>
-                  <NavLink to="/proyectos" className="navlink">
-                    Proyectos
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contactame" className="navlink">
-                    Contáctame
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
+            <Navbar expand='lg' className="bg-body-tertiary mb-3">
+              <Container fluid className="canvas-container">
+                <Navbar.Brand className="brand-logo">
+                  <img src={LOGO} id="LOGO" />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-auto"/>
+                <Navbar.Offcanvas
+                   id="offcanvasNavbar"
+                   aria-labelledby="offcanvasNavbarLabel"
+                   placement="end"
+                >
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title id="offcanvasNavbarLabel">
+                      Offcanvas
+                    </Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body className="canvas-body">
+                    <Nav className="justify-content-end flex-grow-1 pe-3">
+                      <NavLink to="/" className="navlink">
+                        ¿Quién soy?
+                      </NavLink>
+                      <NavLink to="/codificando" className="navlink">
+                        Frontend Pro
+                      </NavLink>
+                      <div className="navlink"></div>
+                      <NavLink to="/proyectos" className="navlink">
+                        Proyectos
+                      </NavLink>
+                      <NavLink to="/contactame" className="navlink">
+                        Contáctame
+                      </NavLink>
+                    </Nav>
+                  </Offcanvas.Body>
+                </Navbar.Offcanvas>
+              </Container>
+            </Navbar>
             <div className="container-hrs-header">
               <hr className="hr-header"></hr>
               <hr className="hr-header"></hr>
             </div>
             <div className="usuario-activo">
               <span>{estadoAnimacion.usuario}</span>
-              <img src={estadoAnimacion.avatar}/>
+              <img src={estadoAnimacion.avatar} />
             </div>
           </header>
           <main>
