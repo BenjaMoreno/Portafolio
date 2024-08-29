@@ -35,11 +35,13 @@
   left: 0;
   height: 100%;
   width: 100%;
+  padding: 10px;
   opacity: 0;
   background-color: #033645;
   transition: opacity 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 .grid-container-proyectos figure:hover img {
   transform: scale(1.1);
@@ -59,7 +61,7 @@
   font-family: "Sulphur Point", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 1.4em;
+  font-size: 100%;
   text-align: center;
 }
 .grid-container-proyectos figure figcaption a {
@@ -81,4 +83,40 @@
 }
 .grid-container-proyectos figure figcaption a:hover {
   background-color: #015a72;
+}
+
+@media (max-width:1084px) {
+  .grid-container-proyectos figure p{
+    font-size: 80%;
+  }
+  .grid-container-proyectos figure figcaption a{
+    padding: 5% 10%;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width:700px) {
+  .grid-container-proyectos{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width:370px) {
+  .grid-container-proyectos figure{
+    min-width: 80%;
+    min-height: auto;
+    height: auto;
+  }
+  .grid-container-proyectos figure img{
+    min-width: 80%;
+    min-height: auto;
+    height: auto;
+  }
+  .grid-container-proyectos figure p{
+    font-size:50%;
+  }
+  .grid-container-proyectos figure figcaption a{
+    padding:0 2%;
+    font-size: 0.9rem;
+    border:#015a72 solid 1px;
+  }
 }
