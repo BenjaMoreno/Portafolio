@@ -31,11 +31,11 @@ export const FrontendPro = () => {
         <Flecha className="flecha-animada" />
       </h1>
       <Gestion/>
-      {/* <hr className="separador-secciones"></hr>
+      <hr className="separador-secciones"></hr>
       <ComposR/>
       <hr className="separador-secciones"></hr>
 
-      <Apis/>
+      {/* <Apis/>
       <hr className="separador-secciones"></hr>
       <Formulario/>
       <hr className="separador-secciones"></hr>

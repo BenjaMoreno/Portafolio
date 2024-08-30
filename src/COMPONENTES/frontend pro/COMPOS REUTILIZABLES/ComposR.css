@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center; 
     margin-top: 16vh;
+
 }
 .container-compos{
     display: flex;
@@ -27,3 +28,29 @@
     padding: 2% 3%;
     margin: 0 0 10vh 0;
 }
+@media (max-width:1440px) {
+    .container-compos-reutilizables h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width:768px) {
+    .container-compos-reutilizables{
+    height: 100vh;
+    }
+    .container-compos{
+        height: 80vh;
+    }
+    .container-compos-reutilizables h1{
+        margin: auto
+    }
+  }
+@media (max-width:576px) {
+    .container-compos-reutilizables h1{
+        font-size: 1.4rem;
+    }
+  }
+  @media (max-width:410px) {
+    .container-compos-reutilizables h1{
+        font-size: 0.8rem;
+    }
+  }
