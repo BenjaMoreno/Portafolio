@@ -4,13 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
 }
 .info-api {
   width: 90%;
   overflow: hidden;
-  
 }
 .titulo-habilidad {
   border: solid 2px rgb(192, 192, 192);
@@ -28,8 +25,7 @@
   height: 90vh;
   width: 100%;
   margin: 10vh 0;
-  box-sizing: border-box; 
-
+  box-sizing: border-box;
 }
 
 .api-elemento-titulo span {
@@ -40,4 +36,26 @@
 .fondo-noticias {
   height: 80vh;
   width: 100%;
+}
+@media (max-width: 1025px) {
+  .container-apis {
+    height: 200vh;
+  }
+  .info-api {
+    height: auto;
+    width: 95%;
+  }
+  .titulo-habilidad {
+    margin: auto;
+    font-size: 2rem;
+  }
+  .api-elemento {
+    margin: 0;
+    height: 85vh;
+  }
+}
+@media (max-width: 500px) {
+  .titulo-habilidad {
+    font-size: 1rem;
+  }
 }

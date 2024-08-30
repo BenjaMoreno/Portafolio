@@ -35,9 +35,9 @@ export const FrontendPro = () => {
       <ComposR/>
       <hr className="separador-secciones"></hr>
 
-      {/* <Apis/>
+      <Apis/>
       <hr className="separador-secciones"></hr>
-      <Formulario/>
+      {/* <Formulario/>
       <hr className="separador-secciones"></hr>
       <Bibliotecas/>
       <Optimizacion/> */}

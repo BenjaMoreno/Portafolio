@@ -97,3 +97,61 @@
   font-size: 1.6rem;
   margin: auto;
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .dato-weather strong {
+    font-size: 1rem;
+  }
+  .container-datos-weather {
+    padding-right: 0;
+  }
+}
+@media (max-width: 1025px) {
+  .consulta-weather {
+    flex-direction: column;
+  }
+  .separador-weather {
+    height: 50%;
+    width: 100%;
+  }
+  .separador-weather h1 {
+    font-size: 1.2rem;
+  }
+  .container-datos-weather {
+    display: flex;
+    height: max-content;
+    height: 100%;
+    padding: 0;
+    border-top-left-radius: initial;
+    border-bottom-left-radius: initial;
+  }
+  .dato-weather {
+    border: solid rgba(255, 255, 255, 0.128) 1px;
+    flex-direction: column;
+  }
+  .weather img {
+    width: 50%;
+    margin: auto 0 auto 0;
+    height: auto;
+    filter: drop-shadow(0 0 10px grey);
+  }
+}
+@media (max-width: 500px) {
+  .container-datos-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .weather img {
+    height: auto;
+    width: 40%;
+  }
+  .separador-weather input {
+  font-size: 1rem;
+  }
+  .dato-weather:nth-child(1) {
+    grid-column: initial;
+  }
+  .dato-weather strong{
+    font-size: 1rem;
+  }
+}
