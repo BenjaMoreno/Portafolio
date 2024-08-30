@@ -23,6 +23,7 @@
 .titulo-pro span {
   position: absolute;
   top: 40%;
+  margin: 0 5.8%;
 }
 .flecha-animada {
   position: absolute;
@@ -57,5 +58,30 @@
   100% {
     bottom: 50px;
     color: rgb(131, 131, 131);
+  }
+}
+@media (max-width:1323px) {
+  .titulo-pro span{
+    font-size: 2rem;
+  }
+}
+@media (max-width:997px) {
+  .titulo-pro span{
+    text-align: left;
+  }
+}
+@media (max-width:768px) {
+  .flecha-animada{
+    left: inherit;
+    right: 15vw;
+  }
+}
+@media (max-width:400px) {
+  .flecha-animada{
+    height: 50px;
+    width: 50px;
+  }
+  .titulo-pro span{
+    font-size: 1rem;
   }
 }

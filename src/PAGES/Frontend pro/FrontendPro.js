@@ -31,7 +31,7 @@ export const FrontendPro = () => {
         <Flecha className="flecha-animada" />
       </h1>
       <Gestion/>
-      <hr className="separador-secciones"></hr>
+      {/* <hr className="separador-secciones"></hr>
       <ComposR/>
       <hr className="separador-secciones"></hr>
 
@@ -40,7 +40,7 @@ export const FrontendPro = () => {
       <Formulario/>
       <hr className="separador-secciones"></hr>
       <Bibliotecas/>
-      <Optimizacion/>
+      <Optimizacion/> */}
     </div>
   );
 };

@@ -69,7 +69,7 @@ export const Gestion = () => {
       <h1 className="titulo-gestion">Gestión de Estado</h1>
 
       <form className="form-estado" onSubmit={formik.handleSubmit}>
-        <h1>Crea un usuario</h1>
+        <h1 className="palabras-gestion">Crea un usuario</h1>
         <div className="container-input-btn">
           <input
             type="text"
@@ -87,7 +87,7 @@ export const Gestion = () => {
             Crear
           </button>
         </div>
-        <h2>Elige tu avatar</h2>
+        <h2 className="palabras-gestion">Elige tu avatar</h2>
         <div className="container-avatars">
           {avatares.map((avatarImg, index) => (
             <img
@@ -103,11 +103,11 @@ export const Gestion = () => {
       </form>
       <hr className="hr-estado" />
       <div className="resultado-estado">
-        <div className="caja-flex-estado">
+        <div className="caja-flex-estado palabras-gestion usuario-layout">
           Usuario:&nbsp;&nbsp;<span>{usuarioState}</span>
         </div>
         <div className="divisor-flex"></div>
-        <div className="caja-flex-estado">
+        <div className="caja-flex-estado palabras-gestion">
           Avatar:&nbsp;&nbsp;&nbsp;&nbsp;
           <img src={avatarState} alt="Astronauta" />
         </div>

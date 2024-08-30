@@ -21,6 +21,7 @@
   border: solid gray 2px;
   padding: 2% 5%;
   grid-area: h1;
+  
 }
 
 .form-estado {
@@ -75,6 +76,7 @@
   width: 10vh;
   height: auto;
 }
+
 .form-estado {
   display: flex;
   flex-direction: column;
@@ -158,4 +160,56 @@
   bottom: 10%;
   left: 25%;
   text-decoration: overline red;
+}
+@media /*(min-width:1025px) and*/ (max-width:1440px) {
+  .container-gestion .palabras-gestion{
+    font-size: 1.5rem;
+  }
+  
+}
+@media (max-width:1025px) {
+  .container-gestion{
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    }
+    .hr-estado{
+      width: 70%;
+      height: 1px;
+    }
+    .titulo-gestion{
+      font-size: 2.4rem;
+    }
+    .form-estado .palabras-gestion{
+      text-align: left;
+      width: 100%;
+      padding-left: 5%;
+    }
+}
+@media (max-width:460px) {
+  .titulo-gestion{
+    margin: 0 10%;
+    font-size: 1.6rem;
+  }
+  .container-gestion .palabras-gestion{
+    font-size: 1rem;
+  }
+  .container-input-btn{
+    flex-direction: column;
+    height: 50%;
+  }
+  .container-input-btn input{
+    height: 30%;
+  }
+  .container-input-btn button{
+    padding: 1% 5%;
+  }
+  .usuario-layout span{
+    font-size: 1.6rem;
+  }
+}
+@media (max-width:338px) {
+  .titulo-gestion{
+    font-size: 1rem;
+  }
 }
