@@ -110,10 +110,7 @@ export const Formulario = () => {
       reglamentos: [],
     },
     validationSchema: Yup.object().shape({
-      compañia: Yup.string().max(
-        60,
-        "Muy largo"
-      ),
+      compañia: Yup.string().max(60, "Muy largo"),
       pais: Yup.string().required("*Nacionalidad requerida"),
       celular: Yup.string()
         .max(15, "Formato muy extenso")
@@ -133,7 +130,7 @@ export const Formulario = () => {
         titulo: "¡Formulario exitoso!",
       };
       setDatosVerde(objetoVerde);
-      console.log(values)
+      console.log(values);
     },
   });
   const countries = [
@@ -330,106 +327,108 @@ export const Formulario = () => {
         onSubmit={formik.handleSubmit}
       >
         <h1>{datosRosa === null ? "Formulario 1" : datosRosa.titulo}</h1>
-        <label htmlFor="nombre">
-          Nombre:
-          {formik.errors.nombre && formik.touched.nombre && (
-            <div className="error-yup">{formik.errors.nombre}</div>
-          )}
-          <span className="datos-form-rosa-listo">
-            {datosRosa === null ? "indefinido" : datosRosa.nombre}
-          </span>
-        </label>
-        <input
-          placeholder="nombre"
-          type="text"
-          id="nombre"
-          className="desactivador-rosa"
-          name="nombre"
-          value={formik.values.nombre}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          maxLength={23}
-        />
-        <label htmlFor="correo">
-          Tu correo:
-          {formik.errors.correo && formik.touched.correo && (
-            <div className="error-yup">{formik.errors.correo}</div>
-          )}
-          <span className="datos-form-rosa-listo">
-            {datosRosa === null ? "indefinido" : datosRosa.correo}
-          </span>
-        </label>
-        <input
-          placeholder="correo"
-          type="email"
-          id=""
-          name="correo"
-          value={formik.values.correo}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          className="desactivador-rosa"
-        />
-        <label htmlFor="celular">
-          Tu celular:
-          {formik.errors.celular && formik.touched.celular && (
-            <div className="error-yup">{formik.errors.celular}</div>
-          )}
-          <span className="datos-form-rosa-listo">
-            {datosRosa === null || typeof datosRosa.celular === "string"
-              ? "sin numero"
-              : datosRosa.celular}
-          </span>
-        </label>
-        <input
-          type="tel"
-          id="celular-rosa"
-          className="desactivador-rosa"
-          name="celular"
-          placeholder="+56*********"
-          pattern="\+56 \{9}"
-          aria-label="Número de Teléfono"
-          value={formik.values.celular}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          // title="Ingrese un número de teléfono válido en el formato: +56 999999999"
-        />
-        <label>
-          Tu genero:
-          {formik.errors.genero && formik.touched.genero && (
-            <div className="error-yup">{formik.errors.genero}</div>
-          )}{" "}
-          <span className="datos-form-rosa-listo">
-            {datosRosa === null ? "indefinido" : datosRosa.genero}
-          </span>
-        </label>
-        <select
-          value={formik.values.genero}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          name="genero"
-          className="desactivador-rosa"
-        >
-          <option value={""}>Selecciona...</option>
-          <option value={"hombre"}>Hombre</option>
-          <option value={"mujer"}>Mujer</option>
-          <option value={"Otro tipo de genero"}>Otro</option>
-        </select>
-        <label htmlFor="comentarios">
-          Comentarios:
-          {formik.errors.comentario && formik.touched.comentario && (
-            <div className="error-yup">{formik.errors.comentario}</div>
-          )}
-          <span className="datos-form-rosa-listo">
-            {datosRosa === null ? "indefinido" : datosRosa.comentario}
-          </span>
-        </label>
-        <textarea
-          name="comentario"
-          value={formik.values.comentario}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          className="desactivador-rosa"
-        ></textarea>
+        <div className="container-inputs-rosa">
+          <label htmlFor="nombre">
+            Nombre:
+            {formik.errors.nombre && formik.touched.nombre && (
+              <div className="error-yup">{formik.errors.nombre}</div>
+            )}
+            <span className="datos-form-rosa-listo">
+              {datosRosa === null ? "indefinido" : datosRosa.nombre}
+            </span>
+          </label>
+          <input
+            placeholder="nombre"
+            type="text"
+            id="nombre"
+            className="desactivador-rosa"
+            name="nombre"
+            value={formik.values.nombre}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            maxLength={23}
+          />
+          <label htmlFor="correo">
+            Tu correo:
+            {formik.errors.correo && formik.touched.correo && (
+              <div className="error-yup">{formik.errors.correo}</div>
+            )}
+            <span className="datos-form-rosa-listo">
+              {datosRosa === null ? "indefinido" : datosRosa.correo}
+            </span>
+          </label>
+          <input
+            placeholder="correo"
+            type="email"
+            id=""
+            name="correo"
+            value={formik.values.correo}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className="desactivador-rosa"
+          />
+          <label htmlFor="celular">
+            Tu celular:
+            {formik.errors.celular && formik.touched.celular && (
+              <div className="error-yup">{formik.errors.celular}</div>
+            )}
+            <span className="datos-form-rosa-listo">
+              {datosRosa === null || typeof datosRosa.celular === "string"
+                ? "sin numero"
+                : datosRosa.celular}
+            </span>
+          </label>
+          <input
+            type="tel"
+            id="celular-rosa"
+            className="desactivador-rosa"
+            name="celular"
+            placeholder="+56*********"
+            pattern="\+56 \{9}"
+            aria-label="Número de Teléfono"
+            value={formik.values.celular}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            // title="Ingrese un número de teléfono válido en el formato: +56 999999999"
+          />
+          <label>
+            Tu genero:
+            {formik.errors.genero && formik.touched.genero && (
+              <div className="error-yup">{formik.errors.genero}</div>
+            )}{" "}
+            <span className="datos-form-rosa-listo">
+              {datosRosa === null ? "indefinido" : datosRosa.genero}
+            </span>
+          </label>
+          <select
+            value={formik.values.genero}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            name="genero"
+            className="desactivador-rosa"
+          >
+            <option value={""}>Selecciona...</option>
+            <option value={"hombre"}>Hombre</option>
+            <option value={"mujer"}>Mujer</option>
+            <option value={"Otro tipo de genero"}>Otro</option>
+          </select>
+          <label htmlFor="comentarios">
+            Comentarios:
+            {formik.errors.comentario && formik.touched.comentario && (
+              <div className="error-yup">{formik.errors.comentario}</div>
+            )}
+            <span className="datos-form-rosa-listo">
+              {datosRosa === null ? "indefinido" : datosRosa.comentario}
+            </span>
+          </label>
+          <textarea
+            name="comentario"
+            value={formik.values.comentario}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className="desactivador-rosa"
+          ></textarea>
+        </div>
 
         <button type="submit">Enviar</button>
       </form>
@@ -458,8 +457,8 @@ export const Formulario = () => {
           <div className="item-exitoso-verde">
             Terminos y condiciones:
             <ul className="container-reglas-aceptadas">
-            <li>{datosVerde != null ? datosVerde.reglamentos[0] : ""}</li>
-            <li>{datosVerde != null ? datosVerde.reglamentos[1] : ""}</li>
+              <li>{datosVerde != null ? datosVerde.reglamentos[0] : ""}</li>
+              <li>{datosVerde != null ? datosVerde.reglamentos[1] : ""}</li>
             </ul>
           </div>
           <div className="item-exitoso-verde">
@@ -497,16 +496,19 @@ export const Formulario = () => {
               onChange={formikVerde.handleChange}
               onBlur={formikVerde.handleBlur}
             >
-              {countries.map((pais,index) => (
-                <option value={pais} key={index}>{pais}</option>
+              {countries.map((pais, index) => (
+                <option value={pais} key={index}>
+                  {pais}
+                </option>
               ))}
             </select>
           </div>
           <div className="grid-item-form-verde numero">
             <label className="label-titulo" htmlFor="celular">
-              CELULAR{
-                formikVerde.errors.celular && formikVerde.touched.celular && (<span>{formikVerde.errors.celular}</span>)
-              }
+              CELULAR
+              {formikVerde.errors.celular && formikVerde.touched.celular && (
+                <span>{formikVerde.errors.celular}</span>
+              )}
             </label>
             <input
               placeholder="numero movil +56******"
@@ -521,9 +523,10 @@ export const Formulario = () => {
           </div>
           <div className="grid-item-form-verde correo">
             <label className="label-titulo" htmlFor="correo">
-              CORREO{
-                formikVerde.errors.correo && formikVerde.touched.correo && (<span>{formikVerde.errors.correo}</span>)
-              }
+              CORREO
+              {formikVerde.errors.correo && formikVerde.touched.correo && (
+                <span>{formikVerde.errors.correo}</span>
+              )}
             </label>
             <input
               placeholder="tu correo"
