@@ -219,13 +219,12 @@
   width: 100%;
   display: none;
   height: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50% 1fr 1fr;
+
 }
 .item-exitoso-verde {
   border: solid rgba(0, 255, 0, 0.18) 1px;
-  font-family: initial;
-  font-size: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -235,13 +234,16 @@
 .item-exitoso-verde span {
   color: lime;
   font-style: normal;
+  font-size: 1rem;
 }
-.item-exitoso-verde:nth-child(4),
+.item-exitoso-verde:nth-child(4) {
+  grid-column: 1/4;
+}
 .item-exitoso-verde:nth-child(5) {
   grid-column: 1/3;
 }
 .item-exitoso-verde:nth-child(6) {
-  grid-row: 2/4;
+  grid-row: 3/4;
   grid-column: 3/4;
 }
 .label-titulo {
@@ -268,7 +270,7 @@
   justify-content: space-evenly;
   font-style: normal;
 }
-
+/* Responsive ---------------------------------------------------------------------------------------------- */
 @media (max-width: 1440px) {
   .container-formularios .titulo-formularios {
     font-size: 3rem;
@@ -290,26 +292,49 @@
     font-size: 2rem;
     margin: 5vh auto;
   }
-  .verde{
+  .verde {
     height: 90vh !important;
   }
-  .grid-container-form-verde{
+  .grid-container-form-verde {
     grid-template-rows: 20% 20% 25% 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    'compañia pais'
-    'numero correo'
-    'atencion atencion'
-    'r1 r1'
-    'r2 r2'
-    'btn btn';
+    grid-template-areas:
+      "compañia pais"
+      "numero correo"
+      "atencion atencion"
+      "r1 r1"
+      "r2 r2"
+      "btn btn";
   }
- 
+  .item-exitoso-verde {
+    flex-direction: column;
+  }
 }
 @media (max-width: 576px) {
   .container-formularios .titulo-formularios {
     font-size: 1.5rem;
   }
+  .container-exitoso-verde {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    height: 80%;
+  }
+ .item-exitoso-verde{
+  height: max-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+ .item-exitoso-verde:nth-child(4) {
+  grid-column: inherit;
+}
+.item-exitoso-verde:nth-child(5) {
+  grid-column: inherit;
+}
+.item-exitoso-verde:nth-child(6) {
+  grid-column: inherit;
+}
+
 }
 @media (max-width: 416px) {
   .container-formularios .titulo-formularios {
@@ -322,6 +347,5 @@
     padding: 0 10%;
     border: green 1px solid;
     font-size: 0.8rem;
-   
   }
 }
