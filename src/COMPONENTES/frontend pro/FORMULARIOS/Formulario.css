@@ -304,12 +304,24 @@
     'r2 r2'
     'btn btn';
   }
-  .reglamento2{
-    grid-column: 1/;
-  }
+ 
 }
 @media (max-width: 576px) {
   .container-formularios .titulo-formularios {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 416px) {
+  .container-formularios .titulo-formularios {
+    font-size: 1rem;
+  }
+  .grid-container-form-verde button {
+    grid-area: btn;
+    height: max-content;
+    width: max-content;
+    padding: 0 10%;
+    border: green 1px solid;
+    font-size: 0.8rem;
+   
   }
 }
