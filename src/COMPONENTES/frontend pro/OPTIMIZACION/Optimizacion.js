@@ -36,23 +36,23 @@ export const Optimizacion = () => {
       <article>
         <div className="item-opti">
           <h2>Lazy Loading</h2>
-          <div className="container-lazy">
-            <Img className="picture" />
-            <Hand className="hand" />
+          <div className="container-lazy quitarp">
+            <Img className="picture " />
+            <Hand className="hand " />
           </div>
         </div>
         <div className="item-opti ">
           <h2>Imagenes</h2>
-          <div className="container-webp">
-            <Img className="picture" />
-            <h1 className="webp">.webp</h1>
+          <div className="container-webp quitarp">
+            <Img className="picture " />
+            <h1 className="webp sub-item-opti ">.webp</h1>
           </div>
         </div>
         <div className="item-opti">
           <h2>Código</h2>
-          <div className="container-codigo">
+          <div className="container-codigo quitarp">
             <img src={Codigo}/>
-            <strong>Código Limpio</strong>
+            <strong className="sub-item-opti">Código Limpio</strong>
           </div>
         </div>
       </article>

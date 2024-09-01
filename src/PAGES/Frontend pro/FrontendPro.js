@@ -40,7 +40,9 @@ export const FrontendPro = () => {
       <Formulario/>
       <hr className="separador-secciones"></hr>
       <Bibliotecas/>
-      {/* <Optimizacion/> */}
+      <hr className="separador-secciones"></hr>
+
+      <Optimizacion/>
     </div>
   );
 };
