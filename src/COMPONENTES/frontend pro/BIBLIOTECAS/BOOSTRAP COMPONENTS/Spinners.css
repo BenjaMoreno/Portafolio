@@ -10,7 +10,6 @@
     
     display: flex;
     align-items: center;
-
 }
 .loafin{
     width: 50%;
@@ -51,3 +50,12 @@ justify-content: space-evenly;
     justify-content: space-evenly;
     align-items: center;
 }
+@media (max-width:1025px) {
+    .spinner:nth-child(5),.spinner:nth-child(11){
+        display: none;
+    }
+    .rango-barra{
+        text-align: center;
+        padding: 6%;
+    }
+  }

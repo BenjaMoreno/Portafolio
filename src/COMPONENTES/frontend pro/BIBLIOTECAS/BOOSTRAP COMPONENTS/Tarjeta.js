@@ -5,7 +5,7 @@ import yo from '../../../../IMAGES/generales/yoTarjeta.jpg'
 
 function Tarjeta() {
   return (
-    <Card style={{ width: '18rem' }} className='ola'>
+    <Card style={{ width: '18rem' }} className='tarjeta'>
       <Card.Img variant="top" src={yo} />
       <Card.Body>
         <Card.Title>Tarjeta de Presentación</Card.Title>

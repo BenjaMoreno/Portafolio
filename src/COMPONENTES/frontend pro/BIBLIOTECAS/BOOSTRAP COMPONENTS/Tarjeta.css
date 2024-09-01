@@ -1,4 +1,11 @@
-.card{
-    height: 70%;
+.tarjeta{
+    height: auto;
+    width:70% !important;
     background-color: rgba(173, 216, 230, 0.655);
+}
+@media (max-width:1025px) {
+    .tarjeta{
+        height: 90%;
+        width: auto;
+    }
 }
