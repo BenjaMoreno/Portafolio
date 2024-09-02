@@ -31,11 +31,12 @@
   border: solid rgba(151, 151, 151, 0.352) 1px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  width: 30vw;
+  width: max-content;
+  padding: 0.5% 10%;
   z-index: 200;
   background-color: #002029;
   overflow: hidden;
-  height: 10vh;
+  height: max-content;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -75,8 +76,8 @@
   width: 10px;
   position: absolute;
   background-color: lime;
-  left: 5%;
-  top: 70%;
+  left: 10%;
+  top: 60%;
   border-radius: 10px;
   transform: translateY(-50%);
   animation: titilar linear 1s infinite;
@@ -312,5 +313,13 @@ footer {
     border:solid 1px lime;
     font-size: 1rem;
     height: 4vh;
+  }
+}
+@media (max-width:768px) {
+  .animacion-bienvenida-usuario h5{
+    font-size: 1rem;
+  }
+  .animacion-bienvenida-usuario span{
+    font-size: 1rem;
   }
 }
