@@ -15,6 +15,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
+import { Button } from "react-bootstrap";
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -23,6 +24,7 @@ function App() {
     usuario: "estado",
     avatar: "",
   });
+  const [mostrarCanvas,setMostrarCanvas]=useState(false)
 
   useEffect(() => {
     if (usuario) {
@@ -41,7 +43,9 @@ function App() {
     var btn_flecha = document.getElementById("subir");
     btn_flecha.style.display = window.scrollY > 0 ? "block" : "none";
   });
-
+ //Control Canvas
+const abrirCanvas=()=>setMostrarCanvas(true);
+const cerrarCanvas=()=>setMostrarCanvas(false)
   return (
     <ContextUser.Provider value={{ usuario, setUsuario }}>
       <BrowserRouter>
@@ -53,30 +57,33 @@ function App() {
                 <Navbar.Brand className="brand-logo">
                   <img src={LOGO} id="LOGO" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={abrirCanvas} />
                 <Navbar.Offcanvas
                    id="offcanvasNavbar"
                    aria-labelledby="offcanvasNavbarLabel"
                    placement="end"
+                   onHide={cerrarCanvas}
+                   show={mostrarCanvas}
                 >
-                  <Offcanvas.Header closeButton>
+                  <Offcanvas.Header closeButton >
                     <Offcanvas.Title id="offcanvasNavbarLabel">
                       Offcanvas
                     </Offcanvas.Title>
+                    {/* <Button>a</Button> */}
                   </Offcanvas.Header>
                   <Offcanvas.Body className="canvas-body">
                     <Nav className="justify-content-end flex-grow-1 pe-3">
-                      <NavLink to="/" className="navlink">
+                      <NavLink to="/" className="navlink" onClick={cerrarCanvas}>
                         ¿Quién soy?
                       </NavLink>
-                      <NavLink to="/codificando" className="navlink">
+                      <NavLink to="/codificando" className="navlink" onClick={cerrarCanvas}>
                         Frontend Pro
                       </NavLink>
                       <div className="navlink"></div>
-                      <NavLink to="/proyectos" className="navlink">
+                      <NavLink to="/proyectos" className="navlink" onClick={cerrarCanvas}>
                         Proyectos
                       </NavLink>
-                      <NavLink to="/contactame" className="navlink">
+                      <NavLink to="/contactame" className="navlink" onClick={cerrarCanvas}>
                         Contáctame
                       </NavLink>
                     </Nav>
