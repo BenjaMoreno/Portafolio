@@ -21,7 +21,7 @@
   border: solid gray 2px;
   padding: 2% 5%;
   grid-area: h1;
-  
+  text-align: center;
 }
 
 .form-estado {
@@ -186,7 +186,7 @@
       padding-left: 5%;
     }
 }
-@media (max-width:460px) {
+@media (max-width:576px) {
   .titulo-gestion{
     margin: 0 10%;
     font-size: 1.6rem;

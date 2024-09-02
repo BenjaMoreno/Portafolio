@@ -47,12 +47,13 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <header>
+            
             <Navbar expand='lg' className="bg-body-tertiary mb-3">
               <Container fluid className="canvas-container">
                 <Navbar.Brand className="brand-logo">
                   <img src={LOGO} id="LOGO" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-auto"/>
+                <Navbar.Toggle aria-controls="offcanvasNavbar" />
                 <Navbar.Offcanvas
                    id="offcanvasNavbar"
                    aria-labelledby="offcanvasNavbarLabel"
@@ -83,14 +84,15 @@ function App() {
                 </Navbar.Offcanvas>
               </Container>
             </Navbar>
-            <div className="container-hrs-header">
-              <hr className="hr-header"></hr>
-              <hr className="hr-header"></hr>
-            </div>
             <div className="usuario-activo">
               <span>{estadoAnimacion.usuario}</span>
               <img src={estadoAnimacion.avatar} />
             </div>
+            <div className="container-hrs-header">
+              <hr className="hr-header"></hr>
+              <hr className="hr-header"></hr>
+            </div>
+           
           </header>
           <main>
             <Routes>
