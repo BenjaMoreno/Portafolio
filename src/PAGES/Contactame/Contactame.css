@@ -58,6 +58,25 @@
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
+  
+}
+.form-exitoso{
+  width: 60%;
+  max-height: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #62780B;
+  text-align: center
+}
+.form-exitoso h1 strong{
+  color: #aacf14;
+  text-transform: capitalize;
+}
+.form-exitoso h3 img{
+  height: 60px;
 
 }
 .formulario-contacto h3 {
@@ -153,6 +172,12 @@
   text-align: right;
   text-decoration:overline solid rgba(255, 0, 0, 0.591);
 }
+@media (min-width:768px) and (max-width:1440px) {
+  .form-exitoso strong,.form-exitoso h1,.form-exitoso h3{
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-height:560px) {
   .formulario-contacto input{
     margin: 2%;
@@ -169,6 +194,9 @@
   .container-contactame{
     flex-direction: column;
     height: 140vh;
+  }
+  .form-exitoso strong{
+    font-size: 1.1rem;
   }
  
 }
