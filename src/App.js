@@ -15,7 +15,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
-import { Button } from "react-bootstrap";
+import menu from '../src/IMAGES/SVG/BURGER_MENU.svg'
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -57,7 +57,9 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 <Navbar.Brand className="brand-logo">
                   <img src={LOGO} id="LOGO" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={abrirCanvas} />
+                <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={abrirCanvas}  style={{ boxShadow: 'none' }}>
+                  <img src={menu} alt="" className="icono-toggle" />
+                </Navbar.Toggle>
                 <Navbar.Offcanvas
                    id="offcanvasNavbar"
                    aria-labelledby="offcanvasNavbarLabel"
@@ -67,7 +69,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 >
                   <Offcanvas.Header closeButton >
                     <Offcanvas.Title id="offcanvasNavbarLabel">
-                      Offcanvas
+                      <img src={LOGO} className="logo-canvas"/>
                     </Offcanvas.Title>
                     {/* <Button>a</Button> */}
                   </Offcanvas.Header>
