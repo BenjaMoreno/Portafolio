@@ -36,21 +36,24 @@
 @media (max-width:768px) {
     .container-compos-reutilizables{
     height: 100vh;
+    margin-top: 5vh;
     }
     .container-compos{
         height: 80vh;
     }
     .container-compos-reutilizables h1{
-        margin: auto
+        margin: 0 5vw;
     }
   }
 @media (max-width:576px) {
     .container-compos-reutilizables h1{
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        text-align: center;
     }
+    
   }
-  @media (max-width:410px) {
+  /* @media (max-width:410px) {
     .container-compos-reutilizables h1{
         font-size: 1rem;
     }
-  }
+  } */

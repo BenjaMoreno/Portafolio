@@ -120,7 +120,7 @@
 }
 @media (max-width:768px) {
   .titulo-bibliotecas{
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .btns-bs{
     height: 50vh;
@@ -136,9 +136,7 @@
     flex-direction: column;
     height: auto;
   }
-  .titulo-bibliotecas{
-    font-size: 1rem;
-  }
+  
 }
 @media (min-width:900px) and (max-width:1025px) {
   .dropdown-bs{

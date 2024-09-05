@@ -64,6 +64,9 @@
   .titulo-pro span{
     font-size: 2rem;
   }
+  .separador-secciones{
+    display: none;
+  }
 }
 @media (max-width:997px) {
   .titulo-pro span{
@@ -82,6 +85,6 @@
     width: 50px;
   }
   .titulo-pro span{
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
