@@ -141,6 +141,7 @@ header {
   top: 14vh;
   transform: translate(-50%, -50%);
   transition: 0.15s;
+
 }
 
 .navlink {
@@ -338,4 +339,8 @@ footer {
   .animacion-bienvenida-usuario span{
     font-size: 1rem;
   }
+  .brand-logo{
+    height:10vh ;
+  }
+ 
 }

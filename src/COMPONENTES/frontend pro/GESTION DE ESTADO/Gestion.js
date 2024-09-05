@@ -66,10 +66,10 @@ export const Gestion = () => {
 
   return (
     <section className="container-gestion">
-      <h1 className="titulo-gestion">Gestión de Estado</h1>
+      <h1 className="titulo-gestion">Crea un Estado</h1>
 
-      <form className="form-estado" onSubmit={formik.handleSubmit}>
-        <h1 className="palabras-gestion">Crea un usuario</h1>
+      <form className="form-estado caja" onSubmit={formik.handleSubmit}>
+        <h1 className="palabras-gestion crear-estado">Crea un estado global</h1>
         <div className="container-input-btn">
           <input
             type="text"
@@ -102,7 +102,7 @@ export const Gestion = () => {
         </div>
       </form>
       <hr className="hr-estado" />
-      <div className="resultado-estado">
+      <div className="resultado-estado caja">
         <div className="caja-flex-estado palabras-gestion usuario-layout">
           Usuario:&nbsp;&nbsp;<span>{usuarioState}</span>
         </div>
