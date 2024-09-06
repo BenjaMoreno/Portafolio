@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState ,useEffect } from "react";
 import "./Gestion.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -7,6 +7,7 @@ import social from "../../../IMAGES/SVG/SELFIE.svg";
 import creativo from "../../../IMAGES/SVG/BRUSH.svg";
 import practico from "../../../IMAGES/SVG/LLAVE.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
+import { useLocation } from "react-router-dom";
 
 export const Gestion = () => {
   const avatares = [practico, creativo, social, calculador];
@@ -19,6 +20,17 @@ export const Gestion = () => {
     setAvatarState(img);
     setIndiceAvatar(index);
   };
+  //Ruta al Gestionador de estado
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
 
   //color para avatar activo
   const avatarActive = "inset 0 0 20px 1px lime";
@@ -65,7 +77,7 @@ export const Gestion = () => {
   };
 
   return (
-    <section className="container-gestion">
+    <section className="container-gestion" id="gestion">
       <h1 className="titulo-gestion">Crea un Estado</h1>
 
       <form className="form-estado caja" onSubmit={formik.handleSubmit}>

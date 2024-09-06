@@ -93,10 +93,10 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 </Navbar.Offcanvas>
               </Container>
             </Navbar>
-            <div className="usuario-activo">
+            <NavLink className="usuario-activo" to='/codificando#gestion'>
               <span>{estadoAnimacion.usuario}</span>
               <img src={estadoAnimacion.avatar} />
-            </div>
+            </NavLink>
             <div className="container-hrs-header">
               <hr className="hr-header"></hr>
               <hr className="hr-header"></hr>
