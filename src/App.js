@@ -57,7 +57,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 <Navbar.Brand className="brand-logo">
                   <img src={LOGO} id="LOGO" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={abrirCanvas}  style={{ boxShadow: 'none' }}>
+                <Navbar.Toggle  aria-controls="offcanvasNavbar" onClick={abrirCanvas}  style={{ boxShadow: 'none' }}>
                   <img src={menu} alt="" className="icono-toggle" />
                 </Navbar.Toggle>
                 <Navbar.Offcanvas

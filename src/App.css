@@ -130,6 +130,9 @@ header {
   height: 100% !important;
   background-color: #002029;
 }
+.navbar-toggler{
+  border:none
+}
 .canvas-body{
   height: 100%;
 }
@@ -227,6 +230,9 @@ header {
   height: 100%;
   width: auto;
 }
+.btn-close{
+  filter: invert(100%);
+}
 /* MAIN */
 /* FOOTER */
 footer {
@@ -310,6 +316,13 @@ footer {
   .navlink:nth-child(3){
     display: none;
   }
+  .navlink.active{
+    background: linear-gradient(
+    to right,
+    rgba(165, 165, 165, 0.336) 0%,
+    rgba(97, 112, 117, 0.308) 
+  );
+  }
 }
 @media (max-width:940px) {
   footer{
@@ -322,9 +335,9 @@ footer {
   }
  
   .usuario-activo{
-    top: 4vh;
+    top: 6vh;
     transform: translateY(-50%);
-    right: 1vw;
+    right: 4vw;
     border-radius: 50px;
     border:solid 1px lime;
     font-size: 1rem;
