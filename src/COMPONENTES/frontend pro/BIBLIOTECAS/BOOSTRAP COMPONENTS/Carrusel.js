@@ -7,37 +7,37 @@ function Carrusel() {
     {
       fondo: "linear-gradient(to right, transparent,red ,transparent)",
       titulo: "Carruseles",
-      parrafo: "Lee las diapositivas",
+      parrafo: "1",
     },
     {
       fondo: "linear-gradient(to right, transparent,blue ,transparent)",
-      titulo: "Carruseles",
-      parrafo: "continua",
+      titulo: "Personalizables",
+      parrafo: "2",
     },
 
     {
       fondo: "linear-gradient(to right, transparent,brown ,transparent)",
       titulo: "Carruseles",
       parrafo:
-        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+        "3",
     },
     {
       fondo: "linear-gradient(to right, transparent,purple ,transparent)",
       titulo: "Personalizables",
       parrafo:
-        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+        "4",
     },
     {
       fondo: "linear-gradient(to right, transparent,red ,transparent)",
-      titulo: "1",
+      titulo: "Carruseles",
       parrafo:
-        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+        "5",
     },
     {
       fondo: "linear-gradient(to right, transparent,lime ,transparent)",
-      titulo: "2",
+      titulo: "Personalizables",
       parrafo:
-        "Hago uso moderado de bibliotecas,ya que utilizarlas tiene un costo a nivel de rendimiento",
+        "6",
     },
   ];
 
@@ -49,7 +49,7 @@ function Carrusel() {
           style={{ background: objeto.fondo }}
           className="item-carrusel-bs"
         >
-          <Carousel.Caption>
+          <Carousel.Caption className="caption-bs">
             <h3>{objeto.titulo}</h3>
             <p>{objeto.parrafo}</p>
           </Carousel.Caption>
