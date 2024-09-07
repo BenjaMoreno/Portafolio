@@ -34,7 +34,7 @@ function App() {
       setTimeout(function () {
         document.querySelector(".animacion-bienvenida-usuario").style.display =
           "none";
-      }, 5000);
+      }, 6000);
     }
   }, [usuario]);
 

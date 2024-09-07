@@ -15,7 +15,7 @@ export const ComposR = () => {
     }
   return (
     <section className="container-compos-reutilizables">
-      <h1>Componentes Reutilizables</h1>
+      <h1 className="titulo-secciones">Componentes Reutilizables</h1>
       <div className="container-compos">
         <Reutilizable estilo={estilosCompos.compo1}/>
         <Reutilizable estilo={estilosCompos.compo2}/>

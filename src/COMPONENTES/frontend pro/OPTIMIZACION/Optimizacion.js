@@ -32,7 +32,7 @@ export const Optimizacion = () => {
   }, []);
   return (
     <section className="container-optimizacion">
-      <h1>Optimización</h1>
+      <h1 className="titulo-secciones">Optimización</h1>
       <article>
         <div className="item-opti">
           <h2>Lazy Loading</h2>
