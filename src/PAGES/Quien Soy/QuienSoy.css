@@ -1,0 +1,26 @@
+.Hero {
+  height: 74vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.foto-hero {
+  border: solid #57d7d7 1px;
+  min-height: 70%;
+  height: auto;
+  width: 25%;
+  border-radius: 20px;
+}
+.Hero h1 {
+  color: #a8ffff;
+  
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Hero h2{
+    color: rgb(197, 243, 238);
+    text-align: right;
+}
