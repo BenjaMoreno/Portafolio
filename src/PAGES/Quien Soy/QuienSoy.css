@@ -11,16 +11,47 @@
   height: auto;
   width: 25%;
   border-radius: 20px;
+  /* box-shadow: 0 0 30px lightblue; */
 }
 .Hero h1 {
-  color: #a8ffff;
-  
+  color: #e2fefe;
   font-size: 4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  animation: hero 1.2s ease-in-out forwards;
 }
-.Hero h2{
-    color: rgb(197, 243, 238);
-    text-align: right;
+.Hero h2 {
+  color: rgb(197, 243, 238);
+  text-align: right;
+  opacity: 0;
+  position: relative;
+  animation: hero 1.2s ease-in-out 0.5s forwards;
+}
+.container-texto-hero {
+  position: relative;
+}
+.cv-descarga {
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  padding: 10px 20px;
+  height: auto;
+  width: auto;
+  color: white;
+  border-radius: 10px;
+  font-weight: 900;
+  /* box-shadow: 0 0 5px white; */
+  border: solid #ffffff 1px;
+
+  background-color: rgb(150, 0, 0);
+}
+/* ANIMACIÓNES----------------------------------------------------------------- */
+@keyframes hero {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

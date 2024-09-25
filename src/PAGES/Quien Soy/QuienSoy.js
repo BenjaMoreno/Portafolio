@@ -6,9 +6,10 @@ export const QuienSoy = () => {
   return (
     <div className="Hero">
       <img className="foto-hero" />
-      <div>
+      <div className="container-texto-hero">
         <h1>Benjamin Moreno</h1>
         <h2>Desarrollador Frontend</h2>
+        {/* <a href="" className="cv-descarga">Descargar CV</a> */}
       </div>
     </div>
   );
