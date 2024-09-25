@@ -79,7 +79,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                         ¿Quién soy?
                       </NavLink>
                       <NavLink to="/codificando" className="navlink" onClick={cerrarCanvas}>
-                        Frontend Pro
+                        Mis Habilidades
                       </NavLink>
                       <div className="navlink"></div>
                       <NavLink to="/proyectos" className="navlink" onClick={cerrarCanvas}>
