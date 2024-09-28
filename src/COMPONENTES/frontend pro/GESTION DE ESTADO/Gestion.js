@@ -78,7 +78,7 @@ export const Gestion = () => {
 
   return (
     <section className="container-gestion" id="gestion">
-      <h1 className="titulo-gestion titulo-secciones">Crea un Estado</h1>
+      <h1 className="titulo-gestion titulo-secciones">Manejo de Estado</h1>
 
       <form className="form-estado caja" onSubmit={formik.handleSubmit}>
         <h1 className="palabras-gestion crear-estado">Crea un estado global</h1>

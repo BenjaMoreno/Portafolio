@@ -46,6 +46,10 @@
 
   background-color: rgb(150, 0, 0);
 }
+.container-quiensoy{
+  height: auto;
+  width: 100vw;
+}
 /* ANIMACIÓNES----------------------------------------------------------------- */
 @keyframes hero {
   from {

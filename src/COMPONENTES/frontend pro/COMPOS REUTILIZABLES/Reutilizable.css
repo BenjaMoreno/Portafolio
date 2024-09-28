@@ -24,7 +24,6 @@
   background-color: white;
 }
 .container-emoji {
-  border: solid white 1px;
   flex: 1;
   margin: 2% 2% 2% 2%;
   display: flex;

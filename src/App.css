@@ -97,11 +97,12 @@
     background-color: rgba(0, 255, 0, 0.105);
   }
 }
-/* HEADER */
 .App {
   box-sizing: border-box;
-  height: 100vh;
+  height: auto;
 }
+/* HEADER */
+
 header {
   height: 14vh;
   min-height: 76.8px;
@@ -238,13 +239,15 @@ header {
   filter: invert(100%);
 }
 /* MAIN */
+
+
 /* FOOTER */
 footer {
   height: 12vh;
   width: 100vw;
   box-sizing: border-box;
   position: relative;
-  bottom: 0;
+  /* bottom: 0; */
   display: grid;
   grid-template-areas:
     "hrs hrs"
