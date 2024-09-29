@@ -1,6 +1,7 @@
 import React from "react";
 import "./QuienSoy.css";
 import { Stack } from "./Secciones/Stack";
+import { SobreMi } from "./Secciones/SobreMi";
 
 export const QuienSoy = () => {
   return (
@@ -13,6 +14,7 @@ export const QuienSoy = () => {
           {/* <a href="" className="cv-descarga">Descargar CV</a> */}
         </div>
       </div>
+      <SobreMi/>
       <Stack/>
     </div>
   );

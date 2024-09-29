@@ -33,7 +33,7 @@ export const Stack = () => {
   ];
   return (
     <div className="container-stack">
-      <h1>Mi Stack</h1>
+      <h1>Tecnologías</h1>
       <section className="stack">
         {tecnologias.map((tecnologia) => (
           <figure className="item-stack">

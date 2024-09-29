@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 12vh;
 }
 .foto-hero {
   border: solid #57d7d7 1px;

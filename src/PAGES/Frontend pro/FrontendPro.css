@@ -12,13 +12,13 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  color: rgb(219, 219, 219);
+  color: rgb(228, 228, 228);
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   position: relative;
-  box-shadow: inset 0 0 50vw 1px rgba(6, 152, 152, 0.175);
+  box-shadow: inset 0 0 50vw 1px #002029;
 }
 .titulo-pro span {
   position: absolute;
