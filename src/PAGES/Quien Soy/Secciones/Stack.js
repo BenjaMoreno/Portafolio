@@ -35,8 +35,8 @@ export const Stack = () => {
     <div className="container-stack">
       <h1>Tecnologías</h1>
       <section className="stack">
-        {tecnologias.map((tecnologia) => (
-          <figure className="item-stack">
+        {tecnologias.map((tecnologia,index) => (
+          <figure className="item-stack" key={index}>
             <img src={tecnologia.img} />
             <figcaption>{tecnologia.nombre}</figcaption>
           </figure>

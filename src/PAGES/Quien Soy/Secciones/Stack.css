@@ -1,9 +1,10 @@
 .container-stack {
   margin-top: 12vh;
   width: 100vw;
-  height: 74vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
+
 }
 .container-stack h1 {
   height: 25%;
@@ -15,17 +16,17 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-size: 5rem;
-  
   margin: 0;
 }
 .stack {
   padding: 20px;
   width: 90%;
-  margin: auto auto 15vh auto;
+  margin: auto ;
   flex: 1;
-  border-top: solid white 1px;
-  border-bottom: solid white 1px;
-  display: grid;
+  border-top: solid #165671 1px;
+  border-bottom: solid #165671 1px;
+  display: grid; 
+
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 20px;
@@ -46,6 +47,8 @@
   justify-content: center;
   cursor: pointer;
   box-shadow: inset 0 0 50px #ffffff24;
+  border:solid rgba(255, 255, 255, 0.226) 1px;
+
 }
 .item-stack figcaption {
   display: flex;

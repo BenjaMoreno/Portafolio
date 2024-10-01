@@ -2,12 +2,13 @@ import React from "react";
 import "./QuienSoy.css";
 import { Stack } from "./Secciones/Stack";
 import { SobreMi } from "./Secciones/SobreMi";
+import { Experiencia } from "./Secciones/Experiencia";
 
 export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
       <div className="Hero">
-        <img className="foto-hero" />
+        <img className="foto-hero" src={''}/>
         <div className="container-texto-hero">
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
@@ -15,6 +16,7 @@ export const QuienSoy = () => {
         </div>
       </div>
       <SobreMi/>
+      <Experiencia/>
       <Stack/>
     </div>
   );
