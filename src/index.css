@@ -13,14 +13,16 @@ input[type="number"]::-webkit-outer-spin-button {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   margin: 0;
-  height: auto;
+  height:auto;
   width: 100vw;
-  background: radial-gradient(circle at top left, #0694ec64, transparent 50%),
-              radial-gradient(circle at bottom right, #0694ec64, transparent 50%),
+  background: radial-gradient(circle at 25% 10%, #0694ec64, transparent 40%),
+              radial-gradient(circle at 75% 110%, #0694ec64, transparent 40%),
               radial-gradient(circle at top right, #002029, transparent 50%),
               radial-gradient(circle at bottom left, #002029, transparent 50%);
   background-color: #002029;
+  background-attachment: fixed;
   overflow-x: hidden;
+  background-repeat: no-repeat;
    {
     /*#00141A*/
   }
