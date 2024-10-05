@@ -40,7 +40,7 @@ export const Experiencia = () => {
   return (
     <section className="container-experiencia">
       <span>
-        <Exper className="user" />
+        <Exper className="iconos-span" />
         Experiencia
       </span>
       <section className="grid-container-experiencia">

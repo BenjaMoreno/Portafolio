@@ -13,7 +13,11 @@ import wordpress from "../../../IMAGES/stack/WORDPRESS.png";
 import Hostinger from "../../../IMAGES/stack/HOSTINGER .png";
 import gimp from "../../../IMAGES/stack/GIMP.png";
 import netlify from "../../../IMAGES/SVG/NETLIFY.svg";
+import devtools from "../../../IMAGES/SVG/DEVTOOLS.svg";
 import vercel from "../../../IMAGES/stack/VERCEL.png";
+import jest from "../../../IMAGES/SVG/JEST.svg";
+import cypress from "../../../IMAGES/SVG/CYPRESS.svg";
+import { ReactComponent as Tecnologys } from "../../../IMAGES/SVG/TECNOLOGIAS.svg";
 export const Stack = () => {
   const tecnologias = [
     { nombre: "HTML", img: html },
@@ -25,17 +29,23 @@ export const Stack = () => {
     { nombre: "Bootstrap", img: boostrap },
     { nombre: "React Bootstrap", img: react_boostrap },
     { nombre: "Figma", img: figma },
-    { nombre: "WordPress", img: wordpress },
+    { nombre: "Google DevTools", img: devtools },
+    { nombre: "Jest", img: jest },
+    { nombre: "Cypress", img: cypress },
     { nombre: "Hostinger", img: Hostinger },
     { nombre: "Gimp", img: gimp },
     { nombre: "Netlify", img: netlify },
     { nombre: "Vercel", img: vercel },
+    { nombre: "WordPress", img: wordpress },
   ];
   return (
     <div className="container-stack">
-      <h1>Tecnologías</h1>
+      <span>
+        <Tecnologys className="iconos-span" />
+        Tecnologías
+      </span>
       <section className="stack">
-        {tecnologias.map((tecnologia,index) => (
+        {tecnologias.map((tecnologia, index) => (
           <figure className="item-stack" key={index}>
             <img src={tecnologia.img} />
             <figcaption>{tecnologia.nombre}</figcaption>

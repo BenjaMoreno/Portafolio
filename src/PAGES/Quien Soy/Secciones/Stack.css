@@ -1,22 +1,18 @@
 .container-stack {
-  margin-top: 12vh;
-  width: 100vw;
+  margin: 12vh auto auto auto;
+  width: 80%;
   height: 80vh;
   display: flex;
   flex-direction: column;
-
 }
-.container-stack h1 {
+.container-stack span {
   height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   color: white;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-size: 5rem;
+  font-size: 3rem;
+    font-weight: 700;
   margin: 0;
+  text-align: left;
 }
 .stack {
   padding: 20px;
@@ -28,7 +24,7 @@
   display: grid; 
 
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-gap: 20px;
 }
 .item-stack {
@@ -70,7 +66,7 @@
 .item-stack:hover{
   transform: translateY(-10px);
   transition: 0.2s;
-
+  background-color: #1656719d;
 }
 
 .item-stack:hover img{

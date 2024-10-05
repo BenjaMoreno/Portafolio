@@ -27,7 +27,7 @@
   height: 35vh;
   position: relative;
   background-color: transparent;
-  box-shadow: 5px 5px black;
+  /* box-shadow: 5px 5px black; */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -47,7 +47,6 @@
     radial-gradient(circle at top right, #002029, transparent 50%),
     radial-gradient(circle at bottom left, #002029, transparent 50%);
   overflow-x: hidden;
-  box-shadow: 0 10px 20px 1px rgba(255, 255, 255, 0.158);
 }
 .fecha {
   position: absolute;
