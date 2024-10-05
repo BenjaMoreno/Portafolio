@@ -55,7 +55,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
             <Navbar expand='lg' className="bg-body-tertiary mb-3">
               <Container fluid className="canvas-container">
                 <Navbar.Brand className="brand-logo">
-                  <img src={LOGO} id="LOGO" />
+                  <img src={LOGO} id="LOGO" title="Benjamin Moreno"/>
                 </Navbar.Brand>
                 <Navbar.Toggle  aria-controls="offcanvasNavbar" onClick={abrirCanvas}  style={{ boxShadow: 'none' }}>
                   <img src={menu} alt="" className="icono-toggle" />
@@ -93,7 +93,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 </Navbar.Offcanvas>
               </Container>
             </Navbar>
-            <NavLink className="usuario-activo" to='/codificando#gestion'>
+            <NavLink className="usuario-activo" to='/codificando#gestion' title="Clicka para cambiar estado">
               <span>{estadoAnimacion.usuario}</span>
               <img src={estadoAnimacion.avatar} />
             </NavLink>
@@ -140,7 +140,7 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
               <img className="logo-footer" src={LOGO} />
             </a>
           </footer>
-          <a href="#" id="subir">
+          <a href="#" id="subir" title="Pincha para subir">
             <FLECHA className="flecha-svg" />
           </a>
           <div className="animacion-bienvenida-usuario">
