@@ -3,6 +3,7 @@ import "./QuienSoy.css";
 import { Stack } from "./Secciones/Stack";
 import { SobreMi } from "./Secciones/SobreMi";
 import { Experiencia } from "./Secciones/Experiencia";
+import { Certificados } from "./Secciones/Certificados";
 
 export const QuienSoy = () => {
   return (
@@ -18,6 +19,7 @@ export const QuienSoy = () => {
       <SobreMi/>
       <Experiencia/>
       <Stack/>
+      <Certificados/>
     </div>
   );
 };

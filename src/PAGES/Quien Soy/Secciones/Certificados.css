@@ -1,0 +1,78 @@
+.container-certificados {
+  min-height: 86vh;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 1fr;
+  grid-template-areas:
+    "titulo titulo"
+    "carousel info";
+}
+.container-certificados span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #eff5ff;
+  grid-area: titulo;
+  display: flex;
+  align-items: center;
+}
+.carousel-certificates {
+  grid-area: carousel;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-certificates {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info-certificates h1 {
+  color: #eff5ff;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: hero 1.2s ease-in-out forwards;
+}
+.info-certificates a{
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  border-radius: 10px
+}
+.info-certificates div{
+  margin-top: 40px;
+}
+.crsl_certificates {
+  width: 500px !important;
+  height: auto !important;
+  max-height: 100% !important;
+  border: solid #eff5ff 2px !important;
+  padding: 10px;
+  border-radius: 20px;
+}
+.crsl_certificates .carousel-control-prev {
+  left: -15%;
+}
+.crsl_certificates .carousel-control-prev-icon,
+.crsl_certificates .carousel-control-next-icon {
+  height: 50%;
+  width: 100%;
+}
+.crsl_certificates .carousel-control-next {
+  right: -15%;
+}
+
+.crsl_certificates .carousel-indicators {
+  margin-bottom: -10%;
+}
+.svg-verify{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
