@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+### ¿Qué es este proyecto?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es mi portafolio profesional de desarrollador Frontend.
 
-## Available Scripts
+### Propósito del proyecto
 
-In the project directory, you can run:
+Su finalidad es poder proyectar mi perfil en general, y plasmar mis habilidades tanto técnicas como blandas en un solo lugar, con demostraciones concretas, fotos mías y también mis certificaciones.
+Su principal función es poder conseguir empleo con él, para que el reclutador vea que manejo ágil y didácticamente mis habilidades.
 
-### `npm start`
+------------------------------INICIANDO CON EL PROYECTO-------------------------------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Clonar el proyecto desde GitHub
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Copia el https del proyecto en GitHub (el cual te permite hacer un "clone" del proyecto).
 
-### `npm test`
+### Cargar el proyecto hacia una carpeta de tu computador
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cuando tengas el enlace copiado, abres la CMD de tu computadora, te diriges hacia la ubicación exacta donde quieres guardar este proyecto (asumiendo que sabes navegar dentro de la CMD) y aplicas el siguiente comando:
+git clone aquí-el-enlace-de-github
 
-### `npm run build`
+### npm start (Iniciar el proyecto)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Una vez clonado, en la terminal (PowerShell) debes asegurarte de estar posicionado en "C:/........./Portafolio" y aplicar el comando
+npm start.
+Si luego de aplicar ese comando, te aparecen errores o te dice algo como:
+"react-scripts" no se reconoce como un comando interno o externo, programa o archivo por lotes ejecutable,
+es muy probable que debas instalar todas las dependencias o paquetes necesarios del proyecto, los cuales no están en tu computadora. Para ello, sigue el siguiente paso.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aplica este comando si, tras intentar iniciarlo con npm start, te lanza errores. El comando es npm install o su abreviado npm i.
 
-### `npm run eject`
+### npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Espera a que esté todo instalado y vuelve a aplicar el comando npm start, esto abrirá el proyecto en el navegador que utilices para que puedas visualizarlo.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ///CONSIDERAR QUE ESTE README SE ACTUALIZA SEGÚN SURJA UN NUEVO ERROR DEL PROYECTO///
