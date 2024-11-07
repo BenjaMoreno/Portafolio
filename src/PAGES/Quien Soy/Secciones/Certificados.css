@@ -8,6 +8,7 @@
   grid-template-areas:
     "titulo titulo"
     "carousel info";
+  border: solid white 1px;
 }
 .container-certificados span {
   font-size: 3rem;
@@ -39,13 +40,13 @@
   font-style: normal;
   animation: hero 1.2s ease-in-out forwards;
 }
-.info-certificates a{
-  background-color: #007BFF;
+.info-certificates a {
+  background-color: #007bff;
   color: white;
   padding: 20px;
-  border-radius: 10px
+  border-radius: 10px;
 }
-.info-certificates div{
+.info-certificates div {
   margin-top: 40px;
 }
 .crsl_certificates {
@@ -71,7 +72,7 @@
 .crsl_certificates .carousel-indicators {
   margin-bottom: -10%;
 }
-.svg-verify{
+.svg-verify {
   width: 40px;
   height: auto;
   margin: 10px;

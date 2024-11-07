@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 12vh;
+  border: solid white 1px;
 }
 .foto-hero {
   border: solid #57d7d7 1px;
@@ -47,7 +48,7 @@
 
   background-color: rgb(150, 0, 0);
 }
-.container-quiensoy{
+.container-quiensoy {
   height: auto;
   width: 100vw;
 }

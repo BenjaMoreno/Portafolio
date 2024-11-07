@@ -1,27 +1,27 @@
-.container-descripcion{
-    width: 80%;
-    height: 60vh;
-    color: #EFF5FF;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.container-descripcion {
+  width: 80%;
+  height: 60vh;
+  color: #eff5ff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid white 1px;
 }
-.container-descripcion span{
-    font-size:3rem;
-    font-weight: 700;
+.container-descripcion span {
+  font-size: 3rem;
+  font-weight: 700;
 }
-.container-descripcion p{
-    font-size: 1.875rem;
-    font-family: "Montserrat", sans-serif;
+.container-descripcion p {
+  font-size: 1.875rem;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-.container-descripcion p a{
-    color: #3C83F6;
+.container-descripcion p a {
+  color: #3c83f6;
 }
-.iconos-span{
-    height:70px;
-   
+.iconos-span {
+  height: 70px;
 }

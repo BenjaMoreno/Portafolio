@@ -1,27 +1,29 @@
 .container-stack {
   margin: 12vh auto auto auto;
   width: 80%;
-  height: 80vh;
+  min-height: 80vh;
+  height: auto;
   display: flex;
   flex-direction: column;
+  border: solid white 1px;
 }
 .container-stack span {
   height: 25%;
   width: 100%;
   color: white;
   font-size: 3rem;
-    font-weight: 700;
+  font-weight: 700;
   margin: 0;
   text-align: left;
 }
 .stack {
   padding: 20px;
   width: 90%;
-  margin: auto ;
+  margin: auto;
   flex: 1;
   border-top: solid #165671 1px;
   border-bottom: solid #165671 1px;
-  display: grid; 
+  display: grid;
 
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -43,8 +45,7 @@
   justify-content: center;
   cursor: pointer;
   box-shadow: inset 0 0 50px #ffffff24;
-  border:solid rgba(255, 255, 255, 0.226) 1px;
-
+  border: solid rgba(255, 255, 255, 0.226) 1px;
 }
 .item-stack figcaption {
   display: flex;
@@ -63,18 +64,17 @@
   height: 80%;
   opacity: 0;
 }
-.item-stack:hover{
+.item-stack:hover {
   transform: translateY(-10px);
   transition: 0.2s;
   background-color: #1656719d;
 }
 
-.item-stack:hover img{
+.item-stack:hover img {
   opacity: 1;
   transition: 0.5s;
 }
-.item-stack:hover figcaption{
+.item-stack:hover figcaption {
   opacity: 0;
   transition: 0.4s;
 }
-
