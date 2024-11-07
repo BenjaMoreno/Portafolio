@@ -9,17 +9,17 @@ export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
       <div className="Hero">
-        <img className="foto-hero" src={''}/>
+        <img className="foto-hero" src={""} />
         <div className="container-texto-hero">
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
           {/* <a href="" className="cv-descarga">Descargar CV</a> */}
         </div>
       </div>
-      <SobreMi/>
-      <Experiencia/>
+      <SobreMi />
+      {/* <Experiencia/>
       <Stack/>
-      <Certificados/>
+      <Certificados/> */}
     </div>
   );
 };
