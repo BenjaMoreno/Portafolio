@@ -6,11 +6,8 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  border: solid white 1px;
 }
 .container-experiencia span {
-  height: 200px;
-  line-height: 200px;
   font-size: 3rem;
   font-weight: 700;
 }
@@ -28,7 +25,6 @@
   height: 35vh;
   position: relative;
   background-color: transparent;
-  /* box-shadow: 5px 5px black; */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -38,6 +34,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  padding-bottom: 20px;
 }
 .trabajo:hover {
   transform: translateY(-6px);
@@ -52,7 +49,7 @@
 .fecha {
   position: absolute;
   right: 20px;
-  top: 20px;
+  bottom: 20px;
   border: solid white 1px;
   background-color: #2728284a;
   color: rgb(255, 255, 255);
@@ -83,8 +80,9 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 90%;
+  height: max-content;
   max-height: 90%;
+  overflow: hidden;
   width: 80%;
 }
 .detalles-trabajo h2 {
@@ -93,4 +91,28 @@
 }
 .detalles-trabajo ul {
   margin: 0;
+}
+@media (max-width: 430px) {
+  .container-experiencia span {
+    font-size: 2rem;
+  }
+  .center-trabajo p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .fecha {
+    font-size: 0.6rem;
+  }
+  .detalles-trabajo h2 {
+    font-size: smaller;
+  }
+  .detalles-trabajo li {
+    font-size: small;
+  }
+}
+@media (max-width: 1210px) {
+  .grid-container-experiencia {
+    grid-template-columns: 1fr;
+  }
 }

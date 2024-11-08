@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Experiencia.css";
 import { ReactComponent as Exper } from "../../../IMAGES/SVG/EXPERIENCIA.svg";
 
@@ -33,10 +33,10 @@ export const Experiencia = () => {
     },
   ];
 
-  useEffect(() => {}, [activarDetalles]);
-  const quitarDetalles = (e) => {
+  const quitarDetalles = () => {
     setActivarDetalles(null);
   };
+
   return (
     <section className="container-experiencia">
       <span>
@@ -49,7 +49,7 @@ export const Experiencia = () => {
             className="trabajo"
             key={indiceMap}
             onClick={() => setActivarDetalles(indiceMap)}
-            onMouseLeave={(e) => quitarDetalles()}
+            onMouseLeave={quitarDetalles}
             title="Haz clic para ver detalles del trabajo"
           >
             {activarDetalles === indiceMap ? (
@@ -68,7 +68,14 @@ export const Experiencia = () => {
               </div>
             )}
 
-            <div className="fecha">{trabajo.fecha}</div>
+            <div
+              className="fecha"
+              style={{
+                display: activarDetalles === indiceMap ? "none" : "block",
+              }}
+            >
+              {trabajo.fecha}
+            </div>
           </div>
         ))}
       </section>

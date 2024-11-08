@@ -17,9 +17,9 @@ export const QuienSoy = () => {
         </div>
       </div>
       <SobreMi />
-      {/* <Experiencia/>
-      <Stack/>
-      <Certificados/> */}
+      <Experiencia />
+      {/* <Stack/> */}
+      {/* <Certificados/> */}
     </div>
   );
 };
