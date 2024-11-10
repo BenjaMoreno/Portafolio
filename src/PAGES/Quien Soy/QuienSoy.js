@@ -18,7 +18,7 @@ export const QuienSoy = () => {
       </div>
       <SobreMi />
       <Experiencia />
-      {/* <Stack/> */}
+      <Stack />
       {/* <Certificados/> */}
     </div>
   );
