@@ -8,7 +8,7 @@
 }
 .foto-hero {
   border: solid #57d7d7 1px;
-  min-height: 70%;
+  /* min-height: 70%; */
   height: auto;
   width: 25%;
   border-radius: 20px;
@@ -58,5 +58,26 @@
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .container-texto-hero h1 {
+    font-size: 2rem;
+  }
+  .container-texto-hero h2 {
+    font-size: 1.2rem;
+  }
+  .foto-hero {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 630px) {
+  .Hero {
+    height: 84vh;
+    flex-direction: column;
+  }
+  .container-texto-hero h2 {
+    text-align: center;
   }
 }

@@ -4,12 +4,13 @@ import { Stack } from "./Secciones/Stack";
 import { SobreMi } from "./Secciones/SobreMi";
 import { Experiencia } from "./Secciones/Experiencia";
 import { Certificados } from "./Secciones/Certificados";
+import foto from "../../IMAGES/generales/hero-foto.png";
 
 export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
       <div className="Hero">
-        <img className="foto-hero" src={""} />
+        <img className="foto-hero" src={foto} />
         <div className="container-texto-hero">
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
