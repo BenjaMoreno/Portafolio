@@ -20,7 +20,7 @@ export const QuienSoy = () => {
       <SobreMi />
       <Experiencia />
       <Stack />
-      {/* <Certificados/> */}
+      <Certificados />
     </div>
   );
 };

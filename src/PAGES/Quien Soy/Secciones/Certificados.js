@@ -56,11 +56,11 @@ export const Certificados = () => {
       </article>
       <div className="info-certificates">
         <h1>{titulo}</h1>
-        <div>
-        <a href={linkState} target="blank">
-          Ver Oficial
-        </a>
-        <Verify className="svg-verify"/>
+        <div className="container-oficial">
+          <a href={linkState} target="blank">
+            Ver Oficial
+          </a>
+          <Verify className="svg-verify" />
         </div>
       </div>
     </section>
