@@ -26,23 +26,23 @@ export const FrontendPro = () => {
     <div className="container-pro">
       <h1 className="titulo-pro">
         <span>
-          Conoce mis habilidades y servicios como desarrollador<br/> de Frontend
+          Conoce mis habilidades y servicios como desarrollador de Frontend
         </span>
         <Flecha className="flecha-animada" />
       </h1>
-      <Gestion/>
+      <Gestion />
       <hr className="separador-secciones"></hr>
-      <ComposR/>
-      <hr className="separador-secciones"></hr>
-
-      <Apis/>
-      <hr className="separador-secciones"></hr>
-      <Formulario/>
-      <hr className="separador-secciones"></hr>
-      <Bibliotecas/>
+      <ComposR />
       <hr className="separador-secciones"></hr>
 
-      <Optimizacion/>
+      <Apis />
+      <hr className="separador-secciones"></hr>
+      <Formulario />
+      <hr className="separador-secciones"></hr>
+      <Bibliotecas />
+      <hr className="separador-secciones"></hr>
+
+      <Optimizacion />
     </div>
   );
 };

@@ -32,24 +32,40 @@
 .container-texto-hero {
   position: relative;
 }
+.container-descarga {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20vw;
+  float: right;
+  margin-top: 20px;
+}
 .cv-descarga {
-  position: absolute;
-  right: 0;
-  bottom: -100%;
-  padding: 10px 20px;
-  height: auto;
-  width: auto;
   color: white;
+  min-width: max-content;
+  border: solid #ffffff 2px;
+  padding: 5px 15px;
   border-radius: 10px;
-  font-weight: 900;
-  /* box-shadow: 0 0 5px white; */
-  border: solid #ffffff 1px;
-
-  background-color: rgb(150, 0, 0);
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.541);
+}
+.cv-descarga:hover {
+  box-shadow: inset 0 0 70px black;
 }
 .container-quiensoy {
   height: auto;
   width: 100vw;
+}
+.logo-gith {
+  min-height: 40px;
+  width: auto;
+}
+.logo-gith:hover {
+  filter: drop-shadow(0 0 4px rgb(153, 199, 246));
 }
 /* ANIMACIÓNES----------------------------------------------------------------- */
 @keyframes hero {
@@ -71,6 +87,10 @@
     width: auto;
     height: auto;
   }
+  .container-descarga {
+    float: inherit;
+    width: 100%;
+  }
 }
 @media (max-width: 630px) {
   .Hero {
@@ -79,5 +99,8 @@
   }
   .container-texto-hero h2 {
     text-align: center;
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 }
