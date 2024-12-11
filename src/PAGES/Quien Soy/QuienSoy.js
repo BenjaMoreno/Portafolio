@@ -6,7 +6,6 @@ import { Experiencia } from "./Secciones/Experiencia";
 import { Certificados } from "./Secciones/Certificados";
 import foto from "../../IMAGES/generales/hero-foto.png";
 import { ReactComponent as Github } from "../../IMAGES/SVG/GITHUB.svg";
-import { Link } from "react-router-dom";
 export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
