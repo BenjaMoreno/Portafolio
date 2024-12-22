@@ -8,11 +8,11 @@
 }
 .foto-hero {
   border: solid #57d7d7 1px;
-  /* min-height: 70%; */
+  min-height: 70%;
   height: auto;
   width: 25%;
   border-radius: 20px;
-  /* box-shadow: 0 0 30px lightblue; */
+  box-shadow: 0 0 30px lightblue;
 }
 .Hero h1 {
   color: #e2fefe;

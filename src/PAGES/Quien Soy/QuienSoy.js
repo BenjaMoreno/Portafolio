@@ -10,7 +10,7 @@ export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
       <div className="Hero">
-        <img className="foto-hero" src={foto} />
+        <div className="foto-hero" src="{foto}" alt="." />
         <div className="container-texto-hero">
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
