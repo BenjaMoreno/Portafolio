@@ -15,9 +15,6 @@ export const QuienSoy = () => {
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
           <div className="container-descarga">
-            <a href="" className="cv-descarga">
-              Descargar CV
-            </a>
             <a
               href="https://github.com/BenjaMoreno"
               target="_blank"
@@ -25,6 +22,19 @@ export const QuienSoy = () => {
               aria-label="GitHub de Benjamin Moreno"
             >
               <Github className="logo-gith" />
+            </a>
+            <a
+              href="/BenjaminMorenoCV.pdf"
+              download="BenjaminMorenoCV.pdf"
+              className="cv-descarga"
+              target="_blank"
+              onClick={(e) => {
+                e.preventDefault(); // Prevenimos el comportamiento por defecto del enlace
+                window.open("/BenjaminMorenoCV.pdf", "_blank"); // Abre en nueva pestaña
+                e.target.click(); // Inicia la descarga
+              }}
+            >
+              Descargar y Ver CV
             </a>
           </div>
         </div>
