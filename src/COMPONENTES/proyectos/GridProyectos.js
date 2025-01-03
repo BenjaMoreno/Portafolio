@@ -15,7 +15,9 @@ export const GridProyectos = () => {
             actividades a través de su sitio web, así como contenido y noticias
             locales mediante las redes sociales.
           </p>
-          <a href="https://revista-sur-activo-6t3tm88qt-benjamins-projects-0e3ff485.vercel.app/" target="blank">Visitar sitio 🖥️</a>
+          <a href="https://jovial-figolla-7271fd.netlify.app/" target="blank">
+            Visitar sitio 🖥️
+          </a>
         </figcaption>
       </figure>
       <figure>
@@ -27,7 +29,7 @@ export const GridProyectos = () => {
             de bibliotecas.
           </p>
           <a
-            href="https://65e6060432e6f70bd481fa03--animated-croissant-b49064.netlify.app/"
+            href="https://animated-croissant-b49064.netlify.app/"
             target="blank"
           >
             Visitar sitio 🖥️
@@ -42,16 +44,21 @@ export const GridProyectos = () => {
             el rol de Frontend y desarrollo con React en un único proyecto, al
             cual puedo recurrir cuando necesite refrescar información.
           </p>
-          <a href="https://reacttrainingoficial-qosf76o4j-benjamins-projects-0e3ff485.vercel.app/" target="blank">Visitar sitio 🖥️</a>{" "}
+          <a href="https://super-chebakia-d1fcc3.netlify.app/" target="blank">
+            Visitar sitio 🖥️
+          </a>{" "}
         </figcaption>
       </figure>
       <figure>
         <img src={suractivo_antiguo} alt="" />
         <figcaption>
-          <p>
-            Version anterior de la Revista Sur Activo.
-          </p>
-          <a href="https://loquacious-dolphin-180358.netlify.app/" target="blank">Visitar sitio 🖥️</a>
+          <p>Version anterior de la Revista Sur Activo.</p>
+          <a
+            href="https://loquacious-dolphin-180358.netlify.app/"
+            target="blank"
+          >
+            Visitar sitio 🖥️
+          </a>
         </figcaption>
       </figure>
     </article>
