@@ -40,10 +40,11 @@
   transform: translateY(-6px);
   transition: 0.2s ease-out;
   /* background-color: #63085518; */
-  background: radial-gradient(circle at top left, #0694ec64, transparent 50%),
-    radial-gradient(circle at bottom right, #0694ec64, transparent 50%),
+  background: radial-gradient(circle at top left, #d906ec64, transparent 50%),
+    radial-gradient(circle at bottom right, #d906ec64, transparent 50%),
     radial-gradient(circle at top right, #002029, transparent 50%),
     radial-gradient(circle at bottom left, #002029, transparent 50%);
+  background-color: rgba(0, 0, 255, 0.514);
   overflow-x: hidden;
 }
 .fecha {
@@ -82,15 +83,34 @@
   left: 10px;
   height: max-content;
   max-height: 90%;
-  overflow: hidden;
-  width: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 95%;
 }
+.detalles-trabajo::-webkit-scrollbar {
+  width: 12px;
+}
+.detalles-trabajo::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: solid white 1px;
+  box-shadow: inset 0 0 4px white;
+  border-radius: 5px;
+  width: 12px;
+}
+
 .detalles-trabajo h2 {
   padding: 4%;
   font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 .detalles-trabajo ul {
   margin: 0;
+}
+.detalles-trabajo li {
+  margin: 10px 0;
 }
 @media (max-width: 430px) {
   .container-experiencia span {
