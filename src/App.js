@@ -5,9 +5,9 @@ import { QuienSoy } from "./PAGES/Quien Soy/QuienSoy";
 import { Proyectos } from "./PAGES/Proyectos/Proyectos";
 import { Contactame } from "./PAGES/Contactame/Contactame";
 import { FrontendPro } from "./PAGES/Frontend pro/FrontendPro";
-import facebook from "../src/IMAGES/SVG/FACEBOOK.svg";
-import github from "../src/IMAGES/SVG/GITHUB.svg";
-import linkedin from "../src/IMAGES/SVG/LINKEDIN.svg";
+import { ReactComponent as Facebook } from "../src/IMAGES/SVG/FACEBOOK.svg";
+import { ReactComponent as Linkedin } from "../src/IMAGES/SVG/LINKEDIN.svg";
+import { ReactComponent as Github } from "../src/IMAGES/SVG/GITHUB.svg";
 import { ReactComponent as FLECHA } from "../src/IMAGES/SVG/FLECHA.svg";
 import { useEffect, useState } from "react";
 import { ContextUser } from "./CONTEXT/ContextUser";
@@ -15,7 +15,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
-import menu from '../src/IMAGES/SVG/BURGER_MENU.svg'
+import menu from "../src/IMAGES/SVG/BURGER_MENU.svg";
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -24,7 +24,7 @@ function App() {
     usuario: "estado",
     avatar: "",
   });
-  const [mostrarCanvas,setMostrarCanvas]=useState(false)
+  const [mostrarCanvas, setMostrarCanvas] = useState(false);
 
   useEffect(() => {
     if (usuario) {
@@ -43,49 +43,68 @@ function App() {
     var btn_flecha = document.getElementById("subir");
     btn_flecha.style.display = window.scrollY > 0 ? "block" : "none";
   });
- //Control Canvas
-const abrirCanvas=()=>setMostrarCanvas(true);
-const cerrarCanvas=()=>setMostrarCanvas(false)
+  //Control Canvas
+  const abrirCanvas = () => setMostrarCanvas(true);
+  const cerrarCanvas = () => setMostrarCanvas(false);
   return (
     <ContextUser.Provider value={{ usuario, setUsuario }}>
       <BrowserRouter>
         <div className="App">
           <header>
-            
-            <Navbar expand='lg' className="bg-body-tertiary mb-3">
+            <Navbar expand="lg" className="bg-body-tertiary mb-3">
               <Container fluid className="canvas-container">
                 <Navbar.Brand className="brand-logo">
-                  <img src={LOGO} id="LOGO" title="Benjamin Moreno"/>
+                  <img src={LOGO} id="LOGO" title="Benjamin Moreno" />
                 </Navbar.Brand>
-                <Navbar.Toggle  aria-controls="offcanvasNavbar" onClick={abrirCanvas}  style={{ boxShadow: 'none' }}>
+                <Navbar.Toggle
+                  aria-controls="offcanvasNavbar"
+                  onClick={abrirCanvas}
+                  style={{ boxShadow: "none" }}
+                >
                   <img src={menu} alt="" className="icono-toggle" />
                 </Navbar.Toggle>
                 <Navbar.Offcanvas
-                   id="offcanvasNavbar"
-                   aria-labelledby="offcanvasNavbarLabel"
-                   placement="end"
-                   onHide={cerrarCanvas}
-                   show={mostrarCanvas}
+                  id="offcanvasNavbar"
+                  aria-labelledby="offcanvasNavbarLabel"
+                  placement="end"
+                  onHide={cerrarCanvas}
+                  show={mostrarCanvas}
                 >
-                  <Offcanvas.Header closeButton >
+                  <Offcanvas.Header closeButton>
                     <Offcanvas.Title id="offcanvasNavbarLabel">
-                      <img src={LOGO} className="logo-canvas"/>
+                      <img src={LOGO} className="logo-canvas" />
                     </Offcanvas.Title>
                     {/* <Button>a</Button> */}
                   </Offcanvas.Header>
                   <Offcanvas.Body className="canvas-body">
                     <Nav className="justify-content-end flex-grow-1 pe-3">
-                      <NavLink to="/" className="navlink" onClick={cerrarCanvas}>
+                      <NavLink
+                        to="/"
+                        className="navlink"
+                        onClick={cerrarCanvas}
+                      >
                         ¿Quién soy?
                       </NavLink>
-                      <NavLink to="/codificando" className="navlink" onClick={cerrarCanvas}>
+                      <NavLink
+                        to="/codificando"
+                        className="navlink"
+                        onClick={cerrarCanvas}
+                      >
                         Mis Habilidades
                       </NavLink>
                       <div className="navlink"></div>
-                      <NavLink to="/proyectos" className="navlink" onClick={cerrarCanvas}>
+                      <NavLink
+                        to="/proyectos"
+                        className="navlink"
+                        onClick={cerrarCanvas}
+                      >
                         Proyectos
                       </NavLink>
-                      <NavLink to="/contactame" className="navlink" onClick={cerrarCanvas}>
+                      <NavLink
+                        to="/contactame"
+                        className="navlink"
+                        onClick={cerrarCanvas}
+                      >
                         Contáctame
                       </NavLink>
                     </Nav>
@@ -93,7 +112,11 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 </Navbar.Offcanvas>
               </Container>
             </Navbar>
-            <NavLink className="usuario-activo" to='/codificando#gestion' title="Clicka para cambiar estado">
+            <NavLink
+              className="usuario-activo"
+              to="/codificando#gestion"
+              title="Clicka para cambiar estado"
+            >
               <span>{estadoAnimacion.usuario}</span>
               <img src={estadoAnimacion.avatar} />
             </NavLink>
@@ -101,7 +124,6 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
               <hr className="hr-header"></hr>
               <hr className="hr-header"></hr>
             </div>
-           
           </header>
           <main>
             <Routes>
@@ -124,16 +146,16 @@ const cerrarCanvas=()=>setMostrarCanvas(false)
                 href="https://web.facebook.com/benjamin.morenosaez.3"
                 target="blank"
               >
-                <img src={facebook} alt="logo face" />
+                <Facebook className="svg-footer" />
               </a>
               <a
                 href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/"
                 target="blank"
               >
-                <img src={linkedin} alt="logo linkedin" />
+                <Linkedin className="svg-footer" />
               </a>
               <a href="https://github.com/BenjaMoreno" target="blank">
-                <img src={github} alt="logo github" />
+                <Github className="svg-footer" />
               </a>
             </div>
             <a href="#">

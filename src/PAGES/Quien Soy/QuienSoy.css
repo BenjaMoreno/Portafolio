@@ -62,6 +62,7 @@
 .logo-gith {
   min-height: 40px;
   width: auto;
+  color: #ffffff !important;
 }
 .logo-gith:hover {
   filter: drop-shadow(0 0 4px rgb(153, 199, 246));
