@@ -61,7 +61,7 @@
 }
 .item-stack img {
   width: auto;
-  height: 80%;
+  height: 50px;
   opacity: 0;
 }
 .item-stack:hover {
