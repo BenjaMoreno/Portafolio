@@ -4,14 +4,22 @@ import revista_sur_activo from "../../IMAGES/proyectos/revista-sur-activo.webp";
 import sonicpulse from "../../IMAGES/proyectos/sonicpulse.webp";
 import react_training from "../../IMAGES/proyectos/react-training.webp";
 import suractivo_antiguo from "../../IMAGES/proyectos/suractivo-pasado.webp";
+import pacis from "../../IMAGES/proyectos/spa.webp";
 
 const proyectos = [
   {
     imgSrc: revista_sur_activo,
     alt: "Revista Sur Activo",
     descripcion:
-      "Revista en el sur de Chile, dedicada principalmente a compartir actividades a través de su sitio web, así como contenido y noticias locales mediante las redes sociales.",
+      "Revista en el sur de Chile,Revista dedicada a compartir actividades de la zona sur de Chile, así como contenido y noticias locales mediante las redes sociales.",
     link: "https://jovial-figolla-7271fd.netlify.app/",
+  },
+  {
+    imgSrc: pacis,
+    alt: "Pacis e-commerce",
+    descripcion:
+      "e-commerce de productos artesanales para el cuidado personal,en el se ofrecen catalogos de productos, los cuales puedes añadir al carrito y comprarlos",
+    link: "https://fantastic-pony-a7bb42.netlify.app/",
   },
   {
     imgSrc: sonicpulse,
