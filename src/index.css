@@ -23,9 +23,7 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
   background-repeat: no-repeat;
-   {
-    /*#00141A*/
-  }
+  /*#00141A*/
 }
 body::-webkit-scrollbar {
   width: 10px;
