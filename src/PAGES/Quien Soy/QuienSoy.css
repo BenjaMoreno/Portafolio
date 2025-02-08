@@ -22,7 +22,7 @@
 .Hero h2 {
   text-align: right;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 100;
   opacity: 0;
   position: relative;
   animation: hero 1.2s ease-in-out 0.5s forwards;
@@ -38,6 +38,10 @@
   float: right;
   margin-top: 20px;
 }
+.container-descarga button {
+  background-color: #13315c;
+  font-family: var(--fuente-montserrat);
+}
 .cv-descarga {
   color: white;
   min-width: max-content;
@@ -48,10 +52,13 @@
   font-weight: 500;
   font-style: normal;
   font-size: 1.2rem;
-  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.541);
+  box-shadow: inset 0 0 70px #0b2545;
+
+  /* box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.541); */
 }
 .cv-descarga:hover {
-  box-shadow: inset 0 0 70px black;
+  box-shadow: inset 0 0 70px #0b2545;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.541);
 }
 .container-quiensoy {
   height: auto;

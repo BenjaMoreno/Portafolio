@@ -5,7 +5,7 @@
   --fuente-poopins: "Poppins", sans-serif;
   --fuente-montserrat: "Montserrat", sans-serif;
   /* Fuentes Color */
-  --fuente-blanca: #e2fefe;
+  --fuente-blanca: #eef4ed;
   /* Fuentes tamaño */
   --font-size-base: 16px;
   --font-size-h1: 3rem; /* 2.5 veces el tamaño base */
@@ -67,6 +67,7 @@ q {
   font-family: var(--fuente-montserrat);
 }
 button {
+  font-family: var(--fuente-montserrat);
   font-size: var(--font-size-h6);
   color: var(--fuente-blanca);
   background-color: #007bff;
@@ -88,11 +89,16 @@ body {
   height: auto;
   width: 100vw;
   font-size: var(--font-size-base);
-  background: radial-gradient(circle at 25% 10%, #0694ec64, transparent 40%),
+  /* background: radial-gradient(circle at 25% 10%, #0694ec64, transparent 40%),
     radial-gradient(circle at 75% 110%, #0694ec64, transparent 40%),
     radial-gradient(circle at top right, #002029, transparent 50%),
     radial-gradient(circle at bottom left, #002029, transparent 50%);
-  background-color: #002029;
+  background-color: #002029; */
+  background: radial-gradient(circle at 25% 10%, #134074, transparent 40%),
+    radial-gradient(circle at 75% 110%, #134074, transparent 40%),
+    radial-gradient(circle at top right, #00171f, transparent 50%),
+    radial-gradient(circle at bottom left, #00171f, transparent 50%);
+  background-color: #134074;
   background-attachment: fixed;
   overflow-x: hidden;
   background-repeat: no-repeat;
@@ -101,7 +107,7 @@ body {
 /* SCROLLBAR */
 body::-webkit-scrollbar {
   width: 10px;
-  background-color: #002029;
+  background-color: #134074;
   border: solid 1px rgba(128, 128, 128, 0.235);
 }
 body::-webkit-scrollbar-thumb:hover {

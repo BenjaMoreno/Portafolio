@@ -24,12 +24,12 @@ export const FrontendPro = () => {
   }, []);
   return (
     <div className="container-pro">
-      <h1 className="titulo-pro">
-        <span>
+      <div className="titulo-pro">
+        <h1>
           Conoce mis habilidades y servicios como desarrollador de Frontend
-        </span>
+        </h1>
         <Flecha className="flecha-animada" />
-      </h1>
+      </div>
       <Gestion />
       <hr className="separador-secciones"></hr>
       <ComposR />
