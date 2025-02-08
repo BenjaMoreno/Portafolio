@@ -2,7 +2,7 @@
   width: 80%;
   min-height: 60vh;
   height: auto;
-  color: #eff5ff;
+  /* color: #eff5ff; */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -15,19 +15,13 @@
   display: flex;
   align-items: center;
 }
-.container-descripcion p {
-  font-size: 1.875rem;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
+
 .container-descripcion p a {
+  font-size: var(--font-size-p);
+  font-weight: 300;
   color: #3c83f6;
 }
-.iconos-span {
-  height: 70px;
-}
+
 @media (max-width: 768px) {
   .iconos-span {
     height: 30px;

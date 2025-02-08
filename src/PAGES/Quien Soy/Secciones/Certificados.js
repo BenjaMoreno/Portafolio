@@ -42,10 +42,10 @@ export const Certificados = () => {
 
   return (
     <section className="container-certificados">
-      <span>
+      <h2>
         <Certificado className="iconos-span" />
         Certificaciónes
-      </span>
+      </h2>
       <article className="carousel-certificates">
         <CarruselReutilizable
           array={certificados}
@@ -58,7 +58,7 @@ export const Certificados = () => {
         <h1>{titulo}</h1>
         <div className="container-oficial">
           <a href={linkState} target="blank">
-            Ver Oficial
+            <button> Ver Oficial</button>
           </a>
           <Verify className="svg-verify" />
         </div>

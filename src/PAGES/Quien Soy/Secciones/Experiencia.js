@@ -62,10 +62,10 @@ export const Experiencia = () => {
 
   return (
     <section className="container-experiencia">
-      <span>
+      <h2>
         <Exper className="iconos-span" />
         Experiencia
-      </span>
+      </h2>
       <section className="grid-container-experiencia">
         {trabajos.map((trabajo, indiceMap) => (
           <div
@@ -77,7 +77,7 @@ export const Experiencia = () => {
           >
             {activarDetalles === indiceMap ? (
               <div className="detalles-trabajo">
-                <h2>Características del sitio:</h2>
+                <h3>Características del sitio:</h3>
                 <ul>
                   {Object.entries(trabajo.caracteristicas).map(
                     ([clave, valor], index) => (
@@ -88,7 +88,7 @@ export const Experiencia = () => {
               </div>
             ) : (
               <div className="center-trabajo">
-                <h2>{trabajo.tipo}</h2>
+                <h3>{trabajo.tipo}</h3>
                 <p>{trabajo.Descripcion}</p>
               </div>
             )}

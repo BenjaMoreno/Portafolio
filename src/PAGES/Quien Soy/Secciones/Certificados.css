@@ -13,10 +13,7 @@
   display: flex;
   align-items: center;
 }
-.container-certificados span {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #eff5ff;
+.container-certificados h2 {
   grid-area: titulo;
   display: flex;
   align-items: center;
@@ -35,20 +32,18 @@
   justify-content: center;
 }
 .info-certificates h1 {
-  color: #eff5ff;
-  font-size: 3.5rem;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--fuente-poopins);
   font-weight: 400;
-  font-style: normal;
-  animation: hero 1.2s ease-in-out forwards;
+  /* animation: hero 1.2s ease-in-out forwards; */
 }
-.info-certificates a {
+/* .info-certificates a {
   background-color: #007bff;
-  color: white;
+  font-weight: 400;
+  font-size: var(--font-size-p);
   padding: 20px;
   border-radius: 10px;
-}
+} */
 
 .crsl_certificates {
   width: 500px !important;

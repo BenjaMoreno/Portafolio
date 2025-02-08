@@ -40,10 +40,10 @@ export const Stack = () => {
   ];
   return (
     <div className="container-stack">
-      <span>
+      <h2>
         <Tecnologys className="iconos-span" />
         Tecnologías
-      </span>
+      </h2>
       <section className="stack">
         {tecnologias.map((tecnologia, index) => (
           <figure className="item-stack" key={index}>

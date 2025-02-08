@@ -1,58 +1,56 @@
-.container-compos-reutilizables{
-    width: 100%;
-    min-width: 100%;
-    height: 140vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 16vh;
-
+.container-compos-reutilizables {
+  width: 100%;
+  min-width: 100%;
+  height: 140vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16vh;
 }
-.container-compos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 70%;
-    height: 100vh;  
-    padding: 5vh 0;
+.container-compos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  height: 100vh;
+  padding: 5vh 0;
 }
-.container-compos-reutilizables h1{
-    font-size: 4rem;
-    color: rgb(192, 192, 192);
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    border:solid 2px rgb(192, 192, 192);
-    border-radius: 100px;
-    padding: 2% 3%;
-    margin: 0 0 10vh 0;
+.container-compos-reutilizables h1 {
+  /* font-size: 4rem; */
+  color: rgb(192, 192, 192);
+  /* font-family: "Poppins", sans-serif; */
+  /* font-weight: 600; */
+  font-style: normal;
+  border: solid 2px rgb(192, 192, 192);
+  border-radius: 100px;
+  padding: 2% 3%;
+  margin: 0 0 10vh 0;
 }
-@media (max-width:1440px) {
-    .container-compos-reutilizables h1{
-        font-size: 2rem;
-    }
+@media (max-width: 1440px) {
+  .container-compos-reutilizables h1 {
+    font-size: 2rem;
+  }
 }
-@media (max-width:768px) {
-    .container-compos-reutilizables{
+@media (max-width: 768px) {
+  .container-compos-reutilizables {
     height: 100vh;
     margin-top: 5vh;
-    }
-    .container-compos{
-        height: 80vh;
-    }
-    .container-compos-reutilizables h1{
-        margin: 0 5vw;
-    }
   }
-@media (max-width:576px) {
-    .container-compos-reutilizables h1{
-        font-size: 1.6rem;
-        text-align: center;
-    }
-    
+  .container-compos {
+    height: 80vh;
   }
-  /* @media (max-width:410px) {
+  .container-compos-reutilizables h1 {
+    margin: 0 5vw;
+  }
+}
+@media (max-width: 576px) {
+  .container-compos-reutilizables h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+/* @media (max-width:410px) {
     .container-compos-reutilizables h1{
         font-size: 1rem;
     }

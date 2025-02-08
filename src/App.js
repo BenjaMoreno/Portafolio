@@ -138,9 +138,7 @@ function App() {
               <hr className="hr-footer" />
               <hr className="hr-footer" />
             </div>
-            <div className="container-frase-footer">
-              Viviendo, aprendiendo y subiendo de nivel un día a la vez.
-            </div>
+            <q>Viviendo, aprendiendo y subiendo de nivel un día a la vez.</q>
             <div className="container-rrss">
               <a
                 href="https://web.facebook.com/benjamin.morenosaez.3"

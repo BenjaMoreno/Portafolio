@@ -10,7 +10,7 @@ export const QuienSoy = () => {
   return (
     <div className="container-quiensoy">
       <div className="Hero">
-        <img className="foto-hero" src={foto} alt="Foto del desarrollador" />
+        <div className="foto-hero" src={""} alt="Foto del desarrollador" />
         <div className="container-texto-hero">
           <h1>Benjamin Moreno</h1>
           <h2>Desarrollador Frontend</h2>
@@ -23,7 +23,7 @@ export const QuienSoy = () => {
             >
               <Github className="logo-gith" />
             </a>
-            <a
+            <button
               href="/BenjaminMorenoCV.pdf"
               download="BenjaminMorenoCV.pdf"
               className="cv-descarga"
@@ -35,7 +35,7 @@ export const QuienSoy = () => {
               }}
             >
               Descargar y Ver CV
-            </a>
+            </button>
           </div>
         </div>
       </div>

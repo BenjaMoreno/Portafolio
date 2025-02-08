@@ -15,16 +15,14 @@
   box-shadow: 0 0 30px lightblue;
 }
 .Hero h1 {
-  color: #e2fefe;
   font-size: 4rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
   animation: hero 1.2s ease-in-out forwards;
 }
 .Hero h2 {
-  color: rgb(197, 243, 238);
   text-align: right;
+  font-size: 2rem;
+  font-weight: 300;
   opacity: 0;
   position: relative;
   animation: hero 1.2s ease-in-out 0.5s forwards;

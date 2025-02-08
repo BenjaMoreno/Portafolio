@@ -5,10 +5,10 @@ import { ReactComponent as User } from "../../../IMAGES/SVG/USER.svg";
 export const SobreMi = () => {
   return (
     <section className="container-descripcion ">
-      <span>
+      <h2>
         <User className="iconos-span" />
         Sobre mí
-      </span>
+      </h2>
       <p>
         Soy Benjamín Moreno Sáez, un apasionado{" "}
         <a href="https://www.linkedin.com/in/benjamorenosaez/">
