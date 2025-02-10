@@ -8,7 +8,7 @@ export const Apis = () => {
   return (
     <section className="container-apis">
       <article className="info-api">
-        <h1 className="titulo-habilidad titulo-secciones">Consumo de APIS</h1>
+        {/* <h1 className="titulo-habilidad ">Consumo de APIS</h1> */}
 
         <div className="api-elemento">
           <OpenWeather />

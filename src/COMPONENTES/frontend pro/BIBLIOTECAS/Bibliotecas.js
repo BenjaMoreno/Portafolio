@@ -8,10 +8,9 @@ import Spinners from "./BOOSTRAP COMPONENTS/Spinners";
 import Botones from "./BOOSTRAP COMPONENTS/Botones";
 
 export const Bibliotecas = () => {
- 
   return (
     <section className="container-bibliotecas">
-      <h1 className="titulo-bibliotecas titulo-secciones">Uso de Bibliotecas</h1>
+      {/* <h1 className="titulo-bibliotecas ">Uso de Bibliotecas</h1> */}
       <article className="grid-container-bibliotecas">
         <div className="navbar-bs biblio-item">
           <NavbarB />
@@ -29,7 +28,7 @@ export const Bibliotecas = () => {
           <DropdownB />
         </div>
         <div className="btns-bs biblio-item">
-          <Botones/>
+          <Botones />
         </div>
       </article>
     </section>

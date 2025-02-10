@@ -30,8 +30,18 @@ export const FrontendPro = () => {
         </h1>
         <Flecha className="flecha-animada" />
       </div>
+      <h2 className="h2-habilidades">Manejo de estado global</h2>
       <Gestion />
       <hr className="separador-secciones"></hr>
+      {/* <h2 className="h2-habilidades">Componentes reutilizables</h2>
+      <hr className="separador-secciones"></hr>
+      <h2 className="h2-habilidades">API REST</h2>
+      <hr className="separador-secciones"></hr>
+      <h2 className="h2-habilidades">Validaciónes</h2>{" "}
+      <hr className="separador-secciones"></hr>
+      <h2 className="h2-habilidades">Bibliotecas</h2>{" "}
+      <hr className="separador-secciones"></hr> */}
+      {/* <hr className="separador-secciones"></hr>
       <ComposR />
       <hr className="separador-secciones"></hr>
 
@@ -40,9 +50,8 @@ export const FrontendPro = () => {
       <Formulario />
       <hr className="separador-secciones"></hr>
       <Bibliotecas />
-      <hr className="separador-secciones"></hr>
-
-      <Optimizacion />
+      <hr className="separador-secciones"></hr> */}
+      {/* <Optimizacion /> */}
     </div>
   );
 };

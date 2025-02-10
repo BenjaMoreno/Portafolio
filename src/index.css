@@ -15,6 +15,7 @@
   --font-size-h5: 1.25rem; /* 1.25 veces el tamaño base */
   --font-size-h6: 1rem;
   --font-size-p: 1.875rem;
+  /* --font-size-label: 1.5rem; */
 }
 /* INDEX ANTIGUO */
 h1 {
@@ -65,6 +66,12 @@ figcaption {
 }
 q {
   font-family: var(--fuente-montserrat);
+}
+label {
+  font-family: var(--fuente-poopins);
+  color: var(--fuente-blanca);
+  font-size: var(--font-size-h5);
+  font-weight: 200;
 }
 button {
   font-family: var(--fuente-montserrat);

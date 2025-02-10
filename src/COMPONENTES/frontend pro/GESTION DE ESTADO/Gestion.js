@@ -1,4 +1,4 @@
-import React, { useContext, useState ,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Gestion.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -8,37 +8,40 @@ import creativo from "../../../IMAGES/SVG/BRUSH.svg";
 import practico from "../../../IMAGES/SVG/LLAVE.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
 import { useLocation } from "react-router-dom";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import { boxSizing, display, width } from "@mui/system";
+
+// ESTILOS MODAL
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "#134074",
+  boxShadow: 24,
+  p: 2,
+  minWidth: "280px",
+  width: "40vw",
+  height: "80vh",
+  display: "flex",
+};
 
 export const Gestion = () => {
-  const avatares = [practico, creativo, social, calculador];
-
+  // ESTADOS
   const [usuarioState, setUsuarioState] = useState(null);
   const [avatarState, setAvatarState] = useState(practico);
   const [indiceAvatar, setIndiceAvatar] = useState(0);
+  const [open, setOpen] = React.useState(false);
 
+  // FUNCIONES
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const clickAvatar = (img, index) => {
     setAvatarState(img);
     setIndiceAvatar(index);
   };
-  //Ruta al Gestionador de estado
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [hash]);
-
-  //color para avatar activo
-  const avatarActive = "inset 0 0 20px 1px lime";
-
-  //Envío de datos al contexto
-  var { setUsuario } = useContext(ContextUser);
-
-  // Validación del formulario
   const formik = useFormik({
     initialValues: {
       usuario: "",
@@ -50,20 +53,13 @@ export const Gestion = () => {
     }),
     onSubmit: (values) => {
       setUsuarioState(values.usuario);
+      crearContexto();
+      handleClose();
     },
   });
-
-  // Función manejadora personalizada que llama a dos funciones
-  const handleChange = (event) => {
-    formik.handleChange(event); // Llamar a la función de Formik
-    modUsuario(event); // Llamar a la segunda función personalizada
-  };
-
-  // Ejemplo de una función personalizada (puedes ajustarla según sea necesario)
   const modUsuario = (event) => {
     setUsuarioState(event.target.value);
   };
-  //crear contexto
   const crearContexto = () => {
     if (usuarioState === null) {
       alert("Porfavor intenta ingresar un nombre de Usuario");
@@ -75,54 +71,60 @@ export const Gestion = () => {
       setUsuario(objetoUsuario);
     }
   };
+  const handleChange = (event) => {
+    formik.handleChange(event); // Llamar a la función de Formik
+    modUsuario(event); // Llamar a la segunda función personalizada
+  };
+  // DATA
+  const avatares = [practico, creativo, social, calculador];
+
+  //CONTEXT
+  var { setUsuario } = useContext(ContextUser);
+  //color para avatar activo
+  const avatarActive = "inset 0 0 20px 1px lime";
 
   return (
     <section className="container-gestion" id="gestion">
-      <h1 className="titulo-gestion titulo-secciones">Manejo de Estado</h1>
-
-      <form className="form-estado caja" onSubmit={formik.handleSubmit}>
-        <h1 className="palabras-gestion crear-estado">Crea un estado global</h1>
-        <div className="container-input-btn">
-          <input
-            type="text"
-            placeholder="estado..."
-            name="usuario"
-            value={formik.values.usuario}
-            onChange={handleChange}
-            onBlur={formik.handleBlur}
-            maxLength={13}
-          />
-          {formik.errors.usuario && formik.touched.usuario && (
-            <span>{formik.errors.usuario}</span>
-          )}
-          <button type="submit" onClick={crearContexto}>
-            Crear
-          </button>
-        </div>
-        <h2 className="palabras-gestion">Elige tu avatar</h2>
-        <div className="container-avatars">
-          {avatares.map((avatarImg, index) => (
-            <img
-              src={avatarImg}
-              key={index}
-              onClick={() => clickAvatar(avatarImg, index)}
-              style={{
-                boxShadow: indiceAvatar === index ? avatarActive : "none",
-              }}
-            />
-          ))}
-        </div>
-      </form>
-      <hr className="hr-estado" />
-      <div className="resultado-estado caja">
-        <div className="caja-flex-estado palabras-gestion usuario-layout">
-          Usuario:&nbsp;&nbsp;<span>{usuarioState}</span>
-        </div>
-        <div className="divisor-flex"></div>
-        <div className="caja-flex-estado palabras-gestion">
-          Avatar:&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={avatarState} alt="Astronauta" />
-        </div>
+      <Button onClick={handleOpen}>Crear un estado</Button>
+      <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <form className="form-estado " onSubmit={formik.handleSubmit}>
+              <label>Nombre:</label>
+              <input
+                type="text"
+                placeholder="tu nombre, tu alias..."
+                name="usuario"
+                value={formik.values.usuario}
+                onChange={handleChange}
+                onBlur={formik.handleBlur}
+                maxLength={13}
+              />
+              {formik.errors.usuario && formik.touched.usuario && (
+                <span>{formik.errors.usuario}</span>
+              )}
+              <label>Avatar:</label>
+              <div className="container-avatars">
+                {avatares.map((avatarImg, index) => (
+                  <img
+                    src={avatarImg}
+                    key={index}
+                    onClick={() => clickAvatar(avatarImg, index)}
+                    style={{
+                      boxShadow: indiceAvatar === index ? avatarActive : "none",
+                    }}
+                  />
+                ))}
+              </div>
+              <Button type="submit">Guardar estado</Button>
+            </form>
+          </Box>
+        </Modal>
       </div>
     </section>
   );
