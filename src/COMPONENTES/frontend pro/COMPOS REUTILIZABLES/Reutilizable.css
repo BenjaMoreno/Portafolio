@@ -5,7 +5,7 @@
   display: flex;
   transition: transform 0.3s ease-out;
 }
-.compo:hover{
+.compo:hover {
   scale: 1.04;
   transform: scale(1.1);
   cursor: pointer;
@@ -23,6 +23,9 @@
   border-radius: 5px;
   background-color: white;
 }
+.nombre-compo p {
+  color: black;
+}
 .container-emoji {
   flex: 1;
   margin: 2% 2% 2% 2%;
@@ -36,18 +39,18 @@
   height: 80%;
   width: auto;
 }
-@media (max-width:1025px) {
-  .nombre-compo{
-      font-size: 1.5rem;
+@media (max-width: 1025px) {
+  .nombre-compo {
+    font-size: 1.5rem;
   }
 }
-@media (max-width:768px) {
-  .nombre-compo{
+@media (max-width: 768px) {
+  .nombre-compo {
     justify-content: center;
   }
 }
-@media (max-width:576px) {
-  .nombre-compo{
-      font-size: 1rem;
+@media (max-width: 576px) {
+  .nombre-compo {
+    font-size: 1rem;
   }
 }
