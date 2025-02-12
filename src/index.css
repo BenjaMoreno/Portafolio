@@ -83,6 +83,12 @@ button {
   border: none;
   padding: 8px 16px;
 }
+small {
+  color: var(--fuente-blanca);
+}
+input {
+  border: none;
+}
 .iconos-span {
   height: 60px;
 }

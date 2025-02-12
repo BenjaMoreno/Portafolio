@@ -1,351 +1,102 @@
-/* GENERAL */
-.container-formularios {
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100%;
-  padding: 2% 0;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-areas:
-    "h1 h1"
-    "form form";
-  grid-template-columns: 1fr 1.6fr;
-  grid-template-rows: 20% 80%;
-}
-.container-formularios .titulo-formularios {
-  grid-area: h1;
-  border: solid 2px rgb(192, 192, 192);
-  width: max-content;
-  margin: auto;
-  font-size: 4rem;
-  color: rgb(192, 192, 192);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  border-radius: 100px;
-  padding: 2% 3%;
-  text-align: center;
-}
-.container-formularios form {
-  margin: auto;
-  height: 80%;
-  width: 70%;
-  border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  display: flex;
-  flex-direction: column;
-  padding: 2%;
-  box-sizing: border-box;
-}
-/* FORMULARIO ROSA --------------------------------------------------------------------------------------- */
-.error-yup {
-  flex: 1;
-  text-align: center;
-  color: rgb(117, 10, 10);
-  text-decoration: underline;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.rosa {
-  background-color: palevioletred;
-}
-.rosa h1 {
-  height: 10%;
-  margin: 0;
-  font-size: 2rem;
-}
-.rosa button {
-  height: max-content;
-  margin: auto auto 0 auto;
-  width: max-content;
-  font-size: 1rem;
-}
-
-.container-inputs-rosa label {
-  display: flex;
-}
-.container-inputs-rosa input,
-.container-inputs-rosa textarea,
-.container-inputs-rosa select {
-  border-radius: 5px;
-  border: none;
-}
-
-.datos-form-rosa-listo {
-  color: lime;
-  width: 100%;
-  text-align: right;
-  padding-right: 20%;
-  font-style: normal;
-  display: none;
-}
-.container-inputs-rosa {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  font-size: initial;
-}
-/* FORMULARIO VERDE ---------------------------------------------------------------------------------------*/
-
-.verde {
-  background-color: rgb(1, 211, 134);
-  width: 90%;
-}
-.grid-container-form-verde {
-  width: 100%;
-  flex: 1;
-  display: grid;
-  grid-template-areas:
-    "compañia pais atencion"
-    "numero correo atencion"
-    "r1 r1 r1"
-    "r2 r2 btn";
-  grid-template-columns: repeat(3, 32%);
-  grid-template-rows: repeat(2, 30%) repeat(2, 1fr);
-  grid-gap: 2%;
-}
-.grid-item-form-verde {
-  border: solid rgba(0, 128, 0, 0.488) 2px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: #013612;
-}
-.grid-item-form-verde:hover {
-  background-color: rgba(51, 154, 35, 0.792);
-  scale: 1.009;
-  color: white;
-}
-
-.grid-item-form-verde .input-verde,
-.grid-container-form-verde select {
-  padding-left: 4%;
-  border: solid green 2px;
-  border-radius: 5px;
-  font-size: 0.7rem;
-  height: 30%;
-  width: 85%;
-  background-color: rgb(189, 255, 219);
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-.grid-container-form-verde button {
-  grid-area: btn;
-  height: max-content;
-  width: max-content;
-  padding: 2% 3%;
-  margin: auto;
-  border: solid green 4px;
-  border-radius: 5px;
-  color: rgb(2, 96, 2);
-  font-size: medium;
-  font-family: inherit;
-  background-color: rgb(207, 240, 205);
-  cursor: pointer;
-}
-.grid-container-form-verde button:hover {
-  background-color: green;
-  color: white;
-}
-.compañia {
-  grid-area: compañia;
-}
-.pais {
-  grid-area: pais;
-}
-.numero {
-  grid-area: numero;
-}
-.correo {
-  grid-area: correo;
-}
-.atencion {
-  grid-area: atencion;
-  display: grid;
-  grid-template-areas:
-    "titulo titulo"
-    "o1 o2"
-    "o3 o4";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30% 1fr 1fr;
-}
-.atencion label {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-evenly;
-  font-size: 0.8rem;
-  text-align: center;
-}
-.atencion label input,
-.atencion label {
-  cursor: pointer;
-}
-.titulo-atencion {
-  grid-area: titulo;
-  text-align: center;
-  text-transform: capitalize;
-  margin: auto;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.reglamento1 {
-  grid-area: r1;
-}
-.reglamento2 {
-  grid-area: r2;
-}
-
-.reglamento1,
-.reglamento2 {
-  flex-direction: row;
-  align-items: center;
-  justify-content: initial;
-  padding: 0 0 0 10px;
-}
-.reglamentos {
-  font-size: 0.8rem !important;
-  color: rgb(65, 65, 65);
-  margin: 0 10px !important;
-}
-
-.container-exitoso-verde {
-  width: 100%;
-  display: none;
-  height: 100%;
-
-}
-.item-exitoso-verde {
-  border: solid rgba(0, 255, 0, 0.18) 1px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: grey;
-  font-style: italic;
-}
-.item-exitoso-verde span {
-  color: lime;
-  font-style: normal;
-  font-size: 1rem;
-}
-.item-exitoso-verde:nth-child(4) {
-  grid-column: 1/4;
-}
-.item-exitoso-verde:nth-child(5) {
-  grid-column: 1/3;
-}
-.item-exitoso-verde:nth-child(6) {
-  grid-row: 3/4;
-  grid-column: 3/4;
-}
-.label-titulo {
-  padding-left: 4%;
-}
-.label-titulo span {
-  flex: 1;
-  height: 100%;
-  font-size: 0.6rem;
-  color: rgb(154, 6, 6);
-  text-decoration: underline;
+.container-formulario {
+  width: 100vw;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5vh 0;
 }
-.container-reglas-aceptadas {
+.container-formulario .container-form-response {
+  min-height: 65vh;
+  height: auto;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.089);
+  border-radius: 10px;
+  padding: 10px 20px 20px 20px;
+  border: solid rgba(255, 255, 255, 0.151) 1px;
+  overflow: hidden;
+}
+
+.container-formulario form {
+  margin-right: 100px;
+  text-align: center;
+}
+.container-form-response h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 30px 0;
+}
+
+.container-form-response h4::after,
+.container-form-response h4::before {
+  background-color: white;
+  content: "";
+  height: 1px;
+  width: 50%;
+}
+.container-form-response h4::before {
+  margin-right: 10px;
+}
+.container-form-response h4::after {
+  margin-left: 10px;
+}
+.container-formulario
+  form
+  input:not(.container-formulario form .container-radios label input),
+.container-formulario form select {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #eef4ed;
+  color: var(--color-principal);
+  font-weight: 300;
+}
+.container-radios label {
+  margin-left: 10px;
+}
+
+.container-formulario form button {
+  width: 100%;
+  margin: 15px 0;
+}
+.container-formulario .flecha-forms {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.089);
+  width: 60px;
+  height: 50px;
+  position: relative;
+}
+.container-formulario .respuesta {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container-formulario .container-form-response ul {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  color: lime;
-  font-size: 1rem;
+  justify-content: space-evenly;
+}
+.container-formulario .container-form-response small {
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-style: normal;
+  color: gray;
 }
-/* Responsive ---------------------------------------------------------------------------------------------- */
-@media (max-width: 1440px) {
-  .container-formularios .titulo-formularios {
-    font-size: 3rem;
-  }
+.trash-form {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
 }
-@media (max-width: 1025px) {
-  .container-formularios {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 200vh;
-  }
-  .container-formularios form {
-    height: 70vh;
-  }
-}
-@media (max-width: 768px) {
-  .container-formularios .titulo-formularios {
-    font-size: 2rem;
-    margin: 5vh auto;
-  }
-  .verde {
-    height: 90vh !important;
-  }
-  .grid-container-form-verde {
-    grid-template-rows: 20% 20% 25% 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "compañia pais"
-      "numero correo"
-      "atencion atencion"
-      "r1 r1"
-      "r2 r2"
-      "btn btn";
-  }
-  .item-exitoso-verde {
+/* RESPONSIVE*/
+@media (max-width: 900px) {
+  .container-formulario {
     flex-direction: column;
   }
-}
-@media (max-width: 576px) {
-  .container-formularios .titulo-formularios {
-    font-size: 1.6rem;
-    width: 80%;
-  }
-  .container-exitoso-verde {
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: 1fr;
-    height: 80%;
-  }
- .item-exitoso-verde{
-  height: max-content;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
- }
- .item-exitoso-verde:nth-child(4) {
-  grid-column: inherit;
-}
-.item-exitoso-verde:nth-child(5) {
-  grid-column: inherit;
-}
-.item-exitoso-verde:nth-child(6) {
-  grid-column: inherit;
-}
-
-}
-@media (max-width: 416px) {
- 
-  .grid-container-form-verde button {
-    grid-area: btn;
-    height: max-content;
-    width: max-content;
-    padding: 0 10%;
-    border: green 1px solid;
-    font-size: 0.8rem;
+  .container-formulario form {
+    margin: 0 0 50px 0;
   }
 }
