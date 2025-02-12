@@ -33,14 +33,14 @@ export const FrontendPro = () => {
       <h2 className="h2-habilidades">Validaciónes</h2>
       <Formulario />
       {/* <hr className="separador-secciones"></hr> */}
+      <h2 className="h2-habilidades">API REST</h2>
+      <Apis />
+      {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Manejo de estado global</h2>
       <Gestion />
       {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Componentes reutilizables</h2>
       <ComposR />
-      {/* <hr className="separador-secciones"></hr> */}
-      <h2 className="h2-habilidades">API REST</h2>
-      <Apis />
       {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Bibliotecas</h2>{" "}
       {/* <hr className="separador-secciones"></hr> */}

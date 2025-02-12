@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./OpenWeather.css";
-import weather_paper from "../../../../IMAGES/SVG/WEATHER.svg";
+import { ReactComponent as Weather } from "../../../../IMAGES/SVG/WEATHER.svg";
 
 export const OpenWeather = () => {
   //ESTADOS
   const [ciudad, setCiudad] = useState("");
-  const [cityData, setCityData] = useState({
-    img: "",
-    nubosidad: "",
-    clima: "",
-    humedad: "",
-    temperatura: "",
-  });
+  const [cityData, setCityData] = useState(null);
   const consultarClima = (e) => {
     e.preventDefault();
     var city = e.target.elements.nombre_ciudad.value;
@@ -24,12 +18,14 @@ export const OpenWeather = () => {
       )
         .then((respuesta) => respuesta.json())
         .then((data) => {
+          console.log(data);
           const datosCiudad = {
             img: data.weather[0].icon,
             nubosidad: data.clouds.all,
             clima: data.weather[0].main,
             humedad: data.main.humidity,
             temperatura: data.main.temp,
+            ciudad: data.name,
           };
           setCityData(datosCiudad);
         })
@@ -45,7 +41,37 @@ export const OpenWeather = () => {
         <button type="submit"> Consultar</button>
       </form>
       <div className="separador-weather weather">
-        <div className="container-datos-weather">
+        {cityData === null ? (
+          <Weather />
+        ) : (
+          <section className="container-datos-weather">
+            <div className="item-weather">
+              <img
+                src={`http://openweathermap.org/img/wn/${cityData.img}@2x.png`}
+              />
+              <div>
+                <h3>{cityData.ciudad}</h3>
+                <small>/{cityData.clima}</small>
+              </div>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Temperatura:&nbsp;&nbsp;<b>{cityData.temperatura}°C</b>
+              </h5>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Nubosidad:&nbsp;&nbsp;<b>{cityData.nubosidad}%</b>
+              </h5>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Humedad:&nbsp;&nbsp;<b>{cityData.humedad}%</b>
+              </h5>
+            </div>
+          </section>
+        )}
+        {/* <div className="container-datos-weather">
           <div className="dato-weather">
             <img
               src={
@@ -69,7 +95,7 @@ export const OpenWeather = () => {
             <span>Temperatura:</span>
             <strong>{cityData.temperatura}°C</strong>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

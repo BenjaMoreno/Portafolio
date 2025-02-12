@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./PokeApi.css";
-import pokeball from '../../../../IMAGES/SVG/POKEBALL.svg';
+import pokeball from "../../../../IMAGES/SVG/POKEBALL.svg";
 
 export const PokeApi = () => {
   //ESTADOS
   const [pokemon, setPokemon] = useState("");
-  const [pokeDatos, setPokeDatos] = useState({
-    img: pokeball,
-    nombre: "",
-    tamaño: "",
-    habilidad: "",
-    especie: "",
-  });
+  const [pokeDatos, setPokeDatos] = useState(null);
 
   const consultarPokemon = (e) => {
     e.preventDefault();
@@ -62,8 +56,12 @@ export const PokeApi = () => {
         <button type="submit">Consultar</button>
       </form>
       <div className="separador-pokemon pokemon">
-        <img src={pokeDatos.img} alt={pokeDatos.nombre} />
-        <div className="container-datos-pokemon">
+        {pokeDatos === null ? (
+          <img src={pokeball} alt={"pokebola"} />
+        ) : (
+          <p>a</p>
+        )}
+        {/* <div className="container-datos-pokemon">
           <div className="dato-pokemon">
             <span>Nombre:</span>&nbsp;
             <strong>{pokeDatos.nombre}</strong>
@@ -80,7 +78,7 @@ export const PokeApi = () => {
             <span>Especie:</span>&nbsp;
             <strong>{pokeDatos.especie}</strong>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
