@@ -25,12 +25,15 @@ export const PokeApi = () => {
             throw new Error("No se encontró el Pokémon");
           }
           const data = await respuesta.json();
+          console.log(data);
           const datosPokemon = {
             img: data.sprites.front_default,
             nombre: data.name,
             tamaño: data.height,
             habilidad: data.abilities[0].ability.name,
-            especie: data.species.name,
+            pokedex: data.id,
+            tipo: data.types[0].type.name,
+            peso: data.weight,
           };
           setPokeDatos(datosPokemon);
         } catch (error) {
@@ -53,32 +56,39 @@ export const PokeApi = () => {
       <form className="separador-pokemon" onSubmit={consultarPokemon}>
         <h1>Consulta por un Pokemon</h1>
         <input placeholder="Nombre del Pokémon..." name="nombre_pokemon" />
-        <button type="submit">Consultar</button>
+        <button type="submit" className="api-btns">Consultar</button>
       </form>
       <div className="separador-pokemon pokemon">
         {pokeDatos === null ? (
           <img src={pokeball} alt={"pokebola"} />
         ) : (
-          <p>a</p>
+          <section className="container-datos-weather">
+            <div className="item-weather">
+              <img src={pokeDatos.img} />
+              <div>
+                <h3>{pokeDatos.nombre}</h3>
+                <small title="Numero en la pokedex">
+                  /&nbsp;{pokeDatos.pokedex}
+                </small>
+              </div>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Tipo:&nbsp;&nbsp;<b>{pokeDatos.tipo}</b>
+              </h5>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Peso:&nbsp;&nbsp;<b>{pokeDatos.peso} (hg)</b>
+              </h5>
+            </div>
+            <div className="item-weather">
+              <h5>
+                Tamaño:&nbsp;&nbsp;<b>{pokeDatos.tamaño}(dm)</b>
+              </h5>
+            </div>
+          </section>
         )}
-        {/* <div className="container-datos-pokemon">
-          <div className="dato-pokemon">
-            <span>Nombre:</span>&nbsp;
-            <strong>{pokeDatos.nombre}</strong>
-          </div>
-          <div className="dato-pokemon">
-            <span>Tamaño:</span>&nbsp;
-            <strong>{pokeDatos.tamaño}</strong>
-          </div>
-          <div className="dato-pokemon">
-            <span>Habilidad:</span>&nbsp;
-            <strong>{pokeDatos.habilidad}</strong>
-          </div>
-          <div className="dato-pokemon">
-            <span>Especie:</span>&nbsp;
-            <strong>{pokeDatos.especie}</strong>
-          </div>
-        </div> */}
       </div>
     </div>
   );

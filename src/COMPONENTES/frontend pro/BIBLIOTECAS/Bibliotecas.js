@@ -11,7 +11,7 @@ export const Bibliotecas = () => {
   return (
     <section className="container-bibliotecas">
       {/* <h1 className="titulo-bibliotecas ">Uso de Bibliotecas</h1> */}
-      <article className="grid-container-bibliotecas">
+      {/* <article className="grid-container-bibliotecas">
         <div className="navbar-bs biblio-item">
           <NavbarB />
         </div>
@@ -30,7 +30,7 @@ export const Bibliotecas = () => {
         <div className="btns-bs biblio-item">
           <Botones />
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };

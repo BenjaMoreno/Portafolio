@@ -37,53 +37,11 @@
   border: solid rgb(0, 251, 255) 3px;
   box-shadow: 0 0 6px 1px rgb(0, 251, 255);
 }
-.separador-weather button {
-  border-radius: 50px;
-  padding: 10px 30px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  position: relative;
-  font-size: 1rem;
-  color: black;
-  border: 2px solid black;
-}
-.separador-weather button:hover {
-  background-color: #002029;
-  border-color: #ffa500;
-  color: #ffa500;
-}
 .weather img {
   width: auto;
   margin: auto 0 auto 0;
   height: 80%;
   filter: drop-shadow(0 0 10px grey);
-}
-.container-datos-weather {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  /* border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  /* box-shadow: 0 0 100px rgba(128, 128, 128, 0.217); */
-}
-.container-datos-weather div:nth-child(1) {
-  grid-column: 1/4;
-}
-.container-datos-weather .item-weather {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.dato-weather {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-.dato-weather:nth-child(1) {
-  grid-column: 1/4;
 }
 
 .dato-weather span {

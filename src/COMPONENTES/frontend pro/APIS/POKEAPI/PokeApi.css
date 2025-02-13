@@ -32,21 +32,6 @@
   font-size: 1.6rem;
   margin: 5%;
 }
-.separador-pokemon button {
-  border-radius: 50px;
-  padding: 10px 30px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  position: relative;
-  font-size: 1rem;
-  color: black;
-}
-.separador-pokemon button:hover {
-  background-color: rgba(0, 0, 0, 0.086);
-  border-color: yellow;
-  color: yellow;
-}
 .pokemon {
   flex-direction: row;
   height: 90%;

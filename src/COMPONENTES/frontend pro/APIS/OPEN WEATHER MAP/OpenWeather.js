@@ -38,7 +38,7 @@ export const OpenWeather = () => {
       <form className="separador-weather" onSubmit={consultarClima}>
         <h1>Consulta el clima actual</h1>
         <input placeholder="Escribe una ciudad..." name="nombre_ciudad" />
-        <button type="submit"> Consultar</button>
+        <button type="submit"  className="api-btns"> Consultar</button>
       </form>
       <div className="separador-weather weather">
         {cityData === null ? (
@@ -71,31 +71,6 @@ export const OpenWeather = () => {
             </div>
           </section>
         )}
-        {/* <div className="container-datos-weather">
-          <div className="dato-weather">
-            <img
-              src={
-                cityData.img === ""
-                  ? weather_paper
-                  : `http://openweathermap.org/img/wn/${cityData.img}@2x.png`
-              }
-            />
-            <span>Clima:</span>
-            <strong>{cityData.clima}</strong>
-          </div>
-          <div className="dato-weather">
-            <span>Humedad:</span>
-            <strong>{cityData.humedad}%</strong>
-          </div>
-          <div className="dato-weather">
-            <span>Nubosidad:</span>
-            <strong>{cityData.nubosidad}%</strong>
-          </div>
-          <div className="dato-weather">
-            <span>Temperatura:</span>
-            <strong>{cityData.temperatura}°C</strong>
-          </div>
-        </div> */}
       </div>
     </div>
   );
