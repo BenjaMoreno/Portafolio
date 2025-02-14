@@ -1,145 +1,25 @@
 .container-bibliotecas {
-  width: 100%;
-  min-height: 130vh;
   height: auto;
-  display: flex;
-  flex-direction: column;
-
-}
-.titulo-bibliotecas {
-  border: solid 2px rgb(192, 192, 192);
   width: max-content;
-  font-size: 4rem;
-  color: rgb(192, 192, 192);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  border-radius: 100px;
-  padding: 2% 3%;
-  margin: auto;
+  margin: 10vh auto;
+  display: flex;
 }
-.grid-container-bibliotecas {
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  padding: 5vw;
-  box-sizing: border-box;
-  grid-template-areas:
-    "navbar navbar spinner"
-    "carrusel card spinner"
-    "carrusel card dropdown"
-    "carrusel card btns";
-  grid-template-rows: 20% 20% 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+.links-biblio {
+  display: flex;
+  border: solid white 1px;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: none;
+  overflow: hidden;
 }
-.navbar-bs {
-  grid-area: navbar;
+.links-biblio a {
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+.respuesta-link-biblio {
+  width: 60vw;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.carrusel-bs {
-  grid-area: carrusel;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tarjeta-bs {
-  grid-area: card;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.spinners-bs {
-  grid-area: spinner;
-  /* box-shadow:inset 0 0 40px 1px blue ; */
-}
-.dropdown-bs {
-  grid-area: dropdown;
-  display: flex;
-}
-.btns-bs {
-  grid-area: btns;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  padding: 10px;
-  grid-gap: 10px;
-}
-.grid-container-bibliotecas .biblio-item {
-  /* box-shadow: inset 0 0 400px 1px rgba(152, 152, 152, 0.12); */
-  border: solid rgba(255, 255, 255, 0.202) 1px;
-  background-color: #f5f5f520;
-}
-/* .biblio-item:not(:nth-child(4)){
-  animation: desvanecer 1s linear forwards;
-
-}
-@keyframes desvanecer {
-  from{
-    opacity: 1;
-  }
-  to{
-    opacity: 0;
-  }
-}
-   */
-
-@media (max-width: 1440px) {
-  .grid-container-bibliotecas {
-    grid-template-areas:
-      "navbar navbar navbar"
-      "carrusel card dropdown"
-      "carrusel card spinner"
-      "carrusel card btns";
-  }
-}
-@media (max-width: 1025px) {
-  .grid-container-bibliotecas {
-    grid-template-areas:
-      "navbar navbar navbar"
-      "carrusel carrusel card"
-      "carrusel carrusel card"
-      "spinner dropdown btns";
-    height: 110%;
-  }
-  
-}
-@media (max-width:900px) {
-  .container-bibliotecas {
-    height: auto;
-  }
-  .grid-container-bibliotecas{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .biblio-item{
-    padding: 10% 0;
-  }
-}
-@media (max-width:768px) {
-  .titulo-bibliotecas{
-    font-size: 1.6rem;
-  }
-  .btns-bs{
-    height: 50vh;
-  }
-}
-@media (max-width:400px) {
-  .dropdown-bs{
-    display: flex;
-    flex-direction: column;
-  }
-  .btns-bs{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  
-}
-@media (min-width:900px) and (max-width:1025px) {
-  .dropdown-bs{
-    flex-direction: column;
-  }
 }

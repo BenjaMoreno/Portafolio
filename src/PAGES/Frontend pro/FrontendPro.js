@@ -39,7 +39,7 @@ export const FrontendPro = () => {
       <h2 className="h2-habilidades">Manejo de estado global</h2>
       <Gestion />
       {/* <hr className="separador-secciones"></hr> */}
-      <h2 className="h2-habilidades">Bibliotecas</h2>
+      <h2 className="h2-habilidades">Uso de bibliotecas</h2>
       <Bibliotecas />
 
       {/* <hr className="separador-secciones"></hr> */}

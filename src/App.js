@@ -16,6 +16,7 @@ import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import menu from "../src/IMAGES/SVG/BURGER_MENU.svg";
+import Dropdown from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Dropdown";
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -128,7 +129,9 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<QuienSoy />} />
-              <Route path="/codificando" element={<FrontendPro />} />
+              <Route path="/codificando" element={<FrontendPro />}>
+                <Route path="dropdown" element={<Dropdown />} />
+              </Route>
               <Route path="/proyectos" element={<Proyectos />} />
               <Route path="/contactame" element={<Contactame />} />
             </Routes>
