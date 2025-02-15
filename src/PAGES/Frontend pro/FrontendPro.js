@@ -30,6 +30,9 @@ export const FrontendPro = () => {
         </h1>
         <Flecha className="flecha-animada" />
       </div>
+      {/* <hr className="separador-secciones"></hr> */}
+      <h2 className="h2-habilidades">Uso de bibliotecas</h2>
+      <Bibliotecas />
       <h2 className="h2-habilidades">Validaciónes</h2>
       <Formulario />
       {/* <hr className="separador-secciones"></hr> */}
@@ -38,9 +41,6 @@ export const FrontendPro = () => {
       {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Manejo de estado global</h2>
       <Gestion />
-      {/* <hr className="separador-secciones"></hr> */}
-      <h2 className="h2-habilidades">Uso de bibliotecas</h2>
-      <Bibliotecas />
 
       {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Componentes reutilizables</h2>

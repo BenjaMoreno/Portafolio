@@ -85,7 +85,7 @@ export const Gestion = () => {
 
   return (
     <section className="container-gestion" id="gestion">
-      <Button onClick={handleOpen}>Crear un estado</Button>
+      <Button onClick={handleOpen}>Crea a un dato para todo el sitio</Button>
       <div>
         <Modal
           open={open}

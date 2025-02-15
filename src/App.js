@@ -17,6 +17,10 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import menu from "../src/IMAGES/SVG/BURGER_MENU.svg";
 import Dropdown from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Dropdown";
+import { Radar } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Radar";
+import Tarjeta from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Tarjeta";
+import { Modales } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Modales";
+import { Spinners } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Spinners";
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -131,6 +135,10 @@ function App() {
               <Route path="/" element={<QuienSoy />} />
               <Route path="/codificando" element={<FrontendPro />}>
                 <Route path="dropdown" element={<Dropdown />} />
+                <Route path="grafico" element={<Radar />} />
+                <Route path="tarjetas" element={<Tarjeta />} />
+                <Route path="modales" element={<Modales />} />
+                <Route path="spinners" element={<Spinners />} />
               </Route>
               <Route path="/proyectos" element={<Proyectos />} />
               <Route path="/contactame" element={<Contactame />} />
