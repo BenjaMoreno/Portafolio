@@ -9,7 +9,7 @@ export const Bibliotecas = () => {
   return (
     <section className="container-bibliotecas">
       <div className="links-biblio">
-        <NavLink to={"grafico"}>Visualización de datos</NavLink>
+        <NavLink to={"grafico"}>Gráficos</NavLink>
         <NavLink to={"tarjetas"}>Tarjetas</NavLink>
         <NavLink to={"modales"}>Modales</NavLink>
         <NavLink to={"dropdown"}>Dropdowns</NavLink>
