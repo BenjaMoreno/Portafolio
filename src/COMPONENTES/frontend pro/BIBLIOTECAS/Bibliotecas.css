@@ -15,7 +15,7 @@
   width: 20vw;
   color: gray;
   padding: 20px;
-  border-top: solid 1px rgba(255, 255, 255, 0.336);
+  /* border-top: solid 1px rgba(255, 255, 255, 0.082); */
 }
 .links-biblio a.active {
   font-weight: 400;

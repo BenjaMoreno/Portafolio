@@ -1,3 +1,4 @@
+import Slider from "react-slick";
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -23,7 +24,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-
+import "./Tarjeta.css";
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -52,7 +53,15 @@ const ExpandMore = styled((props) => {
 export const TarjetUno = () => {
   const theme = useTheme();
   return (
-    <Card sx={{ display: "flex", height: "100%" }}>
+    <Card
+      sx={{
+        display: "flex",
+        height: "100%",
+        maxWidth: 345,
+        margin: "auto",
+      }}
+      className="fondo-tarjetas"
+    >
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography component="div" variant="h5">
@@ -99,20 +108,24 @@ export const TarjetUno = () => {
 // Tarjeta de standart
 export const TarjetDos = () => {
   return (
-    <Card sx={{ maxWidth: 345, height: "100%" }}>
+    <Card
+      className="fondo-tarjetas"
+      sx={{ maxWidth: 345, height: "100%", margin: "0 auto" }}
+    >
       <CardMedia sx={{ height: 140 }} image={reptile} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Lagartos
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Los lagartos son un grupo ampliamente distribuido de reptiles
+          escamosos, con más de 6,000 especies, que se extienden por todos los
+          continentes excepto la Antártida.
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Compartir</Button>
+        <Button size="small">Leer más</Button>
       </CardActions>
     </Card>
   );
@@ -126,7 +139,10 @@ export const TarjetTres = () => {
     setExpanded(!expanded);
   };
   return (
-    <Card sx={{ maxWidth: 345, height: "100%" }}>
+    <Card
+      sx={{ maxWidth: 345, height: "90%", margin: "0 auto" }}
+      className="fondo-tarjetas"
+    >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -138,8 +154,8 @@ export const TarjetTres = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title="Paella de camarones y chorizo."
+        subheader="Septiembre 14, 2016"
       />
       <CardMedia
         component="img"
@@ -149,9 +165,9 @@ export const TarjetTres = () => {
       />
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          Esta impresionante paella es un plato perfecto para fiestas y una
+          comida divertida para cocinar junto con tus invitados. Añade 1 taza de
+          guisantes congelados junto con los mejillones, si lo deseas.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -206,8 +222,64 @@ export const TarjetTres = () => {
 };
 
 // Array de tarjetas
-const Tarjetas = [TarjetUno, TarjetDos, TarjetTres];
-
-export default function Tarjeta() {
-  return <></>;
+const Tarjetas = [TarjetDos, TarjetUno, TarjetTres];
+function Tarjeta() {
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div
+      style={{
+        height: "390px", // Alto fijo para el contenedor del Slider
+        width: "70%",
+      }}
+    >
+      <Slider
+        {...settings}
+        style={{
+          height: "390px",
+          width: "100%",
+          padding: "50px 0 0 0",
+        }}
+      >
+        {Tarjetas.map((Tarjet, index) => (
+          <div key={index}>
+            <Tarjet />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 }
+
+export default Tarjeta;
