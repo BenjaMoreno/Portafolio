@@ -19,10 +19,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  bgcolor: "#134074",
+  bgcolor: "#8DA9C4",
   boxShadow: 24,
   p: 2,
-  minWidth: "280px",
+  minWidth: "350px",
+  borderRadius: "10px",
   width: "40vw",
   height: "80vh",
   display: "flex",
@@ -81,11 +82,13 @@ export const Gestion = () => {
   //CONTEXT
   var { setUsuario } = useContext(ContextUser);
   //color para avatar activo
-  const avatarActive = "inset 0 0 20px 1px lime";
+  const avatarActive = "inset 0 0 20px 1px var(--azul-uno)";
 
   return (
     <section className="container-gestion" id="gestion">
-      <Button onClick={handleOpen}>Crea a un dato para todo el sitio</Button>
+      <Button onClick={handleOpen} className="open-modal-btns">
+        Crear un estado
+      </Button>
       <div>
         <Modal
           open={open}

@@ -1,10 +1,13 @@
 .container-bibliotecas {
-  height: auto;
-  width: max-content;
+  height: 60vh;
+  max-height: 60vh;
+  width: 80vw;
+  max-width: 80vw;
   margin: 10vh auto;
   display: flex;
 }
 .links-biblio {
+  max-width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -12,20 +15,40 @@
   overflow: hidden;
 }
 .links-biblio a {
-  width: 20vw;
+  min-width: max-content;
   color: gray;
-  padding: 20px;
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   /* border-top: solid 1px rgba(255, 255, 255, 0.082); */
 }
 .links-biblio a.active {
   font-weight: 400;
-  padding: 20px;
   color: var(--fuente-blanca);
   box-shadow: inset 0 0 30px 1px rgba(255, 255, 255, 0.158);
 }
 .respuesta-link-biblio {
-  width: 60vw;
+  width: 50vw;
+  max-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.open-modal-btns {
+  background-color: #8da9c4 !important;
+  /* border: solid 2px #8da9c4 !important; */
+  color: #020303 !important;
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  font-weight: 600 !important;
+  font-family: var(--fuente-montserrat) !important;
+  transform: translate(-50%, -50%);
+  min-width: max-content !important;
+}
+.container-modales {
+  position: relative;
 }

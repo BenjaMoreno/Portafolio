@@ -17,6 +17,9 @@
   --font-size-h6: 1rem;
   --font-size-p: 1.875rem;
   /* --font-size-label: 1.5rem; */
+
+  /* Colores */
+  --azul-uno: #0b2545;
 }
 /* INDEX ANTIGUO */
 h1 {
@@ -85,10 +88,12 @@ button {
   font-family: var(--fuente-montserrat);
   font-size: var(--font-size-h6);
   color: var(--fuente-blanca);
-  background-color: #007bff;
+  background-color: #8da9c4;
+  /* background-color: #007bff; */
   border-radius: 10px;
   border: none;
   padding: 8px 16px;
+  color: #020303;
 }
 small {
   color: var(--fuente-blanca);

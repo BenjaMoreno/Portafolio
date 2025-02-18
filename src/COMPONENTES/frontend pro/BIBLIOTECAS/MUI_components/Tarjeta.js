@@ -58,7 +58,8 @@ export const TarjetUno = () => {
         display: "flex",
         height: "100%",
         maxWidth: 345,
-        margin: "auto",
+        margin: "50% auto auto auto",
+        transform: "TranslateY(-80%)",
       }}
       className="fondo-tarjetas"
     >
@@ -110,7 +111,12 @@ export const TarjetDos = () => {
   return (
     <Card
       className="fondo-tarjetas"
-      sx={{ maxWidth: 345, height: "100%", margin: "0 auto" }}
+      sx={{
+        maxWidth: 345,
+        height: "100%",
+        margin: "50% auto auto auto",
+        transform: "TranslateY(-65%)",
+      }}
     >
       <CardMedia sx={{ height: 140 }} image={reptile} title="green iguana" />
       <CardContent>
@@ -139,10 +145,7 @@ export const TarjetTres = () => {
     setExpanded(!expanded);
   };
   return (
-    <Card
-      sx={{ maxWidth: 345, height: "90%", margin: "0 auto" }}
-      className="fondo-tarjetas"
-    >
+    <Card sx={{ maxWidth: 345, margin: "auto" }} className="fondo-tarjetas">
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -159,7 +162,7 @@ export const TarjetTres = () => {
       />
       <CardMedia
         component="img"
-        height="194"
+        height="185"
         image={paella}
         alt="Paella dish"
       />
@@ -260,16 +263,15 @@ function Tarjeta() {
   return (
     <div
       style={{
-        height: "390px", // Alto fijo para el contenedor del Slider
+        height: "100%", // Alto fijo para el contenedor del Slider
         width: "70%",
       }}
     >
       <Slider
         {...settings}
         style={{
-          height: "390px",
+          height: "100%",
           width: "100%",
-          padding: "50px 0 0 0",
         }}
       >
         {Tarjetas.map((Tarjet, index) => (

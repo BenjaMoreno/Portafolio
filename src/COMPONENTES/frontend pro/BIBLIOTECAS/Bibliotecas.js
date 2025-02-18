@@ -9,11 +9,11 @@ export const Bibliotecas = () => {
   return (
     <section className="container-bibliotecas">
       <div className="links-biblio">
-        <NavLink to={"grafico"}>Gráficos</NavLink>
+        <NavLink to={"grafico"}>Gráficos interactivos</NavLink>
         <NavLink to={"tarjetas"}>Tarjetas</NavLink>
-        <NavLink to={"modales"}>Modales</NavLink>
-        <NavLink to={"dropdown"}>Dropdowns</NavLink>
-        <NavLink to={"spinners"}>Spinners</NavLink>
+        <NavLink to={"modales"}>Ventanas emergentes</NavLink>
+        <NavLink to={"dropdown"}>Menús desplegables</NavLink>
+        <NavLink to={"spinners"}>Indicadores de carga</NavLink>
       </div>
       <div className="respuesta-link-biblio">
         <Outlet />
