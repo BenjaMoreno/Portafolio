@@ -7,7 +7,10 @@ import { ComposR } from "../../COMPONENTES/frontend pro/COMPOS REUTILIZABLES/Com
 import { Bibliotecas } from "../../COMPONENTES/frontend pro/BIBLIOTECAS/Bibliotecas";
 import { Optimizacion } from "../../COMPONENTES/frontend pro/OPTIMIZACION/Optimizacion";
 import { Formulario } from "../../COMPONENTES/frontend pro/FORMULARIOS/Formulario";
+import { useLocation } from "react-router-dom";
+
 export const FrontendPro = () => {
+  const location = useLocation();
   // DESACTIVAR FLECHA ANIMADA
   useEffect(() => {
     const detectarScroll = () => {
@@ -22,6 +25,14 @@ export const FrontendPro = () => {
       window.removeEventListener("scroll", detectarScroll);
     };
   }, []);
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div className="container-pro">
       <div className="titulo-pro">
@@ -39,7 +50,9 @@ export const FrontendPro = () => {
       <h2 className="h2-habilidades">API REST</h2>
       <Apis />
       {/* <hr className="separador-secciones"></hr> */}
-      <h2 className="h2-habilidades">Manejo de estado global</h2>
+      <h2 className="h2-habilidades" id="gestion">
+        Manejo de estado global
+      </h2>
       <Gestion />
 
       {/* <hr className="separador-secciones"></hr> */}

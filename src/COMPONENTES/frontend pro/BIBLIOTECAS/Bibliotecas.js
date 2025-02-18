@@ -12,8 +12,8 @@ export const Bibliotecas = () => {
         <NavLink to={"grafico"}>Gráficos interactivos</NavLink>
         <NavLink to={"tarjetas"}>Tarjetas</NavLink>
         <NavLink to={"modales"}>Ventanas emergentes</NavLink>
-        <NavLink to={"dropdown"}>Menús desplegables</NavLink>
         <NavLink to={"spinners"}>Indicadores de carga</NavLink>
+        {/* <NavLink to={"dropdown"}>Menús desplegables</NavLink> */}
       </div>
       <div className="respuesta-link-biblio">
         <Outlet />

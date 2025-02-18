@@ -7,7 +7,6 @@ import social from "../../../IMAGES/SVG/SELFIE.svg";
 import creativo from "../../../IMAGES/SVG/BRUSH.svg";
 import practico from "../../../IMAGES/SVG/LLAVE.svg";
 import { ContextUser } from "../../../CONTEXT/ContextUser";
-import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -85,7 +84,7 @@ export const Gestion = () => {
   const avatarActive = "inset 0 0 20px 1px var(--azul-uno)";
 
   return (
-    <section className="container-gestion" id="gestion">
+    <section className="container-gestion">
       <Button onClick={handleOpen} className="open-modal-btns">
         Crear un estado
       </Button>

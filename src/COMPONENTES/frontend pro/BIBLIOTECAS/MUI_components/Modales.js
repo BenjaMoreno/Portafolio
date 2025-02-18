@@ -58,7 +58,7 @@ function ChildModal() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p> */}
           <Button onClick={handleClose} className="open-modal-btns">
-            Cerrar modal
+            Cerrar ventana
           </Button>
         </Box>
       </Modal>
