@@ -32,15 +32,12 @@
   margin: 0;
   text-align: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
-.titulo-pro h1 {
-  position: absolute;
-  top: 40%;
-  margin: 0 5.8%;
-}
-.flecha-animada {
+
+.titulo-pro .flecha-animada {
   position: absolute;
   bottom: 0;
   left: 33vh;
@@ -75,7 +72,19 @@
     color: rgb(131, 131, 131);
   }
 }
-@media (max-width: 1323px) {
+@media (max-width: 768px) {
+  .titulo-pro {
+    padding: 10vw;
+    text-align: left;
+  }
+  .titulo-pro .flecha-animada {
+    width: 50px;
+    height: 50px;
+    left: initial;
+    right: 8vw;
+  }
+}
+/* @media (max-width: 1323px) {
   .titulo-pro span {
     font-size: 2rem;
   }
@@ -99,4 +108,4 @@
     height: 50px;
     width: 50px;
   }
-}
+} */

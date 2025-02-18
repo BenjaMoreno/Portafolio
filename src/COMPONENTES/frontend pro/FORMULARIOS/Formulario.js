@@ -2,9 +2,11 @@ import { useState } from "react";
 import "./Formulario.css";
 import { useForm } from "react-hook-form";
 import { SlRefresh } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 export const Formulario = () => {
   const [datosForm, setDatosForm] = useState(null);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -14,6 +16,7 @@ export const Formulario = () => {
   const onSubmit = (data) => {
     console.log(data);
     setDatosForm(data);
+    navigate("#datosform");
   };
 
   return (
@@ -91,7 +94,7 @@ export const Formulario = () => {
         {/* Botón de enviar */}
         <button type="submit">Enviar</button>
       </form>
-      <div className="container-form-response respuesta">
+      <div className="container-form-response respuesta" id="datosform">
         <h4>Respuesta</h4>
         {datosForm === null ? (
           <small>No es has completado el formulario</small>
