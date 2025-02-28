@@ -4,10 +4,11 @@ import { ReactComponent as Flecha } from "../../IMAGES/SVG/FLECHA-ANIMADA.svg";
 import { Apis } from "../../COMPONENTES/frontend pro/APIS/Apis";
 import { Gestion } from "../../COMPONENTES/frontend pro/GESTION DE ESTADO/Gestion";
 import { ComposR } from "../../COMPONENTES/frontend pro/COMPOS REUTILIZABLES/ComposR";
-import { Bibliotecas } from "../../COMPONENTES/frontend pro/BIBLIOTECAS/Bibliotecas";
 import { Optimizacion } from "../../COMPONENTES/frontend pro/OPTIMIZACION/Optimizacion";
 import { Formulario } from "../../COMPONENTES/frontend pro/FORMULARIOS/Formulario";
 import { useLocation } from "react-router-dom";
+import { Box } from "@mui/material";
+import Bibliotecas from "../../COMPONENTES/frontend pro/BIBLIOTECAS/Bibliotecas";
 
 export const FrontendPro = () => {
   const location = useLocation();
@@ -44,15 +45,14 @@ export const FrontendPro = () => {
       {/* <hr className="separador-secciones"></hr> */}
       <h2 className="h2-habilidades">Elementos para tu proyecto</h2>
       <Bibliotecas />
-      {/* <h2 className="h2-habilidades">Validaciónes</h2>
+      <h2 className="h2-habilidades">Validaciónes</h2>
       <Formulario />
-      <h2 className="h2-habilidades">API REST</h2>
+      {/* <h2 className="h2-habilidades">API REST</h2>
       <Apis />
       <h2 className="h2-habilidades" id="gestion">
         Manejo de estado global
       </h2>
       <Gestion /> */}
-
       {/* <h2 className="h2-habilidades">Componentes reutilizables</h2>
       <ComposR /> */}
       {/* <hr className="separador-secciones"></hr> */}
