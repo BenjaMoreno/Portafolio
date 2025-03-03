@@ -8,9 +8,26 @@ export const Experiencia = () => {
 
   const trabajos = [
     {
+      tipo: "Hackathon",
+      Descripcion: "NoCountry - Desarrollo de una fintech",
+      fecha: "dic.2024 - feb.2025",
+      caracteristicas: {
+        primera:
+          "Diseñé e Implementé el Dashboard (Funcionalidad mas importante de la aplicación)",
+        segunda: "Creé,diseñé y desarrolle el sistema de notificaciónes con IA",
+        tercera:
+          "Integré datos financieros como: fondos,progresos,ahorros,gastos,etc...,transformandolos en gráficos interactivos y visualmente atractivos.",
+        cuarta:
+          "Desarrollé el sistema completo de creación, edición, y eliminación de objetivos financieros,conectado al Backend",
+        quinta:
+          "Creamos una solución real, para clientes reales,sistemas de pago,inició de sesión.",
+        sexta: "Colaboré estrechamente con Backends, Frontend y Diseño UX/UI.",
+      },
+    },
+    {
       tipo: "Práctica laboral",
-      Descripcion: "NoCountry - Desarrollo de un sitio web e-commerce",
-      fecha: "nov.2024 - presente",
+      Descripcion: "NoCountry - Desarrollo de una e-commerce",
+      fecha: "nov.2024 - dic.2024",
       caracteristicas: {
         primera: `Desarrollé completamente el sitio web de tipo "e-commerce" sobre productos artesanales,para el cuidado personal`,
         segunda:
@@ -42,7 +59,7 @@ export const Experiencia = () => {
     },
     {
       tipo: "Freelance",
-      Descripcion: "Desarrollo de una revista local para el sur de Chile",
+      Descripcion: "Desarrollo de una revista local",
       fecha: "ene.2022 - dic.2023",
       caracteristicas: {
         primera: "Diseño y desarrollo del sitio",

@@ -35,6 +35,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 10vw;
 }
 
 .titulo-pro .flecha-animada {
@@ -45,6 +46,9 @@
   width: 100px;
   height: 100px;
   animation: rebote 1s ease-in-out infinite;
+}
+.titulo-pro h1 {
+  font-weight: 300;
 }
 .separador-secciones {
   margin: auto;

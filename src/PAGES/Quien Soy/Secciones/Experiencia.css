@@ -57,10 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+  font-weight: 500;
 }
 
 .center-trabajo {

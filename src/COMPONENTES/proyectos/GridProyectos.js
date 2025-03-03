@@ -12,14 +12,14 @@ const proyectos = [
     alt: "Revista Sur Activo",
     descripcion:
       "Revista en el sur de Chile,Revista dedicada a compartir actividades de la zona sur de Chile, así como contenido y noticias locales mediante las redes sociales.",
-    link: "https://jovial-figolla-7271fd.netlify.app/",
+    link: "https://revistasuractivo.com/",
   },
   {
     imgSrc: pacis,
     alt: "Pacis e-commerce",
     descripcion:
       "e-commerce de productos artesanales para el cuidado personal,en el se ofrecen catalogos de productos, los cuales puedes añadir al carrito y comprarlos",
-    link: "https://fantastic-pony-a7bb42.netlify.app/",
+    link: "https://pacis.netlify.app/",
   },
   {
     imgSrc: sonicpulse,
@@ -33,7 +33,7 @@ const proyectos = [
     alt: "React Training Project",
     descripcion:
       "Proyecto personal para practicar y unificar mis conocimientos sobre el rol de Frontend y desarrollo con React en un único proyecto, al cual puedo recurrir cuando necesite refrescar información.",
-    link: "https://super-chebakia-d1fcc3.netlify.app/",
+    link: "https://react-training-oficial.netlify.app/",
   },
   {
     imgSrc: suractivo_antiguo,
