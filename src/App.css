@@ -109,7 +109,7 @@ header {
   top: 0;
   /* background-color: #002029; */
   background-color: #0b2545;
-  z-index: 100;
+  z-index: 100000;
 }
 .bg-body-tertiary {
   height: 96%;

@@ -18,6 +18,7 @@ import InsightsIcon from "@mui/icons-material/Insights";
 import DataSaverOffOutlinedIcon from "@mui/icons-material/DataSaverOffOutlined";
 import CoPresentOutlinedIcon from "@mui/icons-material/CoPresentOutlined";
 import TabIcon from "@mui/icons-material/Tab";
+import "./Bibliotecas.css";
 const drawerWidth = 240;
 
 function Bibliotecas(props) {
@@ -89,8 +90,8 @@ function Bibliotecas(props) {
             ),
           },
         ].map((text, index) => (
-          <NavLink key={text} to={text.link}>
-            <ListItem disablePadding>
+          <NavLink key={index} to={text.link} className="navlink-bibliotecas">
+            <ListItem>
               <ListItemButton>
                 <ListItemIcon>
                   {text.icono}
