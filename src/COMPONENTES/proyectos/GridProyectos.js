@@ -5,8 +5,16 @@ import sonicpulse from "../../IMAGES/proyectos/sonicpulse.webp";
 import react_training from "../../IMAGES/proyectos/react-training.webp";
 import suractivo_antiguo from "../../IMAGES/proyectos/suractivo-pasado.webp";
 import pacis from "../../IMAGES/proyectos/spa.webp";
+import iupi from "../../IMAGES/proyectos/iupi.webp";
 
 const proyectos = [
+  {
+    imgSrc: iupi,
+    alt: "IUPI",
+    descripcion:
+      "Aplicación de planificación financiera, para entornos con alta taza de inflación",
+    link: "https://iupi-sample.vercel.app/",
+  },
   {
     imgSrc: revista_sur_activo,
     alt: "Revista Sur Activo",
