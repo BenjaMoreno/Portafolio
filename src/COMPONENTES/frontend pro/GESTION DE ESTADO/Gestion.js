@@ -11,6 +11,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { boxSizing, display, width } from "@mui/system";
+import zIndex from "@mui/material/styles/zIndex";
 
 // ESTILOS MODAL
 const style = {
@@ -26,6 +27,7 @@ const style = {
   width: "40vw",
   height: "80vh",
   display: "flex",
+  zIndex: 300,
 };
 
 export const Gestion = () => {

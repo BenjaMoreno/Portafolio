@@ -120,6 +120,7 @@ function Bibliotecas(props) {
         height: "70vh",
         margin: "5vh auto",
         position: "relative",
+        zIndex: 0,
       }}
     >
       {/* Botón para abrir el Drawer en móviles */}

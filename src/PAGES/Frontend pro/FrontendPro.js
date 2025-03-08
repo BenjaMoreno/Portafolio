@@ -47,25 +47,14 @@ export const FrontendPro = () => {
       <Bibliotecas />
       <h2 className="h2-habilidades">Validaciónes</h2>
       <Formulario />
-      {/* <h2 className="h2-habilidades">API REST</h2>
+      <h2 className="h2-habilidades">API REST</h2>
       <Apis />
+      <h2 className="h2-habilidades">Componentes reutilizables</h2>
+      <ComposR />
       <h2 className="h2-habilidades" id="gestion">
         Manejo de estado global
       </h2>
-      <Gestion /> */}
-      {/* <h2 className="h2-habilidades">Componentes reutilizables</h2>
-      <ComposR /> */}
-      {/* <hr className="separador-secciones"></hr> */}
-      {/* <hr className="separador-secciones"></hr>
-      <ComposR />
-      // <hr className="separador-secciones"></hr>
-
-      <Apis />
-      // <hr className="separador-secciones"></hr>
-      <Formulario />
-      // <hr className="separador-secciones"></hr>
-      <Bibliotecas />
-      <hr className="separador-secciones"></hr> */}
+      <Gestion />
       {/* <Optimizacion /> */}
     </div>
   );

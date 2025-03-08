@@ -34,7 +34,7 @@
   border-bottom-left-radius: 50px;
   width: max-content;
   padding: 0.5% 10%;
-  z-index: 200;
+  z-index: 4000;
   background-color: var(--azul-uno);
   overflow: hidden;
   height: max-content;
@@ -109,7 +109,7 @@ header {
   top: 0;
   /* background-color: #002029; */
   background-color: #0b2545;
-  z-index: 100000;
+  z-index: 1000;
 }
 .bg-body-tertiary {
   height: 96%;
