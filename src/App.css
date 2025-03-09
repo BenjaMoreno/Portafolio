@@ -108,7 +108,7 @@ header {
   position: sticky;
   top: 0;
   /* background-color: #002029; */
-  background-color: #0b2545;
+  background-color: #134074;
   z-index: 1000;
 }
 .bg-body-tertiary {
@@ -155,23 +155,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-family: "Sulphur Point", sans-serif;
+  font-family: "Sulphur Point", sans-serif;
   font-weight: 300;
-  font-size: 1.6rem; */
+  font-size: 1.6rem;
   text-align: center;
 }
 .navlink:hover {
   background: linear-gradient(
     to bottom,
     rgba(128, 128, 128, 0.416) 0%,
-    rgba(8, 64, 83, 0.384) 60%
+    #8da9c417 60%
   );
 }
 .navlink.active {
   background: linear-gradient(
     to bottom,
     rgba(165, 165, 165, 0.336) 0%,
-    rgba(8, 64, 83, 0) 20%
+    #8da9c417 20%
   );
   box-sizing: border-box;
 }

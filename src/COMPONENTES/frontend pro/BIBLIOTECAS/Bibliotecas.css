@@ -38,13 +38,13 @@
   position: relative;
 }
 .open-modal-btns {
-  background-color: #8da9c4 !important;
-  /* border: solid 2px #8da9c4 !important; */
-  color: #020303 !important;
+  background-color: #8bc34a !important;
+  color: #ffffff !important;
   position: absolute !important;
   left: 50%;
   top: 50%;
   font-weight: 600 !important;
+  letter-spacing: 1px !important;
   font-family: var(--fuente-montserrat) !important;
   transform: translate(-50%, -50%);
   min-width: max-content !important;

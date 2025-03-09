@@ -25,9 +25,9 @@
   background-color: #011920;
   border-radius: 50px;
   height: 50px;
-  border: solid yellow 3px;
-  box-shadow: 0 0 6px 1px yellow;
-  color: greenyellow;
+  border: solid #ffc107 3px;
+  box-shadow: 0 0 6px 1px #ffc107;
+  color: #ffc107;
   text-align: center;
   font-size: 1.6rem;
   margin: 5%;

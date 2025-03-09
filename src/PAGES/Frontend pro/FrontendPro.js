@@ -49,12 +49,12 @@ export const FrontendPro = () => {
       <Formulario />
       <h2 className="h2-habilidades">API REST</h2>
       <Apis />
-      <h2 className="h2-habilidades">Componentes reutilizables</h2>
-      <ComposR />
       <h2 className="h2-habilidades" id="gestion">
         Manejo de estado global
       </h2>
       <Gestion />
+      <h2 className="h2-habilidades">Componentes reutilizables</h2>
+      <ComposR />
       {/* <Optimizacion /> */}
     </div>
   );
