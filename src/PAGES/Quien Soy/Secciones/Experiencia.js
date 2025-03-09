@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Experiencia.css";
 import { ReactComponent as Exper } from "../../../IMAGES/SVG/EXPERIENCIA.svg";
+import { ReactComponent as Github } from "../../../IMAGES/SVG/GITHUB.svg";
 
 export const Experiencia = () => {
   // ESTADOS
@@ -11,6 +12,7 @@ export const Experiencia = () => {
       tipo: "Hackathon",
       Descripcion: "NoCountry - Desarrollo de una fintech",
       fecha: "dic.2024 - feb.2025",
+      repositorio: "https://github.com/No-Country-simulation/h4-09-fintech",
       caracteristicas: {
         primera:
           "Diseñé e Implementé el Dashboard (Funcionalidad mas importante de la aplicación)",
@@ -28,6 +30,8 @@ export const Experiencia = () => {
       tipo: "Práctica laboral",
       Descripcion: "NoCountry - Desarrollo de una e-commerce",
       fecha: "nov.2024 - dic.2024",
+      repositorio: "https://github.com/No-Country-simulation/c22-10-m-webapp",
+
       caracteristicas: {
         primera: `Desarrollé completamente el sitio web de tipo "e-commerce" sobre productos artesanales,para el cuidado personal`,
         segunda:
@@ -47,6 +51,9 @@ export const Experiencia = () => {
       tipo: "Práctica laboral",
       Descripcion: "NoCountry - Desarrollo de una Red Social",
       fecha: "sept.2024 - nov.2024",
+      repositorio:
+        "https://github.com/No-Country-simulation/c21-16-m-python-react",
+
       caracteristicas: {
         primera: "Diseñé y desarrollé el sitio",
         segunda: "Optimizé y mejoré rendimiento del sitio",
@@ -61,6 +68,8 @@ export const Experiencia = () => {
       tipo: "Freelance",
       Descripcion: "Desarrollo de una revista local",
       fecha: "ene.2022 - dic.2023",
+      repositorio: "https://github.com/BenjaMoreno/Revista-Sur-Activo",
+
       caracteristicas: {
         primera: "Diseño y desarrollo del sitio",
         segunda: "Optimización y rendimiento del sitio",
@@ -110,13 +119,18 @@ export const Experiencia = () => {
               </div>
             )}
 
-            <div
-              className="fecha"
-              style={{
-                display: activarDetalles === indiceMap ? "none" : "block",
-              }}
-            >
-              {trabajo.fecha}
+            <div className="container-fecha">
+              <a href={trabajo.repositorio} target="blank">
+                <Github className="github" title="Visitar el repositorio" />
+              </a>
+              <div
+                className="fecha"
+                style={{
+                  display: activarDetalles === indiceMap ? "none" : "block",
+                }}
+              >
+                {trabajo.fecha}
+              </div>
             </div>
           </div>
         ))}
