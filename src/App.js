@@ -134,6 +134,7 @@ function App() {
             <Routes>
               <Route path="/" element={<QuienSoy />} />
               <Route path="/codificando" element={<FrontendPro />}>
+                <Route index element={<Radar />} /> {/* Ruta predeterminada */}
                 <Route path="dropdown" element={<Dropdown />} />
                 <Route path="grafico" element={<Radar />} />
                 <Route path="tarjetas" element={<Tarjeta />} />
