@@ -126,11 +126,15 @@ export const Graficos = () => {
             <NavLink
               to={enlace.link}
               key={enlace.label}
-              style={{ textDecoration: "none", color: "inherit" }} // Estilo para el NavLink
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }} // Estilo para el NavLink
             >
               <MenuItem
                 onClick={() => handleMenuItemClick(enlace.label)}
                 disableRipple
+                sx={{ m: 1 }}
               >
                 <img src={enlace.icono} alt="" style={{ margin: "0 10px" }} />
                 {enlace.label}

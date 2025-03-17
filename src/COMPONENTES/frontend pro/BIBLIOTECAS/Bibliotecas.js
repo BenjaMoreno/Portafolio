@@ -9,16 +9,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import { NavLink } from "react-router-dom";
-// import { Typography } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import InsightsIcon from "@mui/icons-material/Insights";
 import DataSaverOffOutlinedIcon from "@mui/icons-material/DataSaverOffOutlined";
 import CoPresentOutlinedIcon from "@mui/icons-material/CoPresentOutlined";
 import TabIcon from "@mui/icons-material/Tab";
 import "./Bibliotecas.css";
+
 const drawerWidth = 240;
 
 function Bibliotecas(props) {
@@ -93,14 +91,8 @@ function Bibliotecas(props) {
           <NavLink key={index} to={text.link} className="navlink-bibliotecas">
             <ListItem>
               <ListItemButton>
-                <ListItemIcon>
-                  {text.icono}
-                  {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-                </ListItemIcon>
-                <ListItemText
-                  primary={text.label}
-                  sx={{ fontFamily: "var(--fuente-poppins)" }} // Cambia la fuente aquí
-                />
+                <ListItemIcon>{text.icono}</ListItemIcon>
+                <ListItemText primary={text.label} />
               </ListItemButton>
             </ListItem>
           </NavLink>
@@ -123,17 +115,6 @@ function Bibliotecas(props) {
         zIndex: 0,
       }}
     >
-      {/* Botón para abrir el Drawer en móviles */}
-      {/* <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        edge="start"
-        onClick={handleDrawerToggle}
-        sx={{ position: "absolute", left: 10, top: 10, zIndex: 1200 }}
-      >
-        <MenuIcon />
-      </IconButton> */}
-
       {/* Drawer para móviles */}
       <Drawer
         container={container}
@@ -163,8 +144,8 @@ function Bibliotecas(props) {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
-            position: "relative", // Para que no ocupe toda la pantalla
-            height: "100%", // Ajusta la altura al contenedor
+            position: "relative",
+            height: "100%",
             backgroundColor: "transparent",
           },
         }}

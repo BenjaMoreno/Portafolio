@@ -52,6 +52,12 @@
 .container-modales {
   position: relative;
 }
+
+.navlink-bibliotecas .MuiListItemText-primary {
+  font-family: "Poppins", sans-serif !important; /* Asegura que la fuente se aplique */
+  font-weight: 300 !important; /* Asegura que el peso de la fuente se aplique */
+}
+
 .navlink-bibliotecas.active .MuiListItemButton-root {
   box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.281);
 }
