@@ -47,7 +47,7 @@ function Bibliotecas(props) {
         {[
           {
             label: "Graficos interactivos",
-            link: "grafico",
+            link: "graficos",
             icono: (
               <InsightsIcon
                 style={{

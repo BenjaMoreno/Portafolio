@@ -8,46 +8,46 @@ import {
   YAxis,
 } from "recharts";
 
-export const Radar = () => {
+export const Areas = () => {
   const data = [
     {
-      name: "Page A",
+      name: "Enero",
       uv: 4000,
       pv: 2400,
       amt: 2400,
     },
     {
-      name: "Page B",
+      name: "Febrero",
       uv: 3000,
       pv: 1398,
       amt: 2210,
     },
     {
-      name: "Page C",
+      name: "Marzo",
       uv: 2000,
       pv: 9800,
       amt: 2290,
     },
     {
-      name: "Page D",
+      name: "Abril",
       uv: 2780,
       pv: 3908,
       amt: 2000,
     },
     {
-      name: "Page E",
+      name: "Mayo",
       uv: 1890,
       pv: 4800,
       amt: 2181,
     },
     {
-      name: "Page F",
+      name: "Junio",
       uv: 2390,
       pv: 3800,
       amt: 2500,
     },
     {
-      name: "Page G",
+      name: "Julio",
       uv: 3490,
       pv: 4300,
       amt: 2100,
@@ -74,7 +74,7 @@ export const Radar = () => {
         </defs>
         <XAxis dataKey="name" />
         <YAxis />
-        <CartesianGrid strokeDasharray="3 3" />
+        <CartesianGrid strokeDasharray="2 2" />
         <Tooltip />
         <Area
           type="monotone"
