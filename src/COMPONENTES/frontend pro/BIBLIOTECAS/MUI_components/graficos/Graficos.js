@@ -4,13 +4,14 @@ import { styled, alpha } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import EditIcon from "@mui/icons-material/Edit";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { NavLink, Outlet } from "react-router-dom";
 import area from "../../../../../IMAGES/iconos/area-chart.png";
 import radar from "../../../../../IMAGES/iconos/radar-chart.png";
+import compuesto from "../../../../../IMAGES/iconos/composed-chart.png";
+import torta from "../../../../../IMAGES/iconos/pie-chart.png";
 
-// Cambio 1: Aseguré que el menú tenga un z-index alto y posición fija
+// Estilos personalizados para el menú
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
@@ -31,7 +32,7 @@ const StyledMenu = styled((props) => (
     marginTop: theme.spacing(1),
     minWidth: 180,
     color: "white",
-    backgroundColor: "transparent",
+    backgroundColor: "#0b2545",
     boxShadow:
       "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
     "& .MuiMenu-list": {
@@ -59,24 +60,35 @@ const StyledMenu = styled((props) => (
 const enlaces = [
   { label: "area", link: "areas", icono: area },
   { label: "radar", link: "radar", icono: radar },
+  { label: "compuesto", link: "compuesto", icono: compuesto },
+  { label: "torta", link: "torta", icono: torta },
 ];
 
 export const Graficos = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [opcionSeleccionada, setOpcionSeleccionada] = React.useState("Tipos");
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleMenuItemClick = (label) => {
+    setOpcionSeleccionada(label); // Actualiza la opción seleccionada
+    handleClose(); // Cierra el menú
+  };
+
   return (
     <Box
       sx={{
         position: "relative",
         width: "100%",
         height: "100%",
-        overflow: "hidden", // Cambio 2: Evita que el contenido se desplace
+        overflow: "hidden", // Evita que el contenido se desplace
       }}
     >
       <Box sx={{ position: "absolute", right: "2%", top: "2%", zIndex: 1000 }}>
@@ -89,8 +101,15 @@ export const Graficos = () => {
           disableElevation
           onClick={handleClick}
           endIcon={<KeyboardArrowDownIcon />}
+          sx={{
+            backgroundColor: "#0b2545", // Cambia el color de fondo
+            color: "white", // Cambia el color del texto
+            "&:hover": {
+              backgroundColor: "#13315c", // Cambia el color de fondo al pasar el mouse
+            },
+          }}
         >
-          Tipos
+          {opcionSeleccionada}
         </Button>
 
         <StyledMenu
@@ -101,15 +120,18 @@ export const Graficos = () => {
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          disableScrollLock // Cambio 3: Evita que el menú bloquee el scroll
+          disableScrollLock // Evita que el menú bloquee el scroll
         >
           {enlaces.map((enlace) => (
             <NavLink
               to={enlace.link}
-              key={enlace.label} // Cambio 4: Agregué una clave única
-              style={{ display: "block", textDecoration: "none" }} // Cambio 5: Aseguré que el NavLink no afecte el layout
+              key={enlace.label}
+              style={{ textDecoration: "none", color: "inherit" }} // Estilo para el NavLink
             >
-              <MenuItem onClick={handleClose} disableRipple>
+              <MenuItem
+                onClick={() => handleMenuItemClick(enlace.label)}
+                disableRipple
+              >
                 <img src={enlace.icono} alt="" style={{ margin: "0 10px" }} />
                 {enlace.label}
               </MenuItem>
@@ -117,7 +139,7 @@ export const Graficos = () => {
           ))}
         </StyledMenu>
       </Box>
-      <Outlet style={{ zIndex: 0 }} />
+      <Outlet /> {/* Renderiza las rutas anidadas */}
     </Box>
   );
 };

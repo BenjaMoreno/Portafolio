@@ -23,6 +23,8 @@ import { Spinners } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/
 import { Graficos } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Graficos";
 import { Areas } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Areas";
 import RadarChartComponent from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/RadarChartComponent";
+import Compuesto from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Compuesto";
+import Torta from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Torta";
 
 function App() {
   // ESTADO CONTEXT USUARIO
@@ -138,8 +140,12 @@ function App() {
               <Route path="/codificando" element={<FrontendPro />}>
                 <Route path="dropdown" element={<Dropdown />} />
                 <Route path="graficos" element={<Graficos />}>
+                  {/* Ruta de índice para "graficos" */}
+                  <Route index element={<Torta />} />
                   <Route path="areas" element={<Areas />} />
                   <Route path="radar" element={<RadarChartComponent />} />
+                  <Route path="compuesto" element={<Compuesto />} />
+                  <Route path="torta" element={<Torta />} />
                 </Route>
                 <Route path="tarjetas" element={<Tarjeta />} />
                 <Route path="modales" element={<Modales />} />
