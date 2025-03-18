@@ -90,7 +90,7 @@ function Bibliotecas(props) {
         ].map((text, index) => (
           <NavLink key={index} to={text.link} className="navlink-bibliotecas">
             <ListItem>
-              <ListItemButton>
+              <ListItemButton onClick={handleDrawerClose}>
                 <ListItemIcon>{text.icono}</ListItemIcon>
                 <ListItemText primary={text.label} />
               </ListItemButton>
@@ -115,6 +115,22 @@ function Bibliotecas(props) {
         zIndex: 0,
       }}
     >
+      {/* Botón para abrir el Drawer en móviles */}
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="start"
+        onClick={handleDrawerToggle}
+        sx={{
+          position: "absolute",
+          left: { xs: 5, sm: 10, md: 15 }, // Ajusta el left según el breakpoint
+          top: { xs: 5, sm: 10, md: 15 }, // Ajusta el top según el breakpoint
+          zIndex: 1200,
+          display: { xs: "block", sm: "none", md: "none" }, // Oculta o muestra según el breakpoint
+        }}
+      >
+        <MenuIcon sx={{ color: "#ffffff" }} />
+      </IconButton>
       {/* Drawer para móviles */}
       <Drawer
         container={container}

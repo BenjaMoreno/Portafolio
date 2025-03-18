@@ -61,3 +61,17 @@
 .navlink-bibliotecas.active .MuiListItemButton-root {
   box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.281);
 }
+
+.css-cyqh1t-MuiPaper-root-MuiDrawer-paper {
+  background: radial-gradient(circle at 25% 10%, #134074, transparent 40%),
+    radial-gradient(circle at 75% 110%, #134074, transparent 40%),
+    radial-gradient(circle at top right, #00171f, transparent 50%),
+    radial-gradient(circle at bottom left, #00171f, transparent 50%) !important;
+  background-color: #0b2545 !important;
+}
+
+/* @media (max-width: 599px) {
+  .navlink-bibliotecas .MuiListItemText-primary {
+    color: black;
+  }
+} */
