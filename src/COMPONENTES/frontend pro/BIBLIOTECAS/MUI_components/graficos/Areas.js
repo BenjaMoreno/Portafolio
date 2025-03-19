@@ -57,10 +57,8 @@ export const Areas = () => {
   return (
     <ResponsiveContainer>
       <AreaChart
-        width={730}
-        height={250}
         data={data}
-        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+        margin={{ top: 50, right: 1, bottom: 0, left: -10 }}
       >
         <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Radar,
   RadarChart,
@@ -49,12 +49,28 @@ const data = [
 ];
 
 const RadarChartComponent = () => {
+  // Función para calcular el tamaño de la fuente en función del ancho de la pantalla
+  const calculateFontSize = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 600) {
+      return 12; // Tamaño pequeño para pantallas pequeñas
+    } else if (screenWidth >= 600 && screenWidth < 900) {
+      return 16; // Tamaño mediano para pantallas medianas
+    } else {
+      return 18; // Tamaño grande para pantallas grandes
+    }
+  };
+  const fontSize = calculateFontSize();
   return (
     <ResponsiveContainer width="100%" height="100%">
       <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
         <PolarGrid />
-        <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis angle={30} domain={[0, 150]} />
+        <PolarAngleAxis tick={{ fontSize: fontSize }} dataKey="subject" />
+        <PolarRadiusAxis
+          tick={{ fontSize: fontSize }}
+          angle={30}
+          domain={[0, 150]}
+        />
         <Radar
           name="Benja"
           dataKey="A"

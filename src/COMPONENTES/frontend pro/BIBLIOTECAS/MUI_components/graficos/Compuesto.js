@@ -50,30 +50,40 @@ const data = [
     amt: 1700,
   },
 ];
+// Función para calcular el tamaño de la fuente en función del ancho de la pantalla
+const calculateFontSize = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 600) return 12; // Tamaño pequeño para pantallas pequeñas
+  if (screenWidth < 900) return 16; // Tamaño mediano para pantallas medianas
+  return 18; // Tamaño grande para pantallas grandes
+};
 
+const fontSize = calculateFontSize();
 const Compuesto = () => {
   // static demoUrl = 'https://codesandbox.io/p/sandbox/composed-chart-with-axis-label-xykxs9';
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <ComposedChart
-        width={500}
-        height={400}
         data={data}
         margin={{
-          top: 20,
-          right: 80,
-          bottom: 20,
-          left: 20,
+          top: 50,
+          right: 1,
+          bottom: 0,
+          left: -10,
         }}
       >
         <CartesianGrid stroke="#f5f5f5" />
         <XAxis
           dataKey="name"
-          label={{ value: "Pages", position: "insideBottomRight", offset: 0 }}
+          label={{ position: "insideBottomRight", offset: 0 }}
+          tick={{ fontSize: fontSize, fill: "#666" }}
           scale="band"
         />
-        <YAxis label={{ value: "Index", angle: -90, position: "insideLeft" }} />
+        <YAxis
+          label={{ angle: -90, position: "insideLeft" }}
+          tick={{ fontSize: fontSize, fill: "#666" }}
+        />
         <Tooltip />
         <Legend />
         <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />

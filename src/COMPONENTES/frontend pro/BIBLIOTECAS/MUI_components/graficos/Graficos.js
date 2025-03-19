@@ -86,7 +86,6 @@ export const Graficos = () => {
     <Box
       sx={{
         position: "relative",
-        border: "solid white 1px",
         width: "100%",
         height: "100%",
         // overflow: "hidden", // Evita que el contenido se desplace
@@ -161,6 +160,7 @@ export const Graficos = () => {
           maxHeight: "100%",
           width: "100%",
           // m: "40px 0 0 0",
+          // padding: "40px 0 0 0",
         }}
       >
         <Outlet /> {/* Renderiza las rutas anidadas */}
