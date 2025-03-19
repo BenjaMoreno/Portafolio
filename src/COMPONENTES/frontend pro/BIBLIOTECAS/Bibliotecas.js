@@ -148,7 +148,13 @@ function Bibliotecas(props) {
           keepMounted: true,
         }}
         sx={{
-          display: {},
+          display: {
+            xs: "block",
+            sm: "block",
+            md: "none",
+            lg: "none",
+            xl: "none",
+          },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
