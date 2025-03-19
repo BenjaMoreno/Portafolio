@@ -86,12 +86,20 @@ export const Graficos = () => {
     <Box
       sx={{
         position: "relative",
+        border: "solid white 1px",
         width: "100%",
         height: "100%",
-        overflow: "hidden", // Evita que el contenido se desplace
+        // overflow: "hidden", // Evita que el contenido se desplace
       }}
     >
-      <Box sx={{ position: "absolute", right: "2%", top: "2%", zIndex: 1000 }}>
+      <Box
+        sx={{
+          position: "absolute",
+          right: 0,
+          top: 0,
+          zIndex: 1000,
+        }}
+      >
         <Button
           id="demo-customized-button"
           aria-controls={open ? "demo-customized-menu" : undefined}
@@ -107,6 +115,10 @@ export const Graficos = () => {
             "&:hover": {
               backgroundColor: "#13315c", // Cambia el color de fondo al pasar el mouse
             },
+            position: "absolute",
+            right: 0,
+            top: 0,
+            minWidth: "max-content",
           }}
         >
           {opcionSeleccionada}
@@ -143,7 +155,16 @@ export const Graficos = () => {
           ))}
         </StyledMenu>
       </Box>
-      <Outlet /> {/* Renderiza las rutas anidadas */}
+      <Box
+        sx={{
+          height: "100%",
+          maxHeight: "100%",
+          width: "100%",
+          // m: "40px 0 0 0",
+        }}
+      >
+        <Outlet /> {/* Renderiza las rutas anidadas */}
+      </Box>
     </Box>
   );
 };

@@ -109,7 +109,7 @@ function Bibliotecas(props) {
       sx={{
         display: "flex",
         width: "80vw",
-        height: "70vh",
+        height: { xs: "60vh", sm: "70vh", md: "70vh", lg: "70vh" },
         margin: "5vh auto",
         position: "relative",
         zIndex: 0,
@@ -123,10 +123,16 @@ function Bibliotecas(props) {
         onClick={handleDrawerToggle}
         sx={{
           position: "absolute",
-          left: { xs: 5, sm: 10, md: 15 }, // Ajusta el left según el breakpoint
-          top: { xs: 5, sm: 10, md: 15 }, // Ajusta el top según el breakpoint
+          left: 0, // Ajusta el left según el breakpoint
+          top: 0, // Ajusta el top según el breakpoint
           zIndex: 1200,
-          display: { xs: "block", sm: "none", md: "none" }, // Oculta o muestra según el breakpoint
+          display: {
+            xs: "block",
+            sm: "block",
+            md: "none",
+            lg: "none",
+            xl: "none",
+          }, // Oculta o muestra según el breakpoint
         }}
       >
         <MenuIcon sx={{ color: "#ffffff" }} />
@@ -142,7 +148,7 @@ function Bibliotecas(props) {
           keepMounted: true,
         }}
         sx={{
-          display: { xs: "block", sm: "none" },
+          display: {},
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
@@ -156,7 +162,13 @@ function Bibliotecas(props) {
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: "none", sm: "block" },
+          display: {
+            xs: "none",
+            sm: "none",
+            md: "block",
+            lg: "block",
+            xl: "block",
+          },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
@@ -175,8 +187,9 @@ function Bibliotecas(props) {
         component="main"
         sx={{
           flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: "100%",
+          height: "100%",
+          // width: { sm: `calc(100% - ${drawerWidth}px)` },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
