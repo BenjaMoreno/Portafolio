@@ -22,7 +22,7 @@ const style = {
   bgcolor: "#8BC34A",
   boxShadow: 24,
   p: 2,
-  minWidth: "350px",
+  minWidth: "300px",
   borderRadius: "10px",
   width: "40vw",
   height: "80vh",
