@@ -15,14 +15,60 @@ import InsightsIcon from "@mui/icons-material/Insights";
 import DataSaverOffOutlinedIcon from "@mui/icons-material/DataSaverOffOutlined";
 import CoPresentOutlinedIcon from "@mui/icons-material/CoPresentOutlined";
 import TabIcon from "@mui/icons-material/Tab";
+import { useTheme, useMediaQuery } from "@mui/material";
 import "./Bibliotecas.css";
 
 const drawerWidth = 240;
+
+const menuItems = [
+  {
+    label: "Gráficos interactivos",
+    link: "graficos",
+    icono: <InsightsIcon style={{ color: "white" }} />,
+    visible: true, // Siempre visible
+  },
+  {
+    label: "Indicadores de carga",
+    link: "spinners",
+    icono: <DataSaverOffOutlinedIcon style={{ color: "white" }} />,
+    visible: true, // Siempre visible
+  },
+  {
+    label: "Tarjetas de presentación",
+    link: "tarjetas",
+    icono: <CoPresentOutlinedIcon style={{ color: "white" }} />,
+    visible: { xs: false, sm: false, md: true, lg: true }, // Visible solo en md y lg
+  },
+  {
+    label: "Ventanas emergentes",
+    link: "modales",
+    icono: <TabIcon style={{ color: "white" }} />,
+    visible: true, // Siempre visible
+  },
+];
 
 function Bibliotecas(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm")); // xs y sm
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("md", "lg")); // md y lg
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg")); // lg y xl
+
+  const filteredMenuItems = menuItems.filter((item) => {
+    if (typeof item.visible === "boolean") {
+      return item.visible; // Siempre visible o siempre oculto
+    } else {
+      // Visible según el breakpoint
+      return (
+        (isSmallScreen && item.visible.xs) ||
+        (isMediumScreen && item.visible.md) ||
+        (isLargeScreen && item.visible.lg)
+      );
+    }
+  });
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -42,52 +88,7 @@ function Bibliotecas(props) {
   const drawer = (
     <div>
       <List>
-        {[
-          {
-            label: "Graficos interactivos",
-            link: "graficos",
-            icono: (
-              <InsightsIcon
-                style={{
-                  color: "white",
-                }}
-              />
-            ),
-          },
-          {
-            label: "Indicadores de carga",
-            link: "spinners",
-            icono: (
-              <DataSaverOffOutlinedIcon
-                style={{
-                  color: "white",
-                }}
-              />
-            ),
-          },
-          {
-            label: "Tarjetas de presentación",
-            link: "tarjetas",
-            icono: (
-              <CoPresentOutlinedIcon
-                style={{
-                  color: "white",
-                }}
-              />
-            ),
-          },
-          {
-            label: "Ventanas emergentes",
-            link: "modales",
-            icono: (
-              <TabIcon
-                style={{
-                  color: "white",
-                }}
-              />
-            ),
-          },
-        ].map((text, index) => (
+        {filteredMenuItems.map((text, index) => (
           <NavLink key={index} to={text.link} className="navlink-bibliotecas">
             <ListItem>
               <ListItemButton onClick={handleDrawerClose}>
@@ -123,8 +124,8 @@ function Bibliotecas(props) {
         onClick={handleDrawerToggle}
         sx={{
           position: "absolute",
-          left: 0, // Ajusta el left según el breakpoint
-          top: 0, // Ajusta el top según el breakpoint
+          left: 0,
+          top: 0,
           zIndex: 1200,
           display: {
             xs: "block",
@@ -132,7 +133,7 @@ function Bibliotecas(props) {
             md: "none",
             lg: "none",
             xl: "none",
-          }, // Oculta o muestra según el breakpoint
+          },
         }}
       >
         <MenuIcon sx={{ color: "#ffffff" }} />
@@ -193,9 +194,8 @@ function Bibliotecas(props) {
         component="main"
         sx={{
           flexGrow: 1,
-          // width: "100%",
-          height: "100%",
           width: `calc(100% - ${drawerWidth}px)`,
+          height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

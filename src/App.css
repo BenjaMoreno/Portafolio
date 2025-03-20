@@ -63,6 +63,7 @@
   align-items: center;
   flex: 1;
   margin: 0;
+  font-family: var(--fuente-poopins);
 }
 .animacion-bienvenida-usuario span {
   flex: 1;
@@ -131,7 +132,8 @@ header {
 }
 #offcanvasNavbar {
   height: 100% !important;
-  background-color: #002029;
+
+  background-color: #134074;
 }
 .navbar-toggler {
   border: none;
@@ -324,6 +326,14 @@ footer q {
       rgba(165, 165, 165, 0.336) 0%,
       rgba(97, 112, 117, 0.308)
     );
+  }
+  #offcanvasNavbar {
+    height: 100% !important;
+    background: radial-gradient(circle at 25% 10%, #134074, transparent 40%),
+      radial-gradient(circle at 75% 110%, #134074, transparent 40%),
+      radial-gradient(circle at top right, #00171f, transparent 50%),
+      radial-gradient(circle at bottom left, #00171f, transparent 50%);
+    background-color: #134074;
   }
 }
 @media (max-width: 940px) {

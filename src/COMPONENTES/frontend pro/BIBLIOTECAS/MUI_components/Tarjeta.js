@@ -78,7 +78,12 @@ const TarjetaTipo1 = () => {
   }));
 
   return (
-    <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        margin: "0 auto",
+      }}
+    >
       {" "}
       {/* Centrado horizontal */}
       <CardHeader

@@ -56,11 +56,10 @@
   max-height: 80%;
   height: 80%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
-  
 }
-.form-exitoso{
+.form-exitoso {
   width: 60%;
   max-height: 80%;
   height: 80%;
@@ -68,16 +67,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  color: #62780B;
-  text-align: center
+  color: #62780b;
+  text-align: center;
 }
-.form-exitoso h1 strong{
+.form-exitoso h1 strong {
   color: #aacf14;
   text-transform: capitalize;
 }
-.form-exitoso h3 img{
+.form-exitoso h3 img {
   height: 60px;
-
 }
 .formulario-contacto h3 {
   color: rgb(138, 138, 138);
@@ -87,7 +85,7 @@
   font-style: italic;
   text-align: center;
   font-size: 0.9rem;
-  margin:5% auto;
+  margin: 5% auto;
 }
 .formulario-contacto input {
   border-radius: 50px;
@@ -127,13 +125,13 @@
   font-style: italic;
   padding: 10px;
 }
-.formulario-contacto textarea::-webkit-scrollbar{
+.formulario-contacto textarea::-webkit-scrollbar {
   width: 10px;
   background-color: #002029;
   border: solid 1px rgba(128, 128, 128, 0.454);
   border-top-right-radius: 50px;
 }
-.formulario-contacto textarea::-webkit-scrollbar-thumb{
+.formulario-contacto textarea::-webkit-scrollbar-thumb {
   height: 10%;
   width: 10%;
   color: #25d366;
@@ -148,7 +146,6 @@
   font-size: 1.4rem;
   position: relative;
   transition: 0.2s;
-
 }
 .formulario-contacto button:hover {
   color: #000000;
@@ -167,19 +164,21 @@
   height: 300%;
   width: 500%;
 }
-.error-formik-msg{
+.error-formik-msg {
   color: #859900a1;
   text-align: right;
-  text-decoration:overline solid rgba(255, 0, 0, 0.591);
+  text-decoration: overline solid rgba(255, 0, 0, 0.591);
 }
-@media (min-width:768px) and (max-width:1440px) {
-  .form-exitoso strong,.form-exitoso h1,.form-exitoso h3{
+@media (min-width: 768px) and (max-width: 1440px) {
+  .form-exitoso strong,
+  .form-exitoso h1,
+  .form-exitoso h3 {
     font-size: 1.6rem;
   }
 }
 
-@media (max-height:560px) {
-  .formulario-contacto input{
+@media (max-height: 560px) {
+  .formulario-contacto input {
     margin: 2%;
   }
   .formulario-contacto textarea {
@@ -190,21 +189,23 @@
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
-  .container-contactame{
+@media (max-width: 767px) {
+  .container-contactame {
     flex-direction: column;
     height: 140vh;
   }
-  .form-exitoso strong{
+  .form-exitoso strong {
     font-size: 1.1rem;
   }
- 
-}
-@media (max-width:400px) {
-  .container-btnes-contacto a{
-    min-width: 158.400px;
+  .container-btnes-contacto a {
+    font-size: 1rem;
   }
-  .formulario-contacto{
+}
+@media (max-width: 400px) {
+  .container-btnes-contacto a {
+    min-width: 158.4px;
+  }
+  .formulario-contacto {
     height: 90vh;
     width: 90%;
   }

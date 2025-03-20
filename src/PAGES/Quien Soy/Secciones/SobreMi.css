@@ -28,7 +28,8 @@
     width: max-content;
     margin: 0 2%;
   }
-  .container-descripcion p {
+  .container-descripcion p,
+  .container-descripcion p a {
     font-size: 1rem;
   }
 }
