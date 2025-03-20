@@ -1,79 +1,226 @@
+import React from "react";
 import Slider from "react-slick";
-import * as React from "react";
-import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
-import reptile from "../../../../IMAGES/generales/contemplative-reptile.jpg";
-import musica from "../../../../IMAGES/generales/live-from-space.jpg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import paella from "../../../../IMAGES/generales/paella.jpg";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import CardHeader from "@mui/material/CardHeader";
-import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
+import lagarto from "../../../../IMAGES/generales/contemplative-reptile.jpg";
+import vertile from "../../../../IMAGES/generales/vertile.webp";
+
+import {
+  Card,
+  CardContent,
+  Typography,
+  CardActions,
+  Button,
+  CardMedia,
+  CardHeader,
+  Avatar,
+  IconButton,
+  Collapse,
+  styled,
+  Box,
+  useTheme,
+} from "@mui/material";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import "./Tarjeta.css";
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme }) => ({
-  marginLeft: "auto",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-  variants: [
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import SkipNextIcon from "@mui/icons-material/SkipNext";
+
+// Configuración básica del slider
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
     {
-      props: ({ expand }) => !expand,
-      style: {
-        transform: "rotate(0deg)",
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
       },
     },
     {
-      props: ({ expand }) => !!expand,
-      style: {
-        transform: "rotate(180deg)",
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
       },
     },
   ],
-}));
+};
 
-// Tarjeta de musica
-export const TarjetUno = () => {
+// Componente de la tarjeta tipo 1 (adaptada)
+const TarjetaTipo1 = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }));
+
+  return (
+    <Card sx={{ maxWidth: 345, margin: "0 auto" }}>
+      {" "}
+      {/* Centrado horizontal */}
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            R
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        title="Paella de chorizo y gambas"
+        subheader="14 septiembre, 2016"
+      />
+      <CardMedia
+        component="img"
+        height="194"
+        image={paella}
+        alt="Paella dish"
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          Esta impresionante paella es el plato perfecto para fiestas y una
+          comida divertida para cocinar junto con tus invitados. Añade 1 taza de
+          guisantes congelados junto con los mejillones, si lo deseas.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Calienta 1/2 taza del caldo en una olla hasta que comience a hervir
+            a fuego lento, añade el azafrán y deja reposar durante 10 minutos.
+          </Typography>
+          <Typography paragraph sx={{ color: "gray" }}>
+            Calienta aceite en una paellera (de 14 a 16 pulgadas) o en una
+            sartén grande y profunda a fuego medio-alto. Añade el pollo, las
+            gambas y el chorizo, y cocina, revolviendo ocasionalmente, hasta que
+            estén ligeramente dorados, de 6 a 8 minutos. Transfiere las gambas a
+            un plato grande y resérvalas, dejando el pollo y el chorizo en la
+            sartén. Agrega el pimentón, las hojas de laurel, el ajo, los
+            tomates, la cebolla, la sal y la pimienta, y cocina, revolviendo con
+            frecuencia, hasta que la mezcla espese y esté fragante, unos 10
+            minutos. Incorpora el caldo de azafrán y las 4 1/2 tazas restantes
+            de caldo de pollo; lleva a ebullición
+          </Typography>
+          <Typography paragraph sx={{ color: "gray" }}>
+            Añade el arroz y remueve muy suavemente para distribuirlo de manera
+            uniforme. Coloca encima las alcachofas y los pimientos, y cocina sin
+            remover hasta que la mayor parte del líquido se haya absorbido,
+            entre 15 y 18 minutos. Reduce el fuego a medio-bajo, agrega las
+            gambas reservadas y los mejillones, colocándolos suavemente dentro
+            del arroz, y cocina nuevamente sin remover hasta que los mejillones
+            se hayan abierto y el arroz esté tierno, unos 5 a 7 minutos más.
+            (Desecha cualquier mejillón que no se haya abierto).
+          </Typography>
+          <Typography sx={{ color: "gray" }}>
+            Retira del fuego y deja reposar durante 10 minutos antes de servir.
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
+  );
+};
+
+// Nueva tarjeta tipo 2 (adaptada)
+const TarjetaTipo2 = () => {
+  return (
+    <Card
+      sx={{
+        maxWidth: 345,
+        margin: "40% auto auto auto",
+        transform: "translateY(-50%)",
+      }}
+    >
+      {" "}
+      {/* Centrado horizontal */}
+      <CardMedia sx={{ height: 140 }} image={lagarto} title="green iguana" />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lagarto
+        </Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          Los lagartos son un grupo ampliamente distribuido de reptiles
+          escamosos, con más de 6,000 especies, que se encuentran en todos los
+          continentes excepto en la Antártida.
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Compartir</Button>
+        <Button size="small">Leer más</Button>
+      </CardActions>
+    </Card>
+  );
+};
+
+// Nueva tarjeta tipo 3 (adaptada)
+const TarjetaTipo3 = () => {
   const theme = useTheme();
+
   return (
     <Card
       sx={{
         display: "flex",
-        height: "100%",
-        maxWidth: 345,
-        margin: "50% auto auto auto",
-        transform: "TranslateY(-80%)",
+        maxWidth: 500,
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%,-50%)",
       }}
-      className="fondo-tarjetas"
     >
+      {" "}
+      {/* Centrado horizontal */}
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography component="div" variant="h5">
-            Live From Space
+            No Sleep
           </Typography>
           <Typography
             variant="subtitle1"
             component="div"
             sx={{ color: "text.secondary" }}
           >
-            Mac Miller
+            Vertile
           </Typography>
         </CardContent>
         <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
@@ -99,189 +246,53 @@ export const TarjetUno = () => {
       <CardMedia
         component="img"
         sx={{ width: 151 }}
-        image={musica}
+        image={vertile}
         alt="Live from space album cover"
       />
     </Card>
   );
 };
 
-// Tarjeta de standart
-export const TarjetDos = () => {
-  return (
-    <Card
-      className="fondo-tarjetas"
-      sx={{
-        maxWidth: 345,
-        height: "100%",
-        margin: "50% auto auto auto",
-        transform: "TranslateY(-65%)",
-      }}
-    >
-      <CardMedia sx={{ height: 140 }} image={reptile} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lagartos
-        </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Los lagartos son un grupo ampliamente distribuido de reptiles
-          escamosos, con más de 6,000 especies, que se extienden por todos los
-          continentes excepto la Antártida.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Compartir</Button>
-        <Button size="small">Leer más</Button>
-      </CardActions>
-    </Card>
-  );
-};
+// Array de tarjetas con sus respectivas props
+const tarjetasData = [
+  {
+    type: TarjetaTipo1,
+    props: {}, // No necesita props adicionales
+  },
+  {
+    type: TarjetaTipo2,
+    props: {}, // No necesita props adicionales
+  },
+  {
+    type: TarjetaTipo3,
+    props: {}, // No necesita props adicionales
+  },
+];
 
-// Tarjeta red social
-export const TarjetTres = () => {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-  return (
-    <Card sx={{ maxWidth: 345, margin: "auto" }} className="fondo-tarjetas">
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Paella de camarones y chorizo."
-        subheader="Septiembre 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="185"
-        image={paella}
-        alt="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Esta impresionante paella es un plato perfecto para fiestas y una
-          comida divertida para cocinar junto con tus invitados. Añade 1 taza de
-          guisantes congelados junto con los mejillones, si lo deseas.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography sx={{ marginBottom: 2 }}>Method:</Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
-          </Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
-            over medium-high heat. Add chicken, shrimp and chorizo, and cook,
-            stirring occasionally until lightly browned, 6 to 8 minutes.
-            Transfer shrimp to a large plate and set aside, leaving chicken and
-            chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-            onion, salt and pepper, and cook, stirring often until thickened and
-            fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
-            cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography sx={{ marginBottom: 2 }}>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is
-            absorbed, 15 to 18 minutes. Reduce heat to medium-low, add reserved
-            shrimp and mussels, tucking them down into the rice, and cook again
-            without stirring, until mussels have opened and rice is just tender,
-            5 to 7 minutes more. (Discard any mussels that don&apos;t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then
-            serve.
-          </Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
-  );
-};
-
-// Array de tarjetas
-const Tarjetas = [TarjetDos, TarjetUno, TarjetTres];
-function Tarjeta() {
-  var settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+// Componente principal que contiene el slider
+const Tarjeta = () => {
   return (
     <div
       style={{
-        height: "100%", // Alto fijo para el contenedor del Slider
-        width: "70%",
+        width: "80%",
+        height: "100%",
+        margin: "0 auto",
       }}
     >
-      <Slider
-        {...settings}
-        style={{
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        {Tarjetas.map((Tarjet, index) => (
-          <div key={index}>
-            <Tarjet />
-          </div>
-        ))}
+      {" "}
+      {/* Contenedor centrado */}
+      <Slider {...settings}>
+        {tarjetasData.map((tarjeta, index) => {
+          const Component = tarjeta.type;
+          return (
+            <div key={index}>
+              <Component {...tarjeta.props} />
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );
-}
+};
 
 export default Tarjeta;

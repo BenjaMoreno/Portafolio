@@ -16,7 +16,7 @@
 }
 .form-estado label {
   display: inline-block;
-  color: var(--azul-uno);
+  color: var(--fuente-blanca);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 10px 0;

@@ -193,9 +193,9 @@ function Bibliotecas(props) {
         component="main"
         sx={{
           flexGrow: 1,
-          width: "100%",
+          // width: "100%",
           height: "100%",
-          // width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: `calc(100% - ${drawerWidth}px)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

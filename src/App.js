@@ -17,7 +17,6 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import menu from "../src/IMAGES/SVG/BURGER_MENU.svg";
 import Dropdown from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Dropdown";
-import Tarjeta from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Tarjeta";
 import Modales from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Modales";
 import { Spinners } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Spinners";
 import { Graficos } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Graficos";
@@ -25,6 +24,7 @@ import { Areas } from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/gra
 import RadarChartComponent from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/RadarChartComponent";
 import Compuesto from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Compuesto";
 import Torta from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/graficos/Torta";
+import Tarjeta from "./COMPONENTES/frontend pro/BIBLIOTECAS/MUI_components/Tarjeta";
 
 function App() {
   // ESTADO CONTEXT USUARIO
