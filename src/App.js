@@ -155,7 +155,7 @@ function App() {
               <Route path="/contactame" element={<Contactame />} />
             </Routes>
           </main>
-          {/* <footer>
+          <footer>
             <div className="container-hrs-footer">
               <hr className="hr-footer" />
               <hr className="hr-footer" />
@@ -181,7 +181,7 @@ function App() {
             <a href="#">
               <img className="logo-footer" src={LOGO} />
             </a>
-          </footer> */}
+          </footer>
           <a href="#" id="subir" title="Pincha para subir">
             <FLECHA className="flecha-svg" />
           </a>
