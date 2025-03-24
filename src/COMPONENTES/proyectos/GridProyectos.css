@@ -18,7 +18,7 @@
   overflow: hidden;
   position: relative;
   display: inline-block;
-  border: solid #4579848e 2px;
+  border: solid #8da9c4 2px;
 }
 
 .grid-container-proyectos figure img {
@@ -37,7 +37,7 @@
   width: 100%;
   padding: 10px;
   opacity: 0;
-  background-color: #033645;
+  background-color: #0b2545;
   transition: opacity 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -58,15 +58,11 @@
   padding: 10%;
   align-items: center;
   color: rgb(214, 214, 214);
-  font-family: "Sulphur Point", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 100%;
-  text-align: center;
+  font-size: 1.1rem;
 }
 .grid-container-proyectos figure figcaption a {
   margin: auto;
-  border: solid #015a72 4px;
+  border: solid #8da9c4 2px;
   border-radius: 50px;
   padding: 20px 50px;
   color: #ffffff;
@@ -75,48 +71,36 @@
   justify-content: center;
   cursor: pointer;
   color: rgb(214, 214, 214);
-  font-family: "Sulphur Point", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.4rem;
-  text-align: center;
+  font-size: 1rem;
 }
 .grid-container-proyectos figure figcaption a:hover {
   background-color: #015a72;
 }
 
-@media (max-width:1084px) {
-  .grid-container-proyectos figure p{
-    font-size: 80%;
+@media (max-width: 1084px) {
+  .grid-container-proyectos figure p {
+    font-size: 60%;
   }
-  .grid-container-proyectos figure figcaption a{
+  .grid-container-proyectos figure figcaption a {
     padding: 5% 10%;
-    font-size: 0.9rem;
+    font-size: 60%;
   }
 }
-@media (max-width:700px) {
-  .grid-container-proyectos{
+@media (max-width: 700px) {
+  .grid-container-proyectos {
     display: flex;
     flex-direction: column;
   }
 }
-@media (max-width:370px) {
-  .grid-container-proyectos figure{
+@media (max-width: 370px) {
+  .grid-container-proyectos figure {
     min-width: 80%;
     min-height: auto;
     height: auto;
   }
-  .grid-container-proyectos figure img{
+  .grid-container-proyectos figure img {
     min-width: 80%;
     min-height: auto;
     height: auto;
-  }
-  .grid-container-proyectos figure p{
-    font-size:50%;
-  }
-  .grid-container-proyectos figure figcaption a{
-    padding:0 2%;
-    font-size: 0.9rem;
-    border:#015a72 solid 1px;
   }
 }

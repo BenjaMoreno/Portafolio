@@ -6,7 +6,7 @@ import react_training from "../../IMAGES/proyectos/react-training.webp";
 import suractivo_antiguo from "../../IMAGES/proyectos/suractivo-pasado.webp";
 import pacis from "../../IMAGES/proyectos/spa.webp";
 import iupi from "../../IMAGES/proyectos/iupi.webp";
-
+import LaunchIcon from "@mui/icons-material/Launch";
 const proyectos = [
   {
     imgSrc: iupi,
@@ -57,7 +57,18 @@ const Proyecto = ({ imgSrc, alt, descripcion, link }) => (
     <figcaption>
       <p>{descripcion}</p>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        Visitar sitio 🖥️
+        Visitar sitio{" "}
+        <LaunchIcon
+          sx={{
+            height: {
+              xs: "15px",
+              sm: "15px",
+              md: "20px",
+              lg: "20px",
+              xl: "25px",
+            },
+          }}
+        />
       </a>
     </figcaption>
   </figure>
