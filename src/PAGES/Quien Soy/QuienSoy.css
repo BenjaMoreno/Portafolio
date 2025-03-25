@@ -72,6 +72,10 @@
 .logo-gith:hover {
   filter: drop-shadow(0 0 4px rgb(153, 199, 246));
 }
+.subtitulos-quiensoy {
+  display: flex;
+  align-items: center;
+}
 /* ANIMACIÓNES----------------------------------------------------------------- */
 @keyframes hero {
   from {
@@ -104,8 +108,5 @@
   }
   .container-texto-hero h2 {
     text-align: center;
-    font-family: "Sulphur Point", sans-serif;
-    font-weight: 500;
-    font-style: normal;
   }
 }

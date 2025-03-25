@@ -42,7 +42,7 @@ export const Certificados = () => {
 
   return (
     <section className="container-certificados">
-      <h2>
+      <h2 className="subtitulos-quiensoy">
         <Certificado className="iconos-span" />
         Certificaciónes
       </h2>

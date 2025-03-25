@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Experiencia.css";
 import { ReactComponent as Exper } from "../../../IMAGES/SVG/EXPERIENCIA.svg";
 import { ReactComponent as Github } from "../../../IMAGES/SVG/GITHUB.svg";
+import { Typography } from "@mui/material";
 
 export const Experiencia = () => {
   // ESTADOS
@@ -88,7 +89,7 @@ export const Experiencia = () => {
 
   return (
     <section className="container-experiencia">
-      <h2>
+      <h2 className="subtitulos-quiensoy">
         <Exper className="iconos-span" />
         Experiencia
       </h2>
@@ -114,8 +115,37 @@ export const Experiencia = () => {
               </div>
             ) : (
               <div className="center-trabajo">
-                <h3>{trabajo.tipo}</h3>
-                <p>{trabajo.Descripcion}</p>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: {
+                      xs: "1.4rem",
+                      sm: "1.8rem",
+                      md: "1.8rem",
+                      lg: "2rem",
+                      xl: "2rem",
+                    },
+                    fontFamily: "var(--fuente-poopins)",
+                  }}
+                >
+                  {trabajo.tipo}
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontSize: {
+                      xs: "0.8rem",
+                      sm: "1rem",
+                      md: "1rem",
+                      lg: "1rem",
+                      xl: "1rem",
+                    },
+                    fontWeight: 100,
+                    color: "var(--fuente-blanca)",
+                  }}
+                >
+                  {trabajo.Descripcion}
+                </Typography>
               </div>
             )}
 

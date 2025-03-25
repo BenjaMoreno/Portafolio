@@ -5,7 +5,7 @@ import { ReactComponent as User } from "../../../IMAGES/SVG/USER.svg";
 export const SobreMi = () => {
   return (
     <section className="container-descripcion ">
-      <h2>
+      <h2 className="subtitulos-quiensoy">
         <User className="iconos-span" />
         Sobre mí
       </h2>

@@ -49,7 +49,7 @@ export const Stack = () => {
   ];
   return (
     <div className="container-stack">
-      <h2>
+      <h2 className="subtitulos-quiensoy">
         <Tecnologys className="iconos-span" />
         Tecnologías
       </h2>
