@@ -16,18 +16,18 @@ const proyectos = [
     link: "https://iupi-sample.vercel.app/",
   },
   {
-    imgSrc: revista_sur_activo,
-    alt: "Revista Sur Activo",
-    descripcion:
-      "Revista en el sur de Chile,Revista dedicada a compartir actividades de la zona sur de Chile, así como contenido y noticias locales mediante las redes sociales.",
-    link: "https://revistasuractivo.com/",
-  },
-  {
     imgSrc: pacis,
     alt: "Pacis e-commerce",
     descripcion:
       "e-commerce de productos artesanales para el cuidado personal,en el se ofrecen catalogos de productos, los cuales puedes añadir al carrito y comprarlos",
     link: "https://pacis.netlify.app/",
+  },
+  {
+    imgSrc: revista_sur_activo,
+    alt: "Revista Sur Activo",
+    descripcion:
+      "Revista en el sur de Chile,Revista dedicada a compartir actividades de la zona sur de Chile, así como contenido y noticias locales mediante las redes sociales.",
+    link: "https://revistasuractivo.com/",
   },
   {
     imgSrc: sonicpulse,
