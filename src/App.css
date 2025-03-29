@@ -1,5 +1,20 @@
 /* GENERAL */
 
+/* Solución definitiva para el espacio del Offcanvas */
+.offcanvas.offcanvas-end {
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.offcanvas.show {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Asegura que el body no tenga scroll horizontal */
+body {
+  overflow-x: hidden;
+}
 #subir {
   position: fixed;
   right: 10px;
@@ -133,7 +148,6 @@ header {
 }
 #offcanvasNavbar {
   height: 100% !important;
-
   /* background-color: #134074; */
 }
 .navbar-toggler {

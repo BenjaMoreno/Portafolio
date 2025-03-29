@@ -56,143 +56,151 @@ function App() {
   const abrirCanvas = () => setMostrarCanvas(true);
   const cerrarCanvas = () => setMostrarCanvas(false);
   return (
-    <ContextUser.Provider value={{ usuario, setUsuario }}>
-      <BrowserRouter>
-        <div className="App">
-          <header>
-            <Navbar expand="lg" className="bg-body-tertiary mb-3">
-              <Container fluid className="canvas-container">
-                <Navbar.Brand className="brand-logo">
-                  <img src={LOGO} id="LOGO" title="Benjamin Moreno" />
-                </Navbar.Brand>
-                <Navbar.Toggle
-                  aria-controls="offcanvasNavbar"
-                  onClick={abrirCanvas}
-                  style={{ boxShadow: "none" }}
-                >
-                  <img src={menu} alt="" className="icono-toggle" />
-                </Navbar.Toggle>
-                <Navbar.Offcanvas
-                  id="offcanvasNavbar"
-                  aria-labelledby="offcanvasNavbarLabel"
-                  placement="end"
-                  onHide={cerrarCanvas}
-                  show={mostrarCanvas}
-                >
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title id="offcanvasNavbarLabel">
-                      <img src={LOGO} className="logo-canvas" />
-                    </Offcanvas.Title>
-                    {/* <Button>a</Button> */}
-                  </Offcanvas.Header>
-                  <Offcanvas.Body className="canvas-body">
-                    <Nav className="justify-content-end flex-grow-1 pe-3">
-                      <NavLink
-                        to="/"
-                        className="navlink"
-                        onClick={cerrarCanvas}
-                      >
-                        ¿Quién soy?
-                      </NavLink>
-                      <NavLink
-                        to="/codificando"
-                        className="navlink"
-                        onClick={cerrarCanvas}
-                      >
-                        Mis Habilidades
-                      </NavLink>
-                      <div className="navlink"></div>
-                      <NavLink
-                        to="/proyectos"
-                        className="navlink"
-                        onClick={cerrarCanvas}
-                      >
-                        Proyectos
-                      </NavLink>
-                      <NavLink
-                        to="/contactame"
-                        className="navlink"
-                        onClick={cerrarCanvas}
-                      >
-                        Contáctame
-                      </NavLink>
-                    </Nav>
-                  </Offcanvas.Body>
-                </Navbar.Offcanvas>
-              </Container>
-            </Navbar>
-            <NavLink
-              className="usuario-activo"
-              to="/codificando#gestion"
-              title="Clicka para cambiar estado"
-            >
-              <span>{estadoAnimacion.usuario}</span>
-              <img src={estadoAnimacion.avatar} />
-            </NavLink>
-            <div className="container-hrs-header">
-              <hr className="hr-header"></hr>
-              <hr className="hr-header"></hr>
-            </div>
-          </header>
-          <main>
-            <Routes>
-              <Route path="/" element={<QuienSoy />} />
-              <Route path="/codificando" element={<FrontendPro />}>
-                <Route path="dropdown" element={<Dropdown />} />
-                <Route path="graficos" element={<Graficos />}>
-                  {/* Ruta de índice para "graficos" */}
-                  <Route index element={<Torta />} />
-                  <Route path="areas" element={<Areas />} />
-                  <Route path="radar" element={<RadarChartComponent />} />
-                  <Route path="compuesto" element={<Compuesto />} />
-                  <Route path="torta" element={<Torta />} />
+    <div style={{ overflowX: "hidden" }}>
+      <ContextUser.Provider value={{ usuario, setUsuario }}>
+        <BrowserRouter>
+          <div className="App">
+            <header>
+              <Navbar expand="lg" className="bg-body-tertiary mb-3">
+                <Container fluid className="canvas-container">
+                  <Navbar.Brand className="brand-logo">
+                    <img src={LOGO} id="LOGO" title="Benjamin Moreno" />
+                  </Navbar.Brand>
+                  <Navbar.Toggle
+                    aria-controls="offcanvasNavbar"
+                    onClick={abrirCanvas}
+                    style={{ boxShadow: "none" }}
+                  >
+                    <img src={menu} alt="" className="icono-toggle" />
+                  </Navbar.Toggle>
+                  <Navbar.Offcanvas
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                    placement="end"
+                    onHide={cerrarCanvas}
+                    show={mostrarCanvas}
+                    style={{
+                      top: 0,
+                      bottom: 0,
+                      zIndex: 1045,
+                      width: "var(--bs-offcanvas-width)",
+                    }}
+                  >
+                    <Offcanvas.Header closeButton>
+                      <Offcanvas.Title id="offcanvasNavbarLabel">
+                        <img src={LOGO} className="logo-canvas" />
+                      </Offcanvas.Title>
+                      {/* <Button>a</Button> */}
+                    </Offcanvas.Header>
+                    <Offcanvas.Body className="canvas-body">
+                      <Nav className="justify-content-end flex-grow-1 pe-3">
+                        <NavLink
+                          to="/"
+                          className="navlink"
+                          onClick={cerrarCanvas}
+                        >
+                          ¿Quién soy?
+                        </NavLink>
+                        <NavLink
+                          to="/codificando"
+                          className="navlink"
+                          onClick={cerrarCanvas}
+                        >
+                          Mis Habilidades
+                        </NavLink>
+                        <div className="navlink"></div>
+                        <NavLink
+                          to="/proyectos"
+                          className="navlink"
+                          onClick={cerrarCanvas}
+                        >
+                          Proyectos
+                        </NavLink>
+                        <NavLink
+                          to="/contactame"
+                          className="navlink"
+                          onClick={cerrarCanvas}
+                        >
+                          Contáctame
+                        </NavLink>
+                      </Nav>
+                    </Offcanvas.Body>
+                  </Navbar.Offcanvas>
+                </Container>
+              </Navbar>
+              <NavLink
+                className="usuario-activo"
+                to="/codificando#gestion"
+                title="Clicka para cambiar estado"
+              >
+                <span>{estadoAnimacion.usuario}</span>
+                <img src={estadoAnimacion.avatar} />
+              </NavLink>
+              <div className="container-hrs-header">
+                <hr className="hr-header"></hr>
+                <hr className="hr-header"></hr>
+              </div>
+            </header>
+            <main>
+              <Routes>
+                <Route path="/" element={<QuienSoy />} />
+                <Route path="/codificando" element={<FrontendPro />}>
+                  <Route path="dropdown" element={<Dropdown />} />
+                  <Route path="graficos" element={<Graficos />}>
+                    {/* Ruta de índice para "graficos" */}
+                    <Route index element={<Torta />} />
+                    <Route path="areas" element={<Areas />} />
+                    <Route path="radar" element={<RadarChartComponent />} />
+                    <Route path="compuesto" element={<Compuesto />} />
+                    <Route path="torta" element={<Torta />} />
+                  </Route>
+                  <Route path="tarjetas" element={<Tarjeta />} />
+                  <Route path="modales" element={<Modales />} />
+                  <Route path="spinners" element={<Spinners />} />
                 </Route>
-                <Route path="tarjetas" element={<Tarjeta />} />
-                <Route path="modales" element={<Modales />} />
-                <Route path="spinners" element={<Spinners />} />
-              </Route>
-              <Route path="/proyectos" element={<Proyectos />} />
-              <Route path="/contactame" element={<Contactame />} />
-            </Routes>
-          </main>
-          <footer>
-            <div className="container-hrs-footer">
-              <hr className="hr-footer" />
-              <hr className="hr-footer" />
-            </div>
-            <q>Viviendo, aprendiendo y subiendo de nivel un día a la vez.</q>
-            <div className="container-rrss">
-              <a
-                href="https://web.facebook.com/benjamin.morenosaez.3"
-                target="blank"
-              >
-                <Facebook className="svg-footer" />
+                <Route path="/proyectos" element={<Proyectos />} />
+                <Route path="/contactame" element={<Contactame />} />
+              </Routes>
+            </main>
+            <footer>
+              <div className="container-hrs-footer">
+                <hr className="hr-footer" />
+                <hr className="hr-footer" />
+              </div>
+              <q>Viviendo, aprendiendo y subiendo de nivel un día a la vez.</q>
+              <div className="container-rrss">
+                <a
+                  href="https://web.facebook.com/benjamin.morenosaez.3"
+                  target="blank"
+                >
+                  <Facebook className="svg-footer" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/"
+                  target="blank"
+                >
+                  <Linkedin className="svg-footer" />
+                </a>
+                <a href="https://github.com/BenjaMoreno" target="blank">
+                  <Github className="svg-footer" />
+                </a>
+              </div>
+              <a href="#">
+                <img className="logo-footer" src={LOGO} />
               </a>
-              <a
-                href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/"
-                target="blank"
-              >
-                <Linkedin className="svg-footer" />
-              </a>
-              <a href="https://github.com/BenjaMoreno" target="blank">
-                <Github className="svg-footer" />
-              </a>
-            </div>
-            <a href="#">
-              <img className="logo-footer" src={LOGO} />
+            </footer>
+            <a href="#" id="subir" title="Pincha para subir">
+              <FLECHA className="flecha-svg" />
             </a>
-          </footer>
-          <a href="#" id="subir" title="Pincha para subir">
-            <FLECHA className="flecha-svg" />
-          </a>
-          <div className="animacion-bienvenida-usuario">
-            <h5>¡BIENVENIDO!</h5>
-            <span>{estadoAnimacion.usuario}</span>
-            <div></div>
+            <div className="animacion-bienvenida-usuario">
+              <h5>¡BIENVENIDO!</h5>
+              <span>{estadoAnimacion.usuario}</span>
+              <div></div>
+            </div>
           </div>
-        </div>
-      </BrowserRouter>
-    </ContextUser.Provider>
+        </BrowserRouter>
+      </ContextUser.Provider>
+    </div>
   );
 }
 

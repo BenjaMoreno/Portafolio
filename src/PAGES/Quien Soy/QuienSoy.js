@@ -4,7 +4,7 @@ import { Stack } from "./Secciones/Stack";
 import { SobreMi } from "./Secciones/SobreMi";
 import { Experiencia } from "./Secciones/Experiencia";
 import { Certificados } from "./Secciones/Certificados";
-import foto from "../../IMAGES/generales/WhatsApp Image 2025-03-28 at 11.24.15 PM.jpeg";
+import foto from "../../IMAGES/generales/WhatsApp Image 2025-03-28 at 11.24.15 PM (1).jpeg";
 import { ReactComponent as Github } from "../../IMAGES/SVG/GITHUB.svg";
 import { Typography } from "@mui/material";
 
@@ -62,13 +62,31 @@ export const QuienSoy = () => {
             {texto}
             <span style={{ animation: "blink 1s infinite" }}>|</span>
           </h2>
-          <h1>
+          <Typography
+            variant="h1"
+            sx={{
+              fontWeight: {
+                xs: "700",
+                sm: "700",
+                md: "700",
+                lg: "700",
+                xl: "700",
+              },
+              fontSize: {
+                xs: "2rem !important",
+                sm: "2rem !important",
+                md: "4rem !important",
+                lg: "6rem !important",
+                xl: "8rem !important",
+              },
+            }}
+          >
             <Typography variant="span" sx={{ color: "#2563EB" }}>
               Front
             </Typography>
             end <br />
             Developer
-          </h1>
+          </Typography>
           <div className="container-descarga">
             <a
               href="https://github.com/BenjaMoreno"
