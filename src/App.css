@@ -109,7 +109,8 @@ header {
   position: sticky;
   top: 0;
   /* background-color: #002029; */
-  background-color: #134074;
+  background-color: #134074ce;
+  backdrop-filter: blur(5px);
   z-index: 1000;
 }
 .bg-body-tertiary {
@@ -133,7 +134,7 @@ header {
 #offcanvasNavbar {
   height: 100% !important;
 
-  background-color: #134074;
+  /* background-color: #134074; */
 }
 .navbar-toggler {
   border: none;
