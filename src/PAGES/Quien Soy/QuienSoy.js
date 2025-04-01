@@ -69,7 +69,7 @@ export const QuienSoy = () => {
             // maxWidth: "70vw",
             borderRadius: "20px",
             overflow: "hidden",
-            boxShadow: "0 0 30px lightblue",
+            // boxShadow: "0 0 30px lightblue",
             width: {
               xs: "auto",
               sm: "30vw",
@@ -78,7 +78,7 @@ export const QuienSoy = () => {
               xl: "25vw",
             },
             height: {
-              xs: "40vh",
+              xs: "35vh",
               sm: "auto",
               md: "auto",
               lg: "auto",

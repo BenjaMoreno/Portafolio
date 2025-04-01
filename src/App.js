@@ -176,7 +176,7 @@ function App() {
                   <Facebook className="svg-footer" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/benjam%C3%ADn-moreno-s%C3%A1ez-frontenddeveloper/"
+                  href="https://www.linkedin.com/in/benjamorenosaez/"
                   target="blank"
                 >
                   <Linkedin className="svg-footer" />
