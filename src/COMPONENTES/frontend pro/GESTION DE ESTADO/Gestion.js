@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Gestion.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -6,12 +6,10 @@ import calculador from "../../../IMAGES/SVG/ABACO.svg";
 import social from "../../../IMAGES/SVG/SELFIE.svg";
 import creativo from "../../../IMAGES/SVG/BRUSH.svg";
 import practico from "../../../IMAGES/SVG/LLAVE.svg";
-import { ContextUser } from "../../../CONTEXT/ContextUser";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
-import { boxSizing, display, width } from "@mui/system";
-import zIndex from "@mui/material/styles/zIndex";
+import { useStore } from "../../../CONTEXT/store";
 
 // ESTILOS MODAL
 const style = {
@@ -31,6 +29,8 @@ const style = {
 };
 
 export const Gestion = () => {
+  // CONTEXTO
+  const { cambiarEstado } = useStore();
   // ESTADOS
   const [usuarioState, setUsuarioState] = useState(null);
   const [avatarState, setAvatarState] = useState(practico);
@@ -70,7 +70,7 @@ export const Gestion = () => {
         usuario: usuarioState,
         avatar: avatarState,
       };
-      setUsuario(objetoUsuario);
+      cambiarEstado(objetoUsuario);
     }
   };
   const handleChange = (event) => {
@@ -80,8 +80,6 @@ export const Gestion = () => {
   // DATA
   const avatares = [practico, creativo, social, calculador];
 
-  //CONTEXT
-  var { setUsuario } = useContext(ContextUser);
   //color para avatar activo
   const avatarActive = "inset 0 0 20px 1px var(--azul-uno)";
 
