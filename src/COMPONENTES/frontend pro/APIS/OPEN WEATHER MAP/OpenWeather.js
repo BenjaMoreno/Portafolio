@@ -38,14 +38,17 @@ export const OpenWeather = () => {
       <form className="separador-weather" onSubmit={consultarClima}>
         <h1>Consulta el clima actual</h1>
         <input placeholder="Escribe una ciudad..." name="nombre_ciudad" />
-        <button type="submit"  className="api-btns"> Consultar</button>
+        <button type="submit" className="api-btns">
+          {" "}
+          Consultar
+        </button>
       </form>
       <div className="separador-weather weather">
         {cityData === null ? (
           <Weather />
         ) : (
           <section className="container-datos-weather">
-            <div className="item-weather">
+            <div className="item-weather ciudad">
               <img
                 src={`http://openweathermap.org/img/wn/${cityData.img}@2x.png`}
               />
@@ -54,17 +57,17 @@ export const OpenWeather = () => {
                 <small>/{cityData.clima}</small>
               </div>
             </div>
-            <div className="item-weather">
+            <div className="item-weather temperatura">
               <h5>
                 Temperatura:&nbsp;&nbsp;<b>{cityData.temperatura}°C</b>
               </h5>
             </div>
-            <div className="item-weather">
+            <div className="item-weather nubosidad">
               <h5>
                 Nubosidad:&nbsp;&nbsp;<b>{cityData.nubosidad}%</b>
               </h5>
             </div>
-            <div className="item-weather">
+            <div className="item-weather humedad">
               <h5>
                 Humedad:&nbsp;&nbsp;<b>{cityData.humedad}%</b>
               </h5>

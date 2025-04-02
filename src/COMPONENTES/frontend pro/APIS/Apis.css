@@ -47,7 +47,22 @@
   border-bottom-left-radius: 50%; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "c c c"
+    "t n h";
   /* box-shadow: 0 0 100px rgba(128, 128, 128, 0.217); */
+}
+.ciudad {
+  grid-area: c;
+}
+.temperatura {
+  grid-area: t;
+}
+.nubosidad {
+  grid-area: n;
+}
+.humedad {
+  grid-area: h;
 }
 .container-datos-weather div:nth-child(1) {
   grid-column: 1/4;
@@ -77,6 +92,23 @@
   color: black;
   border-radius: 100px;
   padding: 8px 16px;
+}
+@media (max-width: 1200px) {
+  .container-datos-weather {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "c"
+      "t"
+      "n"
+      "h";
+    margin-bottom: 30px;
+  }
+  .ciudad {
+    justify-content: center !important;
+  }
 }
 @media (max-width: 1025px) {
   .container-apis {

@@ -56,14 +56,16 @@ export const PokeApi = () => {
       <form className="separador-pokemon" onSubmit={consultarPokemon}>
         <h1>Consulta por un Pokemon</h1>
         <input placeholder="Nombre del Pokémon..." name="nombre_pokemon" />
-        <button type="submit" className="api-btns">Consultar</button>
+        <button type="submit" className="api-btns">
+          Consultar
+        </button>
       </form>
       <div className="separador-pokemon pokemon">
         {pokeDatos === null ? (
           <img src={pokeball} alt={"pokebola"} />
         ) : (
           <section className="container-datos-weather">
-            <div className="item-weather">
+            <div className="item-weather ciudad">
               <img src={pokeDatos.img} />
               <div>
                 <h3>{pokeDatos.nombre}</h3>
@@ -72,17 +74,17 @@ export const PokeApi = () => {
                 </small>
               </div>
             </div>
-            <div className="item-weather">
+            <div className="item-weather temperatura">
               <h5>
                 Tipo:&nbsp;&nbsp;<b>{pokeDatos.tipo}</b>
               </h5>
             </div>
-            <div className="item-weather">
+            <div className="item-weather nubosidad">
               <h5>
                 Peso:&nbsp;&nbsp;<b>{pokeDatos.peso} (hg)</b>
               </h5>
             </div>
-            <div className="item-weather">
+            <div className="item-weather humedad">
               <h5>
                 Tamaño:&nbsp;&nbsp;<b>{pokeDatos.tamaño}(dm)</b>
               </h5>
