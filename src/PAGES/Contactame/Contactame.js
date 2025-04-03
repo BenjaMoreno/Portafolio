@@ -55,7 +55,12 @@ export const Contactame = () => {
           },
         }}
       >
-        <img src={gmail_logo} style={{ height: "40%" }} alt="" />
+        <img
+          src={gmail_logo}
+          style={{ height: "40%" }}
+          alt="gmail"
+          loading="eager"
+        />
         Gmail
       </Link>
       <Link
@@ -69,7 +74,12 @@ export const Contactame = () => {
           },
         }}
       >
-        <img src={wsp_logo} style={{ height: "40%", minWidth: "" }} alt="" />
+        <img
+          src={wsp_logo}
+          style={{ height: "40%", minWidth: "" }}
+          alt="whatsapp"
+          loading="eager"
+        />
         Whatsapp
       </Link>
     </Box>

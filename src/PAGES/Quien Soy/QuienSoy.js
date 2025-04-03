@@ -86,7 +86,7 @@ export const QuienSoy = () => {
             },
           }}
         >
-          <img src={foto} alt="" className="foto-hero" />
+          <img src={foto} alt="" className="foto-hero" loading="eager" />
         </Box>
         <div className="container-texto-hero">
           <Typography

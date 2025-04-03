@@ -51,6 +51,7 @@ export const OpenWeather = () => {
             <div className="item-weather ciudad">
               <img
                 src={`http://openweathermap.org/img/wn/${cityData.img}@2x.png`}
+                loading="lazy"
               />
               <div>
                 <h3>{cityData.ciudad}</h3>

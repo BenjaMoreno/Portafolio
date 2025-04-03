@@ -20,6 +20,7 @@
 .container-formulario form {
   margin-right: 100px;
   text-align: center;
+  max-width: 90vw !important;
 }
 .container-form-response h4 {
   display: flex;
@@ -72,6 +73,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  max-width: 90vw;
 }
 .container-formulario .container-form-response ul {
   flex: 1;
@@ -90,6 +92,14 @@
   position: absolute;
   bottom: 5%;
   right: 5%;
+}
+
+.response-correo b {
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 70%;
+  overflow: hidden;
 }
 /* RESPONSIVE*/
 @media (max-width: 900px) {

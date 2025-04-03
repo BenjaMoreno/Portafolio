@@ -106,7 +106,7 @@ export const Formulario = () => {
             <li>
               Apellido:&nbsp;&nbsp;<b>{datosForm.apellido}</b>
             </li>
-            <li>
+            <li className="response-correo">
               Correo:&nbsp;&nbsp;<b>{datosForm.correo}</b>
             </li>
             <li>

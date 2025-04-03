@@ -62,7 +62,7 @@ export const PokeApi = () => {
       </form>
       <div className="separador-pokemon pokemon">
         {pokeDatos === null ? (
-          <img src={pokeball} alt={"pokebola"} />
+          <img src={pokeball} alt={"pokebola"} loading="lazy" width="100px" />
         ) : (
           <section className="container-datos-weather">
             <div className="item-weather ciudad">

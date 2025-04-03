@@ -53,7 +53,7 @@ const proyectos = [
 
 const Proyecto = ({ imgSrc, alt, descripcion, link }) => (
   <figure>
-    <img src={imgSrc} alt={alt} />
+    <img src={imgSrc} alt={alt} loading="eager" />
     <figcaption>
       <p>{descripcion}</p>
       <a href={link} target="_blank" rel="noopener noreferrer">

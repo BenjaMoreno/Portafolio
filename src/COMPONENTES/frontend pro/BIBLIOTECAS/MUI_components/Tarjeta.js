@@ -105,6 +105,8 @@ const TarjetaTipo1 = () => {
         height="194"
         image={paella}
         alt="Paella dish"
+        loading="lazy" // <-- Añade esto
+        width="345"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">

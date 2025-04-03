@@ -1,10 +1,10 @@
 import Carousel from "react-bootstrap/Carousel";
 
-function CarruselReutilizable({ array, className, estadoTitulo,estadoLink }) {
+function CarruselReutilizable({ array, className, estadoTitulo, estadoLink }) {
   const handleSelect = (indice) => {
     const claveArray = array[indice];
     estadoTitulo(claveArray.estado);
-    estadoLink(claveArray.link)
+    estadoLink(claveArray.link);
   };
   return (
     <Carousel className={className} onSelect={handleSelect}>
@@ -14,7 +14,8 @@ function CarruselReutilizable({ array, className, estadoTitulo,estadoLink }) {
             <img
               src={item.img}
               alt=""
-              style={{ width: "100%", height: "auto"}}
+              style={{ width: "100%", height: "auto" }}
+              loading="lazy"
             />
           </Carousel.Item>
         );
