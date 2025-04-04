@@ -98,6 +98,9 @@
   .container-texto-hero h2 {
     font-size: 1.2rem;
   }
+  .subtitulos-quiensoy {
+    margin: 20px 0;
+  }
 }
 @media (max-width: 600px) {
   .Hero {

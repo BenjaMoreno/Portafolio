@@ -32,6 +32,9 @@
   .container-descripcion p a {
     font-size: 1rem;
   }
+  .container-descripcion {
+    min-height: max-content;
+  }
 }
 @media (max-width: 430px) {
   .container-descripcion span {
