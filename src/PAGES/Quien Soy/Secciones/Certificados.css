@@ -1,7 +1,7 @@
 .container-certificados {
   min-height: 86vh;
   width: 80%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 15dvh auto;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 1fr;
@@ -73,13 +73,9 @@
   height: auto;
   margin: 10px;
 }
-@media (max-width: 600px) {
-  .container-certificados span {
+@media (max-width: 1024px) {
+  .info-certificates h1 {
     font-size: 2rem;
-  }
-  .container-oficial a {
-    padding: 10px;
-    font-size: small;
   }
 }
 @media (max-width: 768px) {
@@ -92,11 +88,23 @@
       "info";
   }
   .crsl_certificates {
-    width: 100% !important;
+    width: 70% !important;
   }
 }
-@media (max-width: 1024px) {
-  .info-certificates h1 {
+@media (max-width: 600px) {
+  .container-certificados span {
     font-size: 2rem;
+  }
+  .container-oficial a {
+    padding: 10px;
+    font-size: small;
+  }
+}
+@media (max-width: 420px) {
+  .crsl_certificates {
+    width: 90% !important;
+  }
+  .info-certificates h1 {
+    font-size: 1rem;
   }
 }
