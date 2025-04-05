@@ -1,5 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+  Navigate,
+} from "react-router-dom";
 import LOGO from "../src/IMAGES/logoben.png";
 import { QuienSoy } from "./PAGES/Quien Soy/QuienSoy";
 import { Proyectos } from "./PAGES/Proyectos/Proyectos";
@@ -29,7 +35,7 @@ import { useStore } from "./CONTEXT/store";
 function App() {
   // CONTEXT
   const { estado } = useStore();
-  //  USESTATE
+  // USESTATE
   const [mostrarCanvas, setMostrarCanvas] = useState(false);
   // USEEFFECT
   useEffect(() => {
@@ -43,14 +49,15 @@ function App() {
     }
   }, [estado]);
   // FUNCTIONS
-  //ACTIVAR BOTON DE SUBIDA HREF=#
+  // ACTIVAR BOTON DE SUBIDA HREF=#
   window.addEventListener("scroll", function () {
     var btn_flecha = document.getElementById("subir");
     btn_flecha.style.display = window.scrollY > 0 ? "block" : "none";
   });
-  //Control Canvas
+  // Control Canvas
   const abrirCanvas = () => setMostrarCanvas(true);
   const cerrarCanvas = () => setMostrarCanvas(false);
+
   return (
     <div style={{ overflowX: "hidden" }}>
       <BrowserRouter>
@@ -85,7 +92,6 @@ function App() {
                     <Offcanvas.Title id="offcanvasNavbarLabel">
                       <img src={LOGO} className="logo-canvas" />
                     </Offcanvas.Title>
-                    {/* <Button>a</Button> */}
                   </Offcanvas.Header>
                   <Offcanvas.Body className="canvas-body">
                     <Nav className="justify-content-end flex-grow-1 pe-3">
@@ -140,6 +146,9 @@ function App() {
             <Routes>
               <Route path="/" element={<QuienSoy />} />
               <Route path="/codificando" element={<FrontendPro />}>
+                {/* Redirige /codificando a /codificando/graficos */}
+                <Route index element={<Navigate to="graficos" replace />} />
+
                 <Route path="dropdown" element={<Dropdown />} />
                 <Route path="graficos" element={<Graficos />}>
                   {/* Ruta de índice para "graficos" */}
