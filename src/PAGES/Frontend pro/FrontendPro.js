@@ -43,12 +43,12 @@ export const FrontendPro = () => {
         <Flecha className="flecha-animada" />
       </div>
       {/* <hr className="separador-secciones"></hr> */}
+      <h2 className="h2-habilidades">API REST</h2>
+      <Apis />
       <h2 className="h2-habilidades">Elementos para tu proyecto</h2>
       <Bibliotecas />
       <h2 className="h2-habilidades">Validaciónes</h2>
       <Formulario />
-      <h2 className="h2-habilidades">API REST</h2>
-      <Apis />
       <h2 className="h2-habilidades" id="gestion">
         Manejo de estado global
       </h2>
