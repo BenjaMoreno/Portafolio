@@ -25,6 +25,8 @@
   width: 100%;
   min-height: 192px;
   min-width: 290px;
+  border-radius: 20px;
+
   height: auto;
   display: block;
   transition: transform 0.2s ease-in-out;
@@ -37,6 +39,7 @@
   width: 100%;
   padding: 10px;
   opacity: 0;
+  border-radius: 20px;
   background-color: #0b2545;
   transition: opacity 0.3s ease-in-out;
   display: flex;
