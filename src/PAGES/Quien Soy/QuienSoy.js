@@ -4,7 +4,7 @@ import { Stack } from "./Secciones/Stack";
 import { SobreMi } from "./Secciones/SobreMi";
 import { Experiencia } from "./Secciones/Experiencia";
 import { Certificados } from "./Secciones/Certificados";
-import foto from "../../IMAGES/generales/WhatsApp Image 2025-03-31 at 9.07.02 PM.jpeg";
+import foto from "../../IMAGES/generales/WhatsApp Image 2025-04-11 at 4,33,51 PM-Picsart-CropImage.jpeg";
 import { ReactComponent as Github } from "../../IMAGES/SVG/GITHUB.svg";
 import { Box, Typography } from "@mui/material";
 

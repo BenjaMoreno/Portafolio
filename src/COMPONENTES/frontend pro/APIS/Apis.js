@@ -18,6 +18,12 @@ const ApiCard = ({ datosEstaticos, onSearch }) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
+  // Estilos de resultados de la lista
+  const listStyle = {
+    fontFamily: "var(--fuente-poopins)",
+    fontWeight: 200,
+    color: "#ffffff",
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) {
@@ -64,18 +70,21 @@ const ApiCard = ({ datosEstaticos, onSearch }) => {
           />
         )}
         <Box>
-          <Typography>
-            <strong>Temperatura:</strong> {Math.round(data.main?.temp)}°C
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Temperatura:&nbsp;&nbsp;</strong>{" "}
+            {Math.round(data.main?.temp)}°C
           </Typography>
-          <Typography>
-            <strong>Sensación térmica:</strong>{" "}
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Sensación térmica:&nbsp;&nbsp;</strong>{" "}
             {Math.round(data.main?.feels_like)}°C
           </Typography>
-          <Typography>
-            <strong>Humedad:</strong> {data.main?.humidity}%
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Humedad:&nbsp;&nbsp;</strong>{" "}
+            {data.main?.humidity}%
           </Typography>
-          <Typography>
-            <strong>Condición:</strong> {data.weather?.[0]?.description}
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Condición:&nbsp;&nbsp;</strong>{" "}
+            {data.weather?.[0]?.description}
           </Typography>
         </Box>
       </Box>
@@ -99,14 +108,16 @@ const ApiCard = ({ datosEstaticos, onSearch }) => {
           />
         )}
         <Box>
-          <Typography>
-            <strong>Altura:</strong> {data.height / 10}m
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Altura:&nbsp;&nbsp;</strong>{" "}
+            {data.height / 10}m
           </Typography>
-          <Typography>
-            <strong>Peso:</strong> {data.weight / 10}kg
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Peso:&nbsp;&nbsp;</strong>{" "}
+            {data.weight / 10}kg
           </Typography>
-          <Typography>
-            <strong>Habilidades:</strong>
+          <Typography sx={{ fontWeight: 700, color: "#FFDB58" }}>
+            <strong style={listStyle}>Habilidades:&nbsp;&nbsp;</strong>
           </Typography>
           <Box sx={{ display: "flex", gap: 1, mt: 1, flexWrap: "wrap" }}>
             {data.abilities?.map((ability, index) => (
@@ -119,15 +130,23 @@ const ApiCard = ({ datosEstaticos, onSearch }) => {
             ))}
           </Box>
           <Typography sx={{ mt: 2 }}>
-            <strong>Tipos:</strong>
+            <strong style={listStyle}>Tipos:</strong>
           </Typography>
-          <Box sx={{ display: "flex", gap: 1, mt: 1, flexWrap: "wrap" }}>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 1,
+              mt: 1,
+              flexWrap: "wrap",
+            }}
+          >
             {data.types?.map((type, index) => (
               <Chip
                 key={index}
                 label={type.type?.name}
                 color="primary"
                 size="small"
+                fontWeight="900"
               />
             ))}
           </Box>

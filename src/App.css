@@ -50,7 +50,11 @@ body {
   width: max-content;
   padding: 0.5% 10%;
   z-index: 4000;
-  background-color: var(--azul-uno);
+  background: radial-gradient(circle at top left, #13315c, transparent 50%),
+    radial-gradient(circle at bottom right, #13315c, transparent 50%),
+    radial-gradient(circle at top right, #00a7e1, transparent 50%),
+    radial-gradient(circle at bottom left, #00a7e1, transparent 50%);
+  background-color: #134074;
   overflow: hidden;
   height: max-content;
   display: none;
